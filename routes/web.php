@@ -13,6 +13,40 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// nanti semua di masukin di AnderCookedController.php 
+
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/home', function () {
+    return view('layouts.home', [
+        "title" => "Home"
+    ]);
+});
+Route::get('/favorite', function () {
+    return view('layouts.favorite.favorite', [
+        "title" => "Favorite"
+    ]);
+});
+Route::get('/history', function () {
+    return view('layouts.history.history', [
+        "title" => "History"
+    ]);
+});
+Route::get('/recipe', function () {
+    return view('layouts.recipe.recipe', [
+        "title" => "Recipe"
+    ]);
+});
+Route::get('/profile', function () {
+    return view('layouts.profile.profile', [
+        "title" => "Profile"
+    ]);
+});
+
+Route::get('/food', function () {
+    return view('layouts.description.food-desc', [
+        "title" => "Food"
+    ]);
 });

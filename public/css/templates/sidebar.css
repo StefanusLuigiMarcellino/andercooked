@@ -1,0 +1,72 @@
+.position-fixed{
+    position: fixed;
+}
+/* Sidebar Heading */
+.sidebar-heading{
+    font-family: var(--sansserif-font);
+    font-weight: 600;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+.sidebar-subheading{
+    font-family: var(--sansserif-font);
+    font-weight: 500;
+    font-size: 20px;
+}
+.subhead-active{
+    font-weight: 700 !important;
+    color: var(--dark-green) !important;
+}
+.menu-content svg{
+    fill: var(--dark-green);
+}
+
+/* CSS Code */
+.sidebar{
+    width: 20vw;
+    height: 100vh;
+    background-color: var(--white);
+    /* overflow: hidden; */
+    /* position: fixed; */
+    padding-top: 50px;
+    /* padding: 50px 0px 50px 30px; */
+}
+.menu-item{
+    margin-top: 50px;
+    display: grid;
+    row-gap: 30px;
+}
+.list-menu{
+    display: grid;
+    row-gap: 10px;
+    margin-top: 0px;
+    padding: 0 10px;
+}
+.menu-content{
+    display: grid;
+    row-gap: 10px;
+    grid-template-columns: 20% auto;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    padding-left: 20px;
+    border-radius: 15px;
+}
+.menu-content:hover{
+    background-color: var(--light-orange);
+    transition: 0.1s;
+}
+.menu-content .sidebar-subheading:hover{
+    color: var(--dark-green);
+}
+.menu-content path:hover{
+    fill: var(--dark-green);
+}
+.m-30{
+    margin-left: 30px;
+}
+
+/* SVG Config */
+.my-svg{
+    fill: var(--dark-green);
+}

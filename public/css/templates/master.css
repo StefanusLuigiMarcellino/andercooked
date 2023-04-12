@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+/* Scroll Bar */
+::-webkit-scrollbar {
+    width: 7.5px;
+}
+  
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+  
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+/* Base Template */
+:root{
+    /* Color */
+    --black: #222222;
+    --semi-white: #F6F6F6;
+    --white: #FFFFFF;
+    --grey: #C3C3C3;
+    --dark-grey: #86817F;
+    --dark-green: #005247;
+    --med-green: #4B8077;
+    --light-green: #00A043;
+    --dark-orange: #FD9303;
+    --light-orange: #FFF8EE;
+    --cream: #FDECCE;
+    --light-red: #CD6C8C;
+
+    /* Calories, Fats, Carbo, Protein Color */
+    --food-cream: #FDECCE;
+    --food-orange: #FE8E04;
+    --food-purple: #7D60F8;
+    --food-green: #00A043;
+
+    /* Font */
+    --serif-font: 'Libre Baskerville', serif;
+    --sansserif-font: 'Plus Jakarta Sans', sans-serif;
+}
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: var(--sansserif-font);
+    overflow-x: hidden;
+    min-height: 100%;
+}
+button{
+    text-decoration: none;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+}
+
+/* Headings */
+.header-font{
+    font-family: var(--sansserif-font);
+    font-weight: 700;
+    font-size: 30px;
+}
+.search-font{
+    font-family: var(--sansserif-font);
+    font-weight: 400;
+    font-size: 18px;
+}
+.header-font-serif{
+    font-family: var(--serif-font);
+    font-weight: 700;
+    font-size: 30px;
+}
+.description-font-serif{
+    margin-top: 30px;
+    font-family: var(--serif-font);
+    font-weight: 500;
+    font-size: 18px;   
+}
+
+/* Font Color */
+.green{
+    color: var(--med-green);
+}
+.orange{
+    color: var(--dark-orange);
+}
+.black{
+    color: var(--black);
+}
+.grey{
+    color: var(--grey);
+}
+.white{
+    color: var(--white);
+}
+
+/* Margin Top */
+.m-50{
+    margin-top: 50px;
+}
+.m-40{
+    margin-top: 40px;
+}
+.m-100{
+    margin-top: 100px;
+}
+
+/* Home 3 Row Template */
+.columns{
+    display: flex !important;
+}
+.row{
+    display: flex;
+}
+.main-page{
+    /* margin-left: 20vw;; */
+    width: 55vw;
+    height: 129vh;
+    background-color: var(--semi-white);
+    padding: 50px 40px;
+}
+.side-page{
+    width: 26vw;
+    height: 129vh;
+    background-color: var(--white);
+    padding: 50px 35px;
+}
+
+.search-bar{
+    display: grid;
+    grid-template-columns: 6% auto 10%;
+    width: 100%;
+    height: 40px;
+    background-color: var(--white);
+    border-radius: 25px;
+    padding: 0 20px 0 25px;
+    align-items: center;
+}
+.search-bar input{
+    text-decoration: none;
+    border: none;
+    outline: none;
+    color: var(--dark-grey);
+}
+.search-bar .search-button{
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--white);
+    background-color: var(--dark-orange);
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.banner{
+    width: 100%;
+    height: 15vh;
+    background-color: var(--dark-orange);
+    border-radius: 30px;
+}
+.menu-list{
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 20px;
+    row-gap: 30px;
+}
+.menu-list .list{
+    width: 100%;
+    height: 32vh;
+    background-color: #222222;
+}
+
+/* SIDE PAGE (PIE CHART) */
+.user-profile{
+    text-align: right;
+}
+.image{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: var(--black);
+    border-radius: 100%;
+    border: 1px solid var(--grey);
+}
+
+/* PIE CHART */
+.container{
+    padding: 20px;
+    margin-top: 25px;
+    width: 100%;
+    height: 50vh;
+    background-color: var(--light-orange);
+    border-radius: 25px;
+    display: grid;
+    row-gap: 20px;
+}
+/* .pie-chart{
+    width: 100%;
+    height: 100%;
+    background-color: var(--black);
+    border-radius: 100%;
+} */
+.pie-chart {
+    /* background: conic-gradient(var(--food-cream) 90deg, var(--food-green) 90deg, var(--food-orange) 90deg, var(--food-purple) 90deg); */
+    background: conic-gradient(var(--food-cream) 0 4%, var(--food-green) 0 8%, var(--food-orange) 0 17%, var(--food-purple) 0 48%, #b276b2 0 54%, #faa43a 0);
+    border-radius: 50%;
+    width: 13vw;
+    height: 13vw;
+    padding-top: 50%;
+    margin: 0 auto;
+}
+.information{
+    width: 100%;
+    height: 15vh;
+    background-color: var(--white);
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 20px;
+    row-gap: 15px;
+}
+.nutrient{
+    display: grid;
+    grid-template-columns: 20% auto;
+}
+.color-nutrient{
+    margin-top: 2px;
+    width: 15px;
+    height: 15px;
+    border-radius: 2px;
+}
+
+/* Color Information (Nutrient) */
+.food-cream{
+    background-color: var(--food-cream);
+}
+.food-orange{
+    background-color: var(--food-orange);
+}
+.food-purple{
+    background-color: var(--food-purple)
+}
+.food-green{
+    background-color: var(--food-green);
+}
+
+/* Pie Chart Information (Calories, Carbs, etc) */
+.nutrient-title{
+    font-weight: 700;
+    font-size: 14px;   
+    color: var(--black);
+}
+.nutrient-amount{
+    font-weight: 500;
+    font-size: 10px;
+    color: var(--dark-grey);  
+}
+
+/* FOOD AND DRINK PHP */
+.background-image{
+    position: fixed;
+    margin-left: 20vw;
+    width: 81vw;
+    height: 100vh;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    padding: 50px 40px;
+    filter: brightness(50%);
+    overflow: hidden;
+}
+.main-page-large{
+    width: 81vw;
+    height: 100vh;
+    padding: 55px 70px 50px 70px;
+    z-index: 100;
+    color: white;
+
+    /* Divide into 2 up & down section */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.upper-section{
+    width: 65vw;
+}
+.like-count{
+    margin-top: 30px;
+    width: 200px;
+    height: 40px;
+    background-color: var(--white);
+    border-radius: 20px;
+}
+.lower-section{
+    display: flex;
+    justify-content: center;
+}
+.start-cooking-button{
+    font-family: var(--sansserif-font);
+    font-weight: 700;
+    font-size: 16px;
+    width: 200px;
+    height: 40px;
+    background-color: var(--dark-orange);
+    border-radius: 25px;
+    cursor: pointer;
+    filter: drop-shadow(0px 5px 3px rgba(0, 0, 0, 0.25));
+}
+.nutrient-fact{
+    position: absolute;
+    right: 70px;
+    bottom: 50px;
+    background-color: var(--white);
+    width: 250px;
+    height: 130px;
+}

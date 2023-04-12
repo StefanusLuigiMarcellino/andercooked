@@ -1,0 +1,30 @@
+/* create css here */
+:root{
+    /* Color */
+    --black: #222222;
+    --semi-white: #F6F6F6;
+    --white: #FFFFFF;
+    --grey: #C3C3C3;
+    --dark-grey: #86817F;
+    --dark-green: #005247;
+    --med-green: #4B8077;
+    --light-green: #00A043;
+    --dark-orange: #FD9303;
+    --light-orange: #FFF8EE;
+    --cream: #FDECCE;
+    --light-red: #CD6C8C;
+
+    /* Calories, Fats, Carbo, Protein Color */
+    --food-cream: #FDECCE;
+    --food-orange: #FE8E04;
+    --food-purple: #7D60F8;
+    --food-green: #00A043;
+
+    /* Font */
+    --serif-font: 'Libre Baskerville', serif;
+    --sansserif-font: 'Plus Jakarta Sans', sans-serif;
+}
+
+body{
+    background-color: green;
+}
