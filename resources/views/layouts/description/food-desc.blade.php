@@ -1,7 +1,9 @@
 @extends('templates.2-row')
 
 @section('main-section')
-    <div class="background-image" style="background-image: url('../assets/food-pics/foodexample.png');"></div>
+    <div class="background-image">
+        <img src="../assets/food-pics/foodexample.png" alt="">
+    </div>
     <div class="main-page-large">
         <div class="upper-section">
             <div class="header-font-serif white">Chicken & Spinach Skillet Pasta with Lemon & Parmesan</div>

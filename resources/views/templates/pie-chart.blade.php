@@ -4,7 +4,7 @@
         <a href="/profile"><div class="image"></div></a>
     </div>
 
-    <div class="header-font m-50">Weekly Report</div>
+    <div class="header-font margin-20">Weekly Report</div>
 
     <div class="container">
         <div class="pie-chart"></div>
