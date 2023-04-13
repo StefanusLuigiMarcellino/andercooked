@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// nanti semua di masukin di AnderCookedController.php 
+// nanti semua di masukin di AnderCookedController.php
 
 Route::get('/', function () {
     return view('welcome');
