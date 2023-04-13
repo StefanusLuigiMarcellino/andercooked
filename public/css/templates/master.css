@@ -56,7 +56,7 @@ html{
 }
 body{
     font-family: var(--sansserif-font);
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     min-height: 100%;
 }
 button{
@@ -70,23 +70,23 @@ button{
 .header-font{
     font-family: var(--sansserif-font);
     font-weight: 700;
-    font-size: 30px;
+    font-size: 24px;
 }
 .search-font{
     font-family: var(--sansserif-font);
     font-weight: 400;
-    font-size: 18px;
+    font-size: 14px;
 }
 .header-font-serif{
     font-family: var(--serif-font);
     font-weight: 700;
-    font-size: 30px;
+    font-size: 26px;
 }
 .description-font-serif{
-    margin-top: 30px;
+    margin-top: 20px;
     font-family: var(--serif-font);
-    font-weight: 500;
-    font-size: 18px;   
+    font-weight: 400;
+    font-size: 14px;   
 }
 
 /* Font Color */
@@ -107,13 +107,19 @@ button{
 }
 
 /* Margin Top */
-.m-50{
-    margin-top: 50px;
+.margin-1{
+    margin-top: 1vw;
 }
-.m-40{
-    margin-top: 40px;
+.margin-2{
+    margin-top: 2vw;
 }
-.m-100{
+.margin-3{
+    margin-top: 3vw;
+}
+.margin-4{
+    margin-top: 3vw;
+}
+.margin-100{
     margin-top: 100px;
 }
 
@@ -121,28 +127,31 @@ button{
 .columns{
     display: flex !important;
 }
+.column{
+    padding: 0 !important;
+}
 .row{
     display: flex;
 }
 .main-page{
     /* margin-left: 20vw;; */
     width: 55vw;
-    height: 129vh;
+    height: auto;
     background-color: var(--semi-white);
-    padding: 50px 40px;
+    padding: 60px 2vw;
 }
 .side-page{
-    width: 26vw;
-    height: 129vh;
+    /* width: 26vw;
+    height: 100vh; */
     background-color: var(--white);
-    padding: 50px 35px;
+    padding: 4vw 2vw;
 }
 
 .search-bar{
     display: grid;
     grid-template-columns: 6% auto 10%;
     width: 100%;
-    height: 40px;
+    height: 35px;
     background-color: var(--white);
     border-radius: 25px;
     padding: 0 20px 0 25px;
@@ -159,7 +168,7 @@ button{
     font-size: 12px;
     color: var(--white);
     background-color: var(--dark-orange);
-    padding: 5px 10px;
+    padding: 3px 10px;
     border-radius: 20px;
     cursor: pointer;
 }
@@ -168,7 +177,7 @@ button{
     width: 100%;
     height: 15vh;
     background-color: var(--dark-orange);
-    border-radius: 30px;
+    border-radius: 20px;
 }
 .menu-list{
     display: grid;
@@ -200,7 +209,7 @@ button{
     padding: 20px;
     margin-top: 25px;
     width: 100%;
-    height: 50vh;
+    height: 70vh;
     background-color: var(--light-orange);
     border-radius: 25px;
     display: grid;
@@ -223,13 +232,13 @@ button{
 }
 .information{
     width: 100%;
-    height: 15vh;
+    height: auto;
     background-color: var(--white);
     border-radius: 20px;
     display: grid;
     grid-template-columns: auto auto;
     padding: 20px;
-    row-gap: 15px;
+    row-gap: 0px;
 }
 .nutrient{
     display: grid;
@@ -270,20 +279,20 @@ button{
 
 /* FOOD AND DRINK PHP */
 .background-image{
+    z-index: -1;
     position: fixed;
-    margin-left: 20vw;
-    width: 81vw;
-    height: 100vh;
+    width: auto;
+    height: 100%;
     background-size: 100% auto;
     background-repeat: no-repeat;
-    padding: 50px 40px;
+    /* padding: 50px 40px; */
     filter: brightness(50%);
     overflow: hidden;
 }
 .main-page-large{
     width: 81vw;
     height: 100vh;
-    padding: 55px 70px 50px 70px;
+    padding: 55px 70px 1.5vw 70px;
     z-index: 100;
     color: white;
 
@@ -293,10 +302,10 @@ button{
     justify-content: space-between;
 }
 .upper-section{
-    width: 65vw;
+    width: 62vw;
 }
 .like-count{
-    margin-top: 30px;
+    margin-top: 1.5vw;
     width: 200px;
     height: 40px;
     background-color: var(--white);
@@ -310,8 +319,8 @@ button{
     font-family: var(--sansserif-font);
     font-weight: 700;
     font-size: 16px;
-    width: 200px;
-    height: 40px;
+    width: 180px;
+    height: 35px;
     background-color: var(--dark-orange);
     border-radius: 25px;
     cursor: pointer;
@@ -320,7 +329,7 @@ button{
 .nutrient-fact{
     position: absolute;
     right: 70px;
-    bottom: 50px;
+    bottom: 30px;
     background-color: var(--white);
     width: 250px;
     height: 130px;

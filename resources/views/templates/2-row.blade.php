@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="node_modules/bulma/css/bulma.min.css">
     <link rel="stylesheet" href="css/templates/master.css">
     <link rel="stylesheet" href="css/templates/sidebar.css">
     <link rel="stylesheet" href="css/templates/data-aos.css">
@@ -12,9 +13,9 @@
 <body>
     <div class="columns">
         {{-- LEFT SIDE --}}
-        <div class="column">
+        {{-- <div class="column"> --}}
             @include('templates.sidebar')
-        </div>
+        {{-- </div> --}}
 
         {{-- MAIN SIDE --}}
         {{-- notes: ini aku tambahin div.column di baris 21 tapi malah jadinya ancur, jadi sementara ga pake dulu --}}

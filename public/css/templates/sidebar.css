@@ -5,13 +5,13 @@
 .sidebar-heading{
     font-family: var(--sansserif-font);
     font-weight: 600;
-    font-size: 22px;
+    font-size: 20px;
     text-transform: uppercase;
 }
 .sidebar-subheading{
     font-family: var(--sansserif-font);
     font-weight: 500;
-    font-size: 20px;
+    font-size: 16px;
 }
 .subhead-active{
     font-weight: 700 !important;
@@ -24,22 +24,20 @@
 /* CSS Code */
 .sidebar{
     width: 20vw;
-    height: 100vh;
+    height: 100vw;
     background-color: var(--white);
-    /* overflow: hidden; */
-    /* position: fixed; */
-    padding-top: 50px;
-    /* padding: 50px 0px 50px 30px; */
+    /* padding-top: 5vh; */
+    padding: 3vw 1vw;
 }
 .menu-item{
-    margin-top: 50px;
+    margin-top: 4vh;
     display: grid;
-    row-gap: 30px;
+    row-gap: 2vh;
 }
 .list-menu{
     display: grid;
-    row-gap: 10px;
-    margin-top: 0px;
+    row-gap: 1vh;
+    margin-top: 1vh;
     padding: 0 10px;
 }
 .menu-content{
@@ -62,8 +60,12 @@
 .menu-content path:hover{
     fill: var(--dark-green);
 }
-.m-30{
+.margin-30{
     margin-left: 30px;
+}
+
+.content{
+    margin-top: 4vh;
 }
 
 /* SVG Config */
