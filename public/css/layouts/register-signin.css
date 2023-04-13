@@ -25,6 +25,36 @@
     --sansserif-font: 'Plus Jakarta Sans', sans-serif;
 }
 
-body{
+/* body{
     background-color: red;
+} */
+
+.bgImage{
+    display: flex;
+    justify-content: center;
+    padding-top: 45px;
+}
+
+.pembungkus{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.image{
+    position: absolute;
+    z-index: -1;
+}
+
+.kotak1{
+    padding-top: 50px;
+    padding-left: 50px;
+}
+
+.kotak2{
+    width: 800px;
+}
+
+.control input{
+    border-color: black;
+    border-radius: 10px;
 }
