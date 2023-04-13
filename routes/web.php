@@ -59,3 +59,4 @@ Route::get('/food', function () {
 Route::get('/register', function () {
     return view('layouts.register-signin.register');
 });
+
