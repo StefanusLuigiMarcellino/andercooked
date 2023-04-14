@@ -19,6 +19,10 @@ class Menu extends Model
     }
 
     public function histories(){
-        return $this->hasMany(Category::class, 'category_id');
+        return $this->hasMany(History::class);
+    }
+
+    public function favorites(){
+        return $this->hasMany(Favorite::class);
     }
 }
