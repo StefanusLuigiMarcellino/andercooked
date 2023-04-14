@@ -77,6 +77,17 @@ button{
     font-weight: 400;
     font-size: 14px;
 }
+.title-font{
+    font-family: var(--sansserif-font);
+    font-weight: 600;
+    font-size: 20px;
+}
+.sub-title-font{
+    font-family: var(--sansserif-font);
+    font-weight: 500;
+    font-size: 12px;
+    color: var(--grey);
+}
 .header-font-serif{
     font-family: var(--serif-font);
     font-weight: 700;
@@ -126,6 +137,7 @@ button{
 /* Home 3 Row Template */
 .columns{
     display: flex !important;
+    height: auto !important;
 }
 .column{
     padding: 0 !important;
@@ -135,14 +147,14 @@ button{
 }
 .main-page{
     /* margin-left: 20vw;; */
-    width: 55vw;
+    width: 58vw;
     height: auto;
     background-color: var(--semi-white);
-    padding: 60px 2vw;
+    padding: 60px 3vw;
 }
 .side-page{
-    /* width: 26vw;
-    height: 100vh; */
+    width: 26vw;
+    /* height: 100vh; */
     background-color: var(--white);
     padding: 4vw 2vw;
 }
@@ -151,7 +163,7 @@ button{
     display: grid;
     grid-template-columns: 6% auto 10%;
     width: 100%;
-    height: 35px;
+    height: 40px;
     background-color: var(--white);
     border-radius: 25px;
     padding: 0 20px 0 25px;
@@ -178,6 +190,13 @@ button{
     height: 15vh;
     background-color: var(--dark-orange);
     border-radius: 20px;
+    padding: 20px 35px;
+    display: grid;
+    grid-template-columns: 90% 10%;
+}
+.add-btn{
+    display: flex;
+    align-items: center;
 }
 .menu-list{
     display: grid;
@@ -187,8 +206,54 @@ button{
 }
 .menu-list .list{
     width: 100%;
-    height: 32vh;
-    background-color: #222222;
+    height: 35vh;
+    border-radius: 25px;
+    
+    /* background-color: #222222; */
+
+    /* background-image: url('../../assets/food-pics/foodexample.png'); */
+}
+.image-wrapper{
+    width: 100%;
+    height: 35vh;
+    overflow: hidden;
+    border-radius: 25px
+}
+.list img{
+    width: 100%;
+    height: 35vh;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+.list img:hover{
+    transform: scale(1.1);
+}
+.filter{
+    position: absolute;
+    z-index: 101;
+    width: 100%;
+    height: 35vh;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 19.13%, #000000 105.45%);    border-radius: 25px;
+}
+.list-information{
+    display: grid;
+    grid-template-columns: 90% 10%;
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    background-color: var(--white);
+    z-index: 100;
+    bottom: -1px;
+    border-radius: 25px;
+    padding: 13px 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-list{
+    position: absolute;
+    right: 30px;
+    bottom: 13px;
 }
 
 /* SIDE PAGE (PIE CHART) */
@@ -206,10 +271,10 @@ button{
 
 /* PIE CHART */
 .container{
-    padding: 20px;
+    padding: 30px 20px;
     margin-top: 25px;
     width: 100%;
-    height: 70vh;
+    height: 60vh;
     background-color: var(--light-orange);
     border-radius: 25px;
     display: grid;
@@ -232,13 +297,14 @@ button{
 }
 .information{
     width: 100%;
-    height: auto;
+    height: 8vw;
     background-color: var(--white);
     border-radius: 20px;
     display: grid;
     grid-template-columns: auto auto;
-    padding: 20px;
+    padding: 20px 25px;
     row-gap: 0px;
+    column-gap: 50px;
 }
 .nutrient{
     display: grid;
