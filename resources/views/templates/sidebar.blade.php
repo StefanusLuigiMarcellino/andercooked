@@ -1,10 +1,10 @@
 {{-- SIDEBAR --}}
 <div class="sidebar" data-aos="fade-right">
     <div class="position-fixed">
-        <a href="/home"><div class="logo m-30"><img src="/assets/logo/AnderCooked.png" alt="" width="233px"></div></a>
+        <a href="/home"><div class="logo margin-30"><img src="/assets/logo/full-logo.svg" alt="" width="90%"></div></a>
 
         <div class="menu-item">
-            <div class="sidebar-heading black m-30">Quick Menu</div>
+            <div class="sidebar-heading black margin-30">Quick Menu</div>
             <div class="list-menu">
                 <a href="/home"><div class="menu-content" id="menu-content">
                     @include('icons.home')
@@ -26,7 +26,7 @@
         </div>
 
         <div class="menu-item">
-            <div class="sidebar-heading black m-30">Category</div>
+            <div class="sidebar-heading black margin-30">Category</div>
             <div class="list-menu">
                 <a href="/food"><div class="menu-content" id="menu-content">
                     @include('icons.food')
