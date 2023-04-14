@@ -1,5 +1,6 @@
 .position-fixed{
     position: fixed;
+    width: 15vw;
 }
 /* Sidebar Heading */
 .sidebar-heading{
@@ -23,7 +24,7 @@
 
 /* CSS Code */
 .sidebar{
-    width: 20vw;
+    width: 18vw;
     height: 100vw;
     background-color: var(--white);
     /* padding-top: 5vh; */
