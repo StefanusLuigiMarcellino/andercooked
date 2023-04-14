@@ -13,4 +13,8 @@ class History extends Model
     public function users(){
         return $this->belongsTo(User::class, 'user_id');
     }
+
+    public function menus(){
+        return $this->belongsTo(Menu::class, 'menu_id');
+    }
 }

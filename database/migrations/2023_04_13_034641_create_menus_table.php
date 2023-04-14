@@ -18,11 +18,11 @@ return new class extends Migration
             $table->foreignId('category_id');
             $table->foreignId('user_id');
             $table->string('menu_name');
-            $table->string('description');
+            $table->text('description');
             $table->date('published_at');
             $table->integer('total_of_likes');
-            $table->string('ingredients');
-            $table->string('cooking_steps');
+            $table->text('ingredients');
+            $table->text('cooking_steps');
             $table->integer('calories');
             $table->integer('carbohydrates');
             $table->integer('protein');
