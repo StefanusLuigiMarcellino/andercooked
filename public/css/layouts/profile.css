@@ -26,5 +26,116 @@
 }
 
 body{
-    background-color: green;
+    background-color: #F6F6F6;
+}
+
+.header{
+    margin-top: 4.8vw;
+    margin-left: 4vw;
+}
+
+.header h3{
+    font-size: 1.7vw;
+}
+
+.form-wrapper{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 2.3vw 3.5vw;
+    width: 48.75vw;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    height: 40.5vw;
+}
+
+.form-title{
+    font-size: 1.28vw;
+    font-weight: 700;
+    margin-bottom: 2.5vw;
+}
+
+.profile-picture{
+    display: flex;
+    flex-direction: row;
+    width: 23vw;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-picture img{
+    width: 5.5vw;
+    border-radius: 50%;
+}
+
+.button-green{
+    background-color: var(--med-green);
+    color: white;
+    height: fit-content;
+    border: 1px var(--med-green) solid;
+    padding: 0.6vw 1.3vw;
+    font-family: var(--sansserif-font);
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.7vw;
+}
+
+.button-white{
+    background-color: white;
+    color: #A0A1A8;
+    border: 1px #A0A1A8 solid;
+    height: fit-content;
+    padding: 0.6vw 1.3vw;
+    font-family: var(--sansserif-font);
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.7vw;
+}
+
+.field{
+    margin-top: 1.5vw;
+}
+
+.line{
+    position: relative;
+    display: block;
+    margin: 3.5vw 0 2vw -3.5vw;
+    width: 48.75vw;
+    border-top: 1px #CCCCC3 solid;
+}
+
+.wrapper-button{
+    position: relative;
+    display: flex;
+    width: 13vw;
+    justify-content: space-between;
+    margin-left: 28.5vw;
+}
+
+.right-form-wrapper{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 2.3vw 2vw;
+    width: 24vw;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    height: 40.5vw;
+}
+
+.required-tag{
+    color: red;
+}
+
+.line-2{
+    position: relative;
+    display: block;
+    margin: 10.5vw 0 2vw -2vw;
+    width: 24vw;
+    border-top: 1px #CCCCC3 solid;
+}
+
+.save-button{
+    display: flex;
+    justify-content: flex-end;
 }
