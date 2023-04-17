@@ -57,6 +57,13 @@ Route::get('/food', function () {
 });
 
 Route::get('/register', function () {
-    return view('layouts.register-signin.register');
+    return view('layouts.register-signin.register', [
+        "title" => "Register"
+    ]);
 });
 
+Route::get('/signin ', function () {
+    return view('layouts.register-signin.signin', [
+        "title" => "SignIn"
+    ]);
+});
