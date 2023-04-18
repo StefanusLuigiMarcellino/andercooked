@@ -20,7 +20,7 @@
         </div>
 
         <div class="cooking-menus margin-2">
-            <div class="header-font">Top Cooking Recipes</div>
+            <div class="header-font">Result for: ... kalo kosong kasi tampilan apa?</div>
             <div class="menu-list margin-2">
 
                 @for ($i = 0; $i < 10; $i++) 
@@ -35,7 +35,7 @@
                                 <div class="sub-title-font">129cal</div>
                             </div>
                             <div class="right-list">    
-                                @include('icons.like')
+                                @include('icons.loveTEMP')
                                 {{-- notes: nanti akan dibuat animasi spt ini -->https://codepen.io/pugson/pen/wMBjLz --}}
                             </div>
                         </div>
