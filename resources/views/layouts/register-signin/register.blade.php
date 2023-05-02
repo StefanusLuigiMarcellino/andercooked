@@ -2,13 +2,13 @@
 
 @section('registsignin')
 
-<div class="container pb-3 pt-3 is-centered">
-    <div class="pembungkus grid">
-        <div class="kotak1 is-4 mt-3">
+<div class="container pt-5 pb-5 is-centered" data-aos="fade-up">
+    <div class="pembungkus grid mb-2">
+        <div class="kotak1 is-4">
             <form action="">
                 <div class="field">
-                    <h1 class="header-font pt-3">Create an account</h1>
-                    <h2>Please Enter Your Details</h2>
+                    <h1 class="header-font">Create an account</h1>
+                    <h2 class="subheader-font">Please enter your details</h2>
                 </div>
                 <div class="keterangan">
                     <div class="field">
@@ -44,31 +44,34 @@
                         </div>
                     </div>
                 </div>
-                <div class="field">
-                    <label for="" class="SK pt-3">
+
+                <div class="terms-condition mt-3">
+                    <table>
                         <tr>
-                            <th>
-                                <input type="checkbox" name="" id="" class="">
-                            </th>
-                            <th>
-                                I agree to the Term and Conditions
-                            </th>
-                            </tr>
-                    </label>
+                            <div style="display: flex;">
+                                <input type="checkbox" name="TNC" id="TNC" value="1" style="margin-bottom: auto; margin-top: auto;">
+                                <label for="TNC">I agree with the</label> 
+                                <a href="#" class="tnc">Terms and Conditions</a>
+                            </div>
+                        </tr>                    
+                    </table>
                 </div>
-                <div class="field mb-2 is-centered">
+
+                <div class="field mb-2 mt-5 is-centered">
                     <label for="" class=" ">
                         <div class="control">
                             <a href="">
-                                <button class="regist mb-2 font">Create Account</button>
+                                <button class="regist font">Create Account</button>
                             </a>
                         </div>
                     </label>
                 </div>
             </form>
         </div>
-        <div class="kotak2 is-4">
-            <img src="assets/food-pics/foodexample.png" alt="">
+        <div class="" style="padding: 0 25px;">
+            <div class="kotak2">
+                <img class="" src="assets/menu-pics/90.jpg" alt="">
+            </div>
         </div>
     </div>
 </div>

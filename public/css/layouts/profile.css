@@ -13,6 +13,7 @@
     --light-orange: #FFF8EE;
     --cream: #FDECCE;
     --light-red: #CD6C8C;
+    --hover-grey: #F0F0F0;
 
     /* Calories, Fats, Carbo, Protein Color */
     --food-cream: #FDECCE;
@@ -26,7 +27,7 @@
 }
 
 body{
-    background-color: #F6F6F6;
+    background-color: var(--white);
 }
 
 .header{
@@ -38,6 +39,11 @@ body{
     font-size: 1.7vw;
 }
 
+.up-wrapper{
+    width: 100%;
+    height: 95vh;
+    /* background-color: red; */
+}
 .form-wrapper{
     position: relative;
     display: flex;
@@ -46,11 +52,10 @@ body{
     width: 48.75vw;
     background-color: #FFFFFF;
     border-radius: 20px;
-    height: 40.5vw;
+    height: 88vh;
 }
 
 .form-title{
-    font-size: 1.28vw;
     font-weight: 700;
     margin-bottom: 2.5vw;
 }
@@ -58,7 +63,7 @@ body{
 .profile-picture{
     display: flex;
     flex-direction: row;
-    width: 23vw;
+    width: 22vw;
     justify-content: space-between;
     align-items: center;
 }
@@ -79,6 +84,28 @@ body{
     font-weight: 600;
     font-size: 0.7vw;
 }
+.button-green:hover{
+    opacity: 0.9;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.button-semi-green{
+    background-color: var(--white);
+    color: var(--med-green);
+    height: fit-content;
+    border: 1px var(--med-green) solid;
+    padding: 0.6vw 1.3vw;
+    font-family: var(--sansserif-font);
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.7vw;
+}
+.button-semi-green:hover{
+    background-color: var(--hover-grey);
+}
 
 .button-white{
     background-color: white;
@@ -91,6 +118,16 @@ body{
     font-weight: 600;
     font-size: 0.7vw;
 }
+.del:hover{
+    background-color: var(--hover-grey);
+    border: 1px solid var(--light-red);
+    color: var(--light-red);
+}
+.save:hover{
+    background-color: var(--hover-grey);
+    border: 1px solid var(--med-green);
+    color: var(--med-green);
+}
 
 .field{
     margin-top: 1.5vw;
@@ -99,7 +136,7 @@ body{
 .line{
     position: relative;
     display: block;
-    margin: 3.5vw 0 2vw -3.5vw;
+    margin: 0vw 0 2vw -3.5vw;
     width: 48.75vw;
     border-top: 1px #CCCCC3 solid;
 }
@@ -120,7 +157,8 @@ body{
     width: 24vw;
     background-color: #FFFFFF;
     border-radius: 20px;
-    height: 40.5vw;
+    /* height: 40.5vw; */
+    height: 88vh;
 }
 
 .required-tag{
@@ -138,4 +176,8 @@ body{
 .save-button{
     display: flex;
     justify-content: flex-end;
+}
+
+.control input{
+    border-radius: 10px;
 }

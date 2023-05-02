@@ -25,6 +25,19 @@
     --sansserif-font: 'Plus Jakarta Sans', sans-serif;
 }
 
-body{
-    background-color: purple;
+.header{
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+.main-section{
+    padding: 60px 2.5vw;
+    background-color: var(--semi-white);
+    height: 100%;
+}
+
+.menu-list-large{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 20px;
+    row-gap: 30px;
 }

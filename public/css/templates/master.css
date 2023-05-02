@@ -6,16 +6,16 @@
 }
   
 ::-webkit-scrollbar-track {
-    background-color: #f1f1f1;
+    background-color: none;
 }
   
 ::-webkit-scrollbar-thumb {
-    background-color: #888;
+    background-color: #C7C7C7;
     border-radius: 5px;
 }
   
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #555;
+    background-color: #747775;
 }
 
 /* Base Template */
@@ -33,6 +33,7 @@
     --light-orange: #FFF8EE;
     --cream: #FDECCE;
     --light-red: #CD6C8C;
+    --hover-grey: #F0F0F0;
 
     /* Calories, Fats, Carbo, Protein Color */
     --food-cream: #FDECCE;
@@ -65,8 +66,21 @@ button{
     text-decoration: none;
     border: none;
 }
+.has-background-semi-white{
+    background-color: var(--semi-white);
+}
 
 /* Headings */
+.fallback-font{
+    font-family: var(--sansserif-font);
+    font-weight: 800;
+    font-size: 64px;  
+}
+.sub-fallback-font{
+    font-family: var(--sansserif-font);
+    font-weight: 500;
+    font-size: 20px;
+}
 .header-font{
     font-family: var(--sansserif-font);
     font-weight: 700;
@@ -80,7 +94,14 @@ button{
 .title-font{
     font-family: var(--sansserif-font);
     font-weight: 600;
-    font-size: 20px;
+    font-size: 18px;
+}
+.profile-font{
+    width: 55px;
+    overflow: hidden;
+    font-family: var(--sansserif-font);
+    font-weight: 500;
+    font-size: 16px;
 }
 .sub-title-font{
     font-family: var(--sansserif-font);
@@ -92,6 +113,16 @@ button{
     font-family: var(--serif-font);
     font-weight: 700;
     font-size: 30px;
+}
+.title-recipe-font{
+    font-family: var(--sansserif-font);
+    font-weight: 600;
+    font-size: 20px;
+}
+.subtitle-recipe-font{
+    font-family: var(--sansserif-font);
+    font-weight: 500;
+    font-size: 14px;
 }
 .subheader-font-serif{
     font-family: var(--serif-font);
@@ -118,6 +149,9 @@ button{
 .grey{
     color: var(--grey);
 }
+.dark-grey{
+    color: var(--dark-grey);
+}
 .white{
     color: var(--white);
 }
@@ -133,7 +167,7 @@ button{
     margin-top: 3vw;
 }
 .margin-4{
-    margin-top: 3vw;
+    margin-top: 4vw;
 }
 .margin-100{
     margin-top: 100px;
@@ -152,13 +186,13 @@ button{
 }
 .main-page{
     /* margin-left: 20vw;; */
-    width: 58vw;
-    height: auto;
+    /* width: 58vw; */
+    height: 100%;
     background-color: var(--semi-white);
     padding: 60px 3vw;
 }
 .side-page{
-    width: 26vw;
+    /* width: 26vw; */
     /* height: 100vh; */
     background-color: var(--white);
     padding: 4vw 2vw;
@@ -189,6 +223,9 @@ button{
     border-radius: 20px;
     cursor: pointer;
 }
+.search-bar .search-button:hover{
+    opacity: 0.75;
+}
 ::-webkit-search-cancel-button {
     -webkit-appearance: none;
     appearance: none;
@@ -207,21 +244,29 @@ button{
 .add-btn{
     display: flex;
     align-items: center;
+    transition: 0.3s;
+}
+.add-btn:hover{
+    transform: scale(1.05);
 }
 .menu-list{
     display: grid;
     grid-template-columns: auto auto;
     column-gap: 20px;
-    row-gap: 30px;
+    row-gap: 30px;  
 }
 .menu-list .list{
-    width: 100%;
+    /* width: 100%; */
     height: 35vh;
     border-radius: 25px;
     
     /* background-color: #222222; */
 
     /* background-image: url('../../assets/food-pics/foodexample.png'); */
+}
+a{
+    margin: 0 !important;
+    padding: 0 !important;
 }
 .image-wrapper{
     width: 100%;
@@ -230,8 +275,9 @@ button{
     border-radius: 25px
 }
 .list img{
+    margin-top: -50px;
     width: 100%;
-    height: 35vh;
+    height: auto;
     border-radius: 25px;
     transition: 0.3s;
 }
@@ -250,7 +296,7 @@ button{
     grid-template-columns: 90% 10%;
     position: absolute;
     width: 100%;
-    height: 80px;
+    height: 90px;
     background-color: var(--white);
     z-index: 100;
     bottom: -1px;
@@ -264,19 +310,85 @@ button{
     position: absolute;
     right: 30px;
     bottom: 13px;
+    cursor: pointer;
 }
 
 /* SIDE PAGE (PIE CHART) */
 .user-profile{
-    text-align: right;
+    width: 120px;
+    height: 30px;
+    border-radius: 40px;
+    background-color: #282828;
+    display: flex;
+    /* justify-content: flex-end; */
+    align-items: center;
+    padding: 3.8px;
+    margin: 0 0 0 auto;
+    cursor: pointer;
+}
+.user-profile:hover{
+    /* background-color: #282828; */
+    opacity: 0.85;
 }
 .image{
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    background-color: var(--black);
+    width: 25px;
+    height: 25px;
+    background-color: var(--white);
     border-radius: 100%;
-    border: 1px solid var(--grey);
+    /* border: 1px solid var(--grey); */
+}
+
+.user-profile-setting{
+    position: absolute;
+    z-index: 100;
+    width: 170px;
+    /* margin-top: 5px; */
+    height: 100px;
+    border-radius: 5px;
+    background-color: #484848;
+    right: 20px;
+    display: grid;
+    padding: 4px;
+    filter: drop-shadow(0px 5px 3px rgba(0, 0, 0, 0.25));
+}
+.margin1{
+    margin-top: 5px;
+}
+.margin2{
+    margin-top: 35px;
+}
+.profile-list{
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+}
+.profile-list:hover{
+    background-color: #7C7C7C;
+    border-radius: 3px;
+}
+.user-profile-setting .line{
+    width: 100%;
+    height: 1px;
+    background-color: var(--grey);
+}
+.menu{
+    margin-left: 10px;
+    font-family: var(--sansserif-font);
+    font-weight: 400;
+    font-size: 14px;
+}
+.hidden{
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+.rotate-normal{
+    transform: none;
+    transition: 0.2s;
+}
+.rotate-upside-down{
+    transform: rotate(180deg);
+    transition: 0.2s;
 }
 
 /* PIE CHART */
@@ -319,6 +431,7 @@ button{
 .nutrient{
     display: grid;
     grid-template-columns: 20% auto;
+    column-gap: 7px;
 }
 .color-nutrient{
     margin-top: 2px;
@@ -345,27 +458,31 @@ button{
 .nutrient-title{
     font-weight: 700;
     font-size: 14px;   
-    color: var(--black);
+    /* color: var(--black); */
 }
 .nutrient-amount{
     font-weight: 500;
     font-size: 10px;
-    color: var(--dark-grey);  
+    /* color: var(--dark-grey);   */
 }
 
 /* FOOD AND DRINK PHP */
 .background-image{
-    z-index: -1;
+    z-index: -100;
     position: fixed;
     width: auto;
     height: 100%;
-    left: 15vw;
+    left: 16.66667%;
     bottom: 0;
     background-size: 100% auto;
     background-repeat: no-repeat;
     /* padding: 50px 40px; */
-    filter: brightness(70%);
+    filter: brightness(45%);
     overflow: hidden;
+}
+.background-image img{
+    width: 100vw;
+    /* height: 100%; */
 }
 .main-page-large{
     width: 84vw;
@@ -388,6 +505,17 @@ button{
     height: 40px;
     background-color: var(--white);
     border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.gap-10{
+    gap: 10px;
+}
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .lower-section{
     display: flex;
@@ -404,11 +532,69 @@ button{
     cursor: pointer;
     filter: drop-shadow(0px 5px 3px rgba(0, 0, 0, 0.25));
 }
+.start-cooking-button:hover{
+    opacity: 0.8;
+}
 .nutrient-fact{
     position: absolute;
     right: 70px;
     bottom: 30px;
-    background-color: var(--white);
-    width: 250px;
-    height: 130px;
+    border: 3px solid var(--white);
+    border-radius: 20px;
+    width: 18vw;
+    height: auto;
+    padding: 0.8rem 1.5rem;
 }
+.nutrient-fact h3{
+    font-weight: 700;
+    font-size: 20px;
+}
+.nutrient-contents{
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 40px;
+}
+.content-wrapper{
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 10px;
+    row-gap: 5px;
+}
+.nutrient-box{
+    width: 15px;
+    height: 15px;
+    border-radius: 2px;
+}
+
+
+/* FALLBACK SECTION */
+.fallback-section{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--semi-white);
+    text-align: center;
+    /* padding-top: 9vw; */
+    align-items: center;
+    /* padding-bottom: auto; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.home-button{
+    margin-top: 50px;
+    margin-bottom: 70px;
+    background-color: var(--med-green);
+    width: 150px;
+    height: 60px;
+    border-radius: 220px;
+    font-weight: 700;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.home-button:hover{
+    opacity: 0.9;
+    box-shadow:  14px 14px 28px #cccccc,
+    -14px -14px 28px #f4f4f4;
+}
+
