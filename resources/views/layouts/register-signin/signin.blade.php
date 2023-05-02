@@ -2,13 +2,13 @@
 
 @section('registsignin')
 
-<div class="container is-centered">
+<div class="container pt-5 pb-5 is-centered" data-aos="fade-up">
     <div class="pembungkus grid">
         <div class="kotak1 is-4 mt-3">
             <form action="">
                 <div class="field">
-                    <h1 class="header-font pt-3">Welcome Back!</h1>
-                    <h2>Please Enter Your Details</h2>
+                    <h1 class="header-font">Welcome Back!</h1>
+                    <h2 class="subheader-font">Please enter your details</h2>
                 </div>
                 <div class="keterangan">
                     <div class="field">
@@ -32,15 +32,17 @@
                     <label for="" class=" ">
                         <div class="control">
                             <a href="">
-                                <button class="regist mt-5 mb-2 font">Log In</button>
+                                <button class="regist mt-5 font">Log In</button>
                             </a>
                         </div>
                     </label>
                 </div>
             </form>
         </div>
-        <div class="kotak2 is-4">
-            <img src="assets/food-pics/foodexample.png" alt="">
+        <div class="" style="padding: 0 25px;">
+            <div class="kotak2">
+                <img class="" src="assets/menu-pics/90.jpg" alt="">
+            </div>
         </div>
     </div>
 </div>

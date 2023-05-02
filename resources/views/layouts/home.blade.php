@@ -5,7 +5,7 @@
     <section class="main-page">
         @include('templates.search')
 
-        <div class="banner margin-3">
+        <div class="banner margin-3" data-aos="zoom-in">
             <div class="text">
                 <div class="header-font white">Create your own recipe</div>
                 <div class="search-font white">Upload your own-home made recipe and share it with other member of our community</div>
@@ -23,31 +23,35 @@
             <div class="header-font">Top Cooking Recipes</div>
             <div class="menu-list margin-2">
 
-                @for ($i = 0; $i < 10; $i++) 
-                    <div class="list" data-aos="zoom-in-up">
-                        <div class="image-wrapper">
-                            <img src="assets/food-pics/foodexample.png" alt="">
+            @for ($i = 1; $i <= 10; $i++) 
+                <div class="list" data-aos="zoom-in-up">
+                    <div class="image-wrapper">
+                        <a href="/menu-details"><img src="assets/menu-pics/{{ $i }}.jpg" alt=""></a>
+                    </div>
+                    <div class="filter"></div>
+                    <div class="list-information">
+                        <div class="left-list">
+                            <div class="title-font">Everything Bagel Crusted Salmon</div>
+                            <div class="sub-title-font">569cal</div>
                         </div>
-                        <div class="filter"></div>
-                        <div class="list-information">
-                            <div class="left-list">
-                                <div class="title-font">Traditional Salad</div>
-                                <div class="sub-title-font">129cal</div>
-                            </div>
-                            <div class="right-list">    
-                                @include('icons.like')
-                                {{-- notes: nanti akan dibuat animasi spt ini -->https://codepen.io/pugson/pen/wMBjLz --}}
-                            </div>
+                        <div class="right-list">    
+                            @include('icons.loveTEMP')
                         </div>
                     </div>
-                @endfor 
-
-            </div>
+                </div>
+            @endfor 
+                {{-- notes: nanti akan dibuat animasi spt ini -->https://codepen.io/pugson/pen/wMBjLz --}}
+            
         </div>
+
+        @include('templates.no-result-display')
     </section>
 @endsection
 
 {{-- Right Section --}}
 @section('right-section')
-    @include('templates.pie-chart')
+    <section class="side-page" data-aos="fade-left">
+        @include('templates.user1-profile')
+        @include('templates.pie-chart')
+    </section>
 @endsection

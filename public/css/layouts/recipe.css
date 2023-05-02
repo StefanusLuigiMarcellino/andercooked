@@ -1,3 +1,6 @@
+.test{
+    height: 1000px;
+}
 /* create css here */
 :root{
     /* Color */
@@ -13,6 +16,7 @@
     --light-orange: #FFF8EE;
     --cream: #FDECCE;
     --light-red: #CD6C8C;
+    --hover-grey: #F0F0F0;
 
     /* Calories, Fats, Carbo, Protein Color */
     --food-cream: #FDECCE;
@@ -26,5 +30,293 @@
 }
 
 body{
-    background-color: red;
+    background-color: white;
+}
+
+.recipe-list{
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 15px;
+}
+.list-detail{
+    display: flex;  
+    width: 100%;
+    height: 150px;
+    background-color: var(--white);
+    border-radius: 25px;
+    padding: 10px;
+    transition: 0.3s;
+}
+/* .list-detail:hover{
+    background-color: var(--hover-grey);
+} */
+.list-detail .pics{
+    overflow: hidden;
+    border-radius: 15px;
+    width: 230px;
+
+}
+.list-detail .pics img{
+    width: 100%;
+    height: auto;
+    transition: 0.3s;
+}
+.list-detail .pics img:hover{
+    transform: scale(1.07);
+}
+
+.list-detail .info{
+    width: 100%;
+    padding: 15px 15px 0 30px;
+}
+
+.btn-pack{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    transform: scale(0.95);
+}
+.btn-pack .preview{
+    font-family: var(--sansserif-font);
+    font-weight: 500;
+    font-size: 14px;
+    color: #747775;
+    padding: 3px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btn-pack .preview:hover{
+    background-color: var(--semi-white);
+}
+.vertical-line{
+    height: 20px;
+    width: 1.25px;
+    background-color: #747775;
+}
+.del-btn{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.del-btn:hover{
+    background-color: var(--semi-white);
+    /* fill: var(--light-red); */
+}
+
+/* Add Recipe Button */
+.add-recipe-button{
+    position: fixed;
+    width: 65px;
+    height: 65px;
+    border-radius: 30px;
+    background-color: var(--dark-orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 35px;
+    bottom: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.add-recipe-button:hover{
+    opacity: 0.8;
+    bottom: 23px;
+    box-shadow:  14px 14px 28px #cccccc,
+             -14px -14px 28px #f4f4f4;
+}
+
+/* Add Recipe Section */
+.margins{
+    margin-left: 3.5vw;
+    margin-right: 3.5vw;
+}
+.add-recipe-form{
+    width: 100%;
+    height: 88vh;
+    background-color: var(--white);
+    border-radius: 25px;
+    padding-top: 2.3vw;
+    overflow: hidden;
+    /* padding: 30px 40px; */
+    /* overflow-y: scroll; */
+}
+.form-title{
+    font-weight: 700;
+    font-size: 1.35vw;
+    margin-bottom: 1.5vw;
+}
+.form-detail{
+    width: 100%;
+    height: 76%;
+    padding-left: 3.5vw;
+    padding-right: 3.5vw;
+    background-color: var(--white);
+    overflow-y: scroll;
+}
+.field .label{
+    font-weight: 600;
+    /* font-size: 18px; */
+}
+
+.file-label{
+    cursor: pointer;
+    width: 100%;
+    height: 125px;
+    border: 2px dashed #CCCCC3;
+    border-radius: 10px;
+    text-align: center;
+}
+.file-input{
+    cursor: pointer;
+}
+
+.upload-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.upload-font{
+    font-weight: 700;
+    font-size: 16px;
+}
+.detail-font{
+    font-weight: 500;
+    font-size: 12px;
+    color: #A0A1A8;
+}
+.nutrient-field{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.detail{
+    padding-right: 100px;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    align-items: center;
+}
+.list-detail p{
+    font-weight: 700;
+    font-size: 16px;
+}
+.control input, .control textarea, .detail input{
+    border-radius: 10px;
+}
+.placeholder-font{
+    color: red; font-size: 24px; font-weight: 300;
+}
+
+/* Footer */
+.line{
+    position: relative;
+    display: block;
+    /* margin-top: 100px; */
+    width: 100%;
+    border-top: 1px #CCCCC3 solid;
+}
+.wrapper-button{
+    padding-top: 20px;
+    padding-bottom: 15px;
+    padding-left: 62vw;
+    padding-right: 3.5vw;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: end;
+    width: 100%;
+    justify-content: space-between;
+    /* margin-left: 28.5vw; */
+}
+.button-white{
+    background-color: white;
+    color: #A0A1A8;
+    border: 1px #A0A1A8 solid;
+    height: fit-content;
+    padding: 0.6vw 1.3vw;
+    font-family: var(--sansserif-font);
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.7vw;
+}
+.del:hover{
+    background-color: var(--hover-grey);
+    border: 1px solid var(--light-red);
+    color: var(--light-red);
+}
+.save:hover{
+    background-color: var(--hover-grey);
+    border: 1px solid var(--med-green);
+    color: var(--med-green);
+}
+
+.button-green{
+    background-color: var(--med-green);
+    color: white;
+    height: fit-content;
+    border: 1px var(--med-green) solid;
+    padding: 0.6vw 1.3vw;
+    font-family: var(--sansserif-font);
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.7vw;
+}
+.button-green:hover{
+    opacity: 0.9;
+}
+.pointer{
+    cursor: pointer;
+}
+
+/* Recipe Details */
+.recipe-details{
+    width: 100%;
+    height: 60vh;
+    background-color: var(--semi-white);
+    border-radius: 25px;
+}
+.padding{
+    padding: 30px 20px;
+}
+.img-wrap{
+    height: 40%;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 25px 25px 0px 0px;
+}
+.img-wrap img{
+    transition: 0.3s;
+}
+.img-wrap img:hover{
+    transform: scale(1.05);
+}
+.like-count-container{
+    width: 100%;
+    height: 3vw;
+    background-color: var(--white);
+    border-radius: 20px;
+    padding: 10px 30px;
+    gap: 20px;
+}
+.gap-10{
+    gap: 10px;
+}
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.information-container{
+    width: 100%;
+    height: 8vw;
+    background-color: var(--white);
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 20px 25px;
+    row-gap: 0px;
+    column-gap: 50px;
 }

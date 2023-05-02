@@ -13,10 +13,10 @@
         </div>
         
         <div class="cooking-menus row-3 margin-2">
-            <div class="header-font">Favorite</div>
+            <div class="header-font">Food Category</div>
             <div class="menu-list-large margin-2">
 
-            @for ($i = 1; $i <= 100; $i++) 
+            {{-- @for ($i = 1; $i <= 100; $i++) 
                 <div class="list" data-aos="zoom-in-up">
                     <div class="image-wrapper">
                         <a href="/menu-details"><img src="assets/menu-pics/{{ $i }}.jpg" alt=""></a>
@@ -32,11 +32,9 @@
                         </div>
                     </div>
                 </div>
-            @endfor 
-                {{-- notes: nanti akan dibuat animasi spt ini -->https://codepen.io/pugson/pen/wMBjLz --}}
-                
+            @endfor  --}}
         </div>
-            @include('templates.no-result-display')
+        @include('templates.no-result-display')
 
     </section>
 @endsection

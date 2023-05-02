@@ -9,17 +9,17 @@
     <link rel="stylesheet" href="css/templates/sidebar.css">
     <link rel="stylesheet" href="css/templates/data-aos.css">
     <title>AnderCooked | {{ $title }}</title>
+    <link rel="icon" type="image/png" href="assets/logo/logo-png.png">
 </head>
 <body>
     <div class="columns">
         {{-- LEFT SIDE --}}
-        {{-- <div class="column"> --}}
+        <div class="column is-2 has-background-white">
             @include('templates.sidebar')
-        {{-- </div> --}}
+        </div>
 
         {{-- MAIN SIDE --}}
-        {{-- notes: ini aku tambahin div.column di baris 21 tapi malah jadinya ancur, jadi sementara ga pake dulu --}}
-        <div class="column">
+        <div class="column is-10 has-background-semi-white">
             @yield('main-section')
         </div>
 

@@ -44,15 +44,33 @@ Route::get('/recipe', function () {
         "title" => "Recipe"
     ]);
 });
+Route::get('/add-recipe', function () {
+    return view('layouts.recipe.add-recipe', [
+        "title" => "Add Recipe"
+    ]);
+});
+
+
 Route::get('/profile', function () {
     return view('layouts.profile.profile', [
-        "title" => "Profile"
+        "title" => "Profile",
+        "semi-white" => "TRUE"
     ]);
 });
 
 Route::get('/food', function () {
-    return view('layouts.description.food-desc', [
+    return view('layouts.categories.food', [
         "title" => "Food"
+    ]);
+});
+Route::get('/drink', function () {
+    return view('layouts.categories.drink', [
+        "title" => "Drink"
+    ]);
+});
+Route::get('/menu-details', function () {
+    return view('layouts.description.description', [
+        "title" => "Details"
     ]);
 });
 
@@ -64,6 +82,6 @@ Route::get('/register', function () {
 
 Route::get('/signin ', function () {
     return view('layouts.register-signin.signin', [
-        "title" => "SignIn"
+        "title" => "Sign In"
     ]);
 });
