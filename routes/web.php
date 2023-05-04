@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MenuController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SigninController;
 use App\Http\Controllers\RegisterController;
@@ -75,6 +76,8 @@ Route::get('/menu-details', function () {
         "title" => "Details"
     ]);
 });
+
+Route::get('/food', [MenuController::class, 'index']);
 
 Route::get('/register', [RegisterController::class, 'index']);
 Route::post('/register', [RegisterController::class, 'store']);
