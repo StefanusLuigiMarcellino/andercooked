@@ -5,7 +5,24 @@
 <div class="container pt-5 pb-5 is-centered" data-aos="fade-up">
     <div class="pembungkus grid">
         <div class="kotak1 is-4 mt-3">
-            <form action="">
+
+            @if(session()->has('success'))
+            <div class="notification is-success">
+                <button class="delete"></button>
+                {{ session('success') }}
+            </div>
+            @endif
+
+            @if(session()->has('failed'))
+            <div class="notification is-danger">
+                <button class="delete"></button>
+                {{ session('failed') }}
+            </div>
+            @endif
+
+
+            <form action="\signin" method="post">
+                @csrf
                 <div class="field">
                     <h1 class="header-font">Welcome Back!</h1>
                     <h2 class="subheader-font">Please enter your details</h2>
@@ -16,15 +33,20 @@
                             Email
                         </label>
                         <div class="control">
-                            <input type="email" name="" id="" class="input" placeholder="ander.cooked@gmail.com" required>
+                            <input type="email" name="email" id="email" class="input @error('email')is-invalid @enderror"
+                            placeholder="ander.cooked@gmail.com" required value="{{ old('email') }}">
                         </div>
+
+                        @error('email')
+                        <p class="help is-danger">{{ $message }}</p>
+                        @enderror
                     </div>
                     <div class="field">
                         <label for="" class="label">
                             Password
                         </label>
                         <div class="control">
-                            <input type="password" name="" id="" class="input" placeholder="**********" required>
+                            <input type="password" name="password" id="password" class="input" placeholder="**********" required>
                         </div>
                     </div>
                 </div>

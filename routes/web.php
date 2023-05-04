@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SigninController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -74,14 +76,8 @@ Route::get('/menu-details', function () {
     ]);
 });
 
-Route::get('/register', function () {
-    return view('layouts.register-signin.register', [
-        "title" => "Register"
-    ]);
-});
+Route::get('/register', [RegisterController::class, 'index']);
+Route::post('/register', [RegisterController::class, 'store']);
 
-Route::get('/signin ', function () {
-    return view('layouts.register-signin.signin', [
-        "title" => "Sign In"
-    ]);
-});
+Route::get('/signin', [SigninController::class, 'index']);
+Route::post('/signin', [SigninController::class, 'authenticate']);
