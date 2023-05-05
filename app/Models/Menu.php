@@ -9,6 +9,15 @@ class Menu extends Model
 {
     use HasFactory;
     protected $guarded = ['id'];
+    protected $with = ['categories'];
+
+    public function scopeFilter($query, array $filters) {
+        $query->when($filters['categories'] ?? false, function($query, $categories){
+            return $query->whereHas('categories', function($query) use ($categories){
+                $query->where('slug', $categories);
+            });
+        });
+    }
 
     public function users(){
         return $this->belongsTo(User::class, 'user_id');

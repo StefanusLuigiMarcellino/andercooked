@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MenuController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SigninController;
 use App\Http\Controllers\RegisterController;
@@ -29,6 +30,11 @@ Route::fallback(function () {
 Route::get('/home', function () {
     return view('layouts.home', [
         "title" => "Home"
+    ]);
+});
+Route::get('/menu', function () {
+    return view('layouts.menu', [
+        "title" => "Menu"
     ]);
 });
 Route::get('/favorite', function () {
@@ -70,11 +76,14 @@ Route::get('/drink', function () {
         "title" => "Drink"
     ]);
 });
-Route::get('/menu-details', function () {
-    return view('layouts.description.description', [
-        "title" => "Details"
-    ]);
-});
+// Route::get('/menu-details', function () {
+//     return view('layouts.description.description', [
+//         "title" => "Details"
+//     ]);
+// });
+
+Route::get('/menu', [MenuController::class, 'index']);
+Route::get('/menu-details', [MenuController::class, 'show']);
 
 Route::get('/register', [RegisterController::class, 'index']);
 Route::post('/register', [RegisterController::class, 'store']);
