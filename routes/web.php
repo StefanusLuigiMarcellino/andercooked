@@ -71,13 +71,14 @@ Route::get('/drink', function () {
         "title" => "Drink"
     ]);
 });
-Route::get('/menu-details', function () {
-    return view('layouts.description.description', [
-        "title" => "Details"
-    ]);
-});
+// Route::get('/menu-details', function () {
+//     return view('layouts.description.description', [
+//         "title" => "Details"
+//     ]);
+// });
 
-Route::get('/food', [MenuController::class, 'index']);
+Route::get('/menu', [MenuController::class, 'index']);
+Route::get('/menu-details', [MenuController::class, 'show']);
 
 Route::get('/register', [RegisterController::class, 'index']);
 Route::post('/register', [RegisterController::class, 'store']);

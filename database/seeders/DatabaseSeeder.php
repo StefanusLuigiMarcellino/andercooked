@@ -25,13 +25,15 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
-        
+
         Category::create([
-            'category'=>'Foodies'
+            'category'=>'Foodies',
+            'slug'=>'foodies'
         ]);
 
         Category::create([
-            'category'=>'Beverages'
+            'category'=>'Beverages',
+            'slug'=>'beverages'
         ]);
 
 

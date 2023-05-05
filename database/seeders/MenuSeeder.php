@@ -3491,35 +3491,6 @@ Step 4, Meanwhile, combine the sour cream and mayonnaise with the Sriracha. Driz
             'carbohydrates' => 4,
             'protein' => 20,
             'fat' => 117,
-            'menu_pics' => '126.jpg'
-        ]);
-
-        DB::table('menus')->insert([
-            'category_id' => 1,
-            'user_id' => 1,
-            'menu_name' => 'Big-batch breakfast potatoes',
-            "description" => 'Treat yourself to a comforting brunch featuring Ree Drummond`s big-batch breakfast potatoes. The combination of tender red potatoes, garlic, onion and chopped bell peppers will remind you of your favorite diner hash, but better.',
-            'published_at' => '2023-02-19',
-            'total_of_likes' => 4,
-            'ingredients' => '5 pounds red potatoes, roughly chopped/diced
-4 cloves garlic, minced
-1 onion, chopped
-1 green bell pepper, seeded and roughly chopped
-1 red bell pepper, seeded and roughly chopped
-1/4 cup olive oil
-1/2 stick butter, melted
-1 teaspoon seasoned salt
-1/2 teaspoon cayenne pepper
-Kosher salt and freshly ground pepper',
-            'cooking_steps' => 'Step 1, Preheat the oven to 425 degrees F.
-Step 2, In a large bowl, toss together the potatoes, garlic, onion, green bell pepper, red bell pepper, olive oil, butter, seasoned salt, cayenne pepper and some kosher salt and pepper.
-Step 3, Bake for 20 to 25 minutes, shaking the pan twice.
-Step 4, Raise the heat to 500 degrees and bake until crisp and brown, 10 to 15 minutes.
-Step 5, Sprinkle with a little more salt and pepper before serving',
-            'calories' => 328,
-            'carbohydrates' => 196,
-            'protein' => 24,
-            'fat' => 162,
             'menu_pics' => '128.jpg'
         ]);
 
