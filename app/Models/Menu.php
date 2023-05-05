@@ -9,12 +9,12 @@ class Menu extends Model
 {
     use HasFactory;
     protected $guarded = ['id'];
-    protected $with = ['category'];
+    protected $with = ['categories'];
 
     public function scopeFilter($query, array $filters) {
-        $query->when($filters['category'] ?? false, function($query, $category){
-            return $query->whereHas('category', function($query) use ($category){
-                $query->where('category', $category);
+        $query->when($filters['categories'] ?? false, function($query, $categories){
+            return $query->whereHas('categories', function($query) use ($categories){
+                $query->where('slug', $categories);
             });
         });
     }
@@ -23,7 +23,7 @@ class Menu extends Model
         return $this->belongsTo(User::class, 'user_id');
     }
 
-    public function category(){
+    public function categories(){
         return $this->belongsTo(Category::class, 'category_id');
     }
 

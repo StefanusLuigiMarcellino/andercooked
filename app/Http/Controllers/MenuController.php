@@ -8,14 +8,14 @@ use Illuminate\Http\Request;
 class MenuController extends Controller
 {
     public function index(){
-        return view('layouts.categories.food', [
+        return view('layouts.menu.menu', [
             "title" => "Menu",
-            "menus" => Menu::latest()->filter(request(['category']))->get()
+            "menus" => Menu::latest()->filter(request(['categories']))->get()
         ]);
     }
 
     public function show(Menu $menu){
-        return view('layouts.categories.food', [
+        return view('layouts.description.description', [
             "title" => "Details",
             "menu" => $menu
         ]);
