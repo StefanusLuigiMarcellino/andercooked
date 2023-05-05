@@ -55,12 +55,13 @@
     background-color: var(--light-orange);
     transition: 0.1s;
 }
-.menu-content .sidebar-subheading:hover{
+/* .menu-content .sidebar-subheading:hover{
     color: var(--dark-green);
-}
-.menu-content path:hover{
+} */
+/* .menu-content path:hover{
     fill: var(--dark-green);
-}
+} */
+
 .margin-30{
     margin-left: 30px;
 }

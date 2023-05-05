@@ -32,6 +32,11 @@ Route::get('/home', function () {
         "title" => "Home"
     ]);
 });
+Route::get('/menu', function () {
+    return view('layouts.menu', [
+        "title" => "Menu"
+    ]);
+});
 Route::get('/favorite', function () {
     return view('layouts.favorite.favorite', [
         "title" => "Favorite"
