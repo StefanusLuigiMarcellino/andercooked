@@ -20,15 +20,15 @@ class User extends Authenticatable
         'total_fat' => 0
     ];
 
-    public function menus(){
+    public function menu(){
         return $this->hasMany(Menu::class);
     }
 
-    public function histories(){
+    public function history(){
         return $this->hasMany(History::class);
     }
 
-    public function favorites(){
+    public function favorite(){
         return $this->hasMany(Favorite::class);
     }
 }

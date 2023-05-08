@@ -20,7 +20,7 @@
 </style>
 
 <form action="">
-    <i onclick="Toggle({{$i}})" id="like-btn{{ $i }}" class="fa-regular fa-heart"></i>
+    <i onclick="Toggle({{$menu}})" id="like-btn{{ $menu}}" class="fa-regular fa-heart"></i>
 </form>
 
 <script>

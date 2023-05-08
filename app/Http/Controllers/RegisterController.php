@@ -19,9 +19,9 @@ class RegisterController extends Controller
     public function store(Request $request)
     {
         $validatedRegister = $request->validate([
-            'username' => 'required | min:3 | max:255 | unique:users',
-            'email' => 'required | email:dns | unique:users',
-            'password' => 'required_with:confirm_password | regex:/[A-Z]/ | regex:/[a-z]/ | regex:/[0-9]/ | min:8 | max:255 | same:confirm_password',
+            'username' => 'required|min:3|max:255|unique:users',
+            'email' => 'required|email:dns|unique:users',
+            'password' => 'required_with:confirm_password|regex:/[A-Z]/|regex:/[a-z]/|regex:/[0-9]/|min:8|max:255|same:confirm_password',
             'confirm_password' => 'required',
             'checkbox' => 'accepted'
         ]);

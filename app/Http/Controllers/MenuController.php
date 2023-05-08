@@ -10,7 +10,7 @@ class MenuController extends Controller
     public function index(){
         return view('layouts.menu.menu', [
             "title" => "Menu",
-            "menus" => Menu::latest()->filter(request(['categories']))->get()
+            "menus" => Menu::latest()->filter(request(['category', 'search']))->get()
         ]);
     }
 
