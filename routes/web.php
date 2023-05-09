@@ -32,7 +32,7 @@ Route::get('/home', function () {
         "title" => "Home",
         ""
     ]);
-});
+})->middleware('auth');
 Route::get('/menu', function () {
     return view('layouts.menu', [
         "title" => "Menu"
@@ -78,16 +78,18 @@ Route::get('/drink', function () {
     ]);
 });
 // Route::get('/menu-details', function () {
-//     return view('layouts.description.description', [
-//         "title" => "Details"
-//     ]);
-// });
+    //     return view('layouts.description.description', [
+        //         "title" => "Details"
+        //     ]);
+        // });
 
 Route::get('/menu', [MenuController::class, 'index']);
-Route::get('/menu-details', [MenuController::class, 'show']);
+Route::get('/menu-details/{menu:slug}', [MenuController::class, 'show']);
+// Route::get('/menu-details', [MenuController::class, 'show']);
 
-Route::get('/register', [RegisterController::class, 'index']);
+Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
 
-Route::get('/signin', [SigninController::class, 'index']);
+Route::get('/signin', [SigninController::class, 'index'])->middleware('guest');
 Route::post('/signin', [SigninController::class, 'authenticate']);
+

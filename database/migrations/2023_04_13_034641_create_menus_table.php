@@ -18,6 +18,7 @@ return new class extends Migration
             $table->foreignId('category_id');
             $table->foreignId('user_id');
             $table->string('menu_name');
+            $table->string('slug')->nullable();
             $table->text('description');
             $table->date('published_at');
             $table->integer('total_of_likes');

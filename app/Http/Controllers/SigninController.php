@@ -18,12 +18,12 @@ class SigninController extends Controller
 
     public function authenticate(Request $request)
     {
-        $cresedential = $request->validate([
+        $credential = $request->validate([
             'email' => 'required | email:dns',
             'password' => 'required'
         ]);
 
-        if(Auth::attempt($cresedential))
+        if(Auth::attempt($credential))
         {
             $request->session()->regenerate();
             return redirect()->intended('/home');

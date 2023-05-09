@@ -4,7 +4,6 @@
 @section('mid-section')
     <section class="main-page">
         @include('templates.search')
-
         <div class="banner margin-3" data-aos="zoom-in">
             <div class="text">
                 <div class="header-font white">Create your own recipe</div>
@@ -23,10 +22,10 @@
             <div class="header-font">Top Cooking Recipes</div>
             <div class="menu-list margin-2">
 
-            @for ($i = 1; $i <= 10; $i++) 
+            @for ($menu = 1; $menu <= 10; $menu++)
                 <div class="list" data-aos="zoom-in-up">
                     <div class="image-wrapper">
-                        <a href="/menu-details"><img src="assets/menu-pics/{{ $i }}.jpg" alt=""></a>
+                        <a href="/menu-details"><img src="assets/menu-pics/{{ $menu }}.jpg" alt=""></a>
                     </div>
                     <div class="filter"></div>
                     <div class="list-information">
@@ -34,14 +33,14 @@
                             <div class="title-font">Everything Bagel Crusted Salmon</div>
                             <div class="sub-title-font">569cal</div>
                         </div>
-                        <div class="right-list">    
+                        <div class="right-list">
                             @include('icons.loveTEMP')
                         </div>
                     </div>
                 </div>
-            @endfor 
+            @endfor
                 {{-- notes: nanti akan dibuat animasi spt ini -->https://codepen.io/pugson/pen/wMBjLz --}}
-            
+
         </div>
 
         @include('templates.no-result-display')
