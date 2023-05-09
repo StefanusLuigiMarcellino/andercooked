@@ -29,7 +29,8 @@ Route::fallback(function () {
 
 Route::get('/home', function () {
     return view('layouts.home', [
-        "title" => "Home"
+        "title" => "Home",
+        ""
     ]);
 });
 Route::get('/menu', function () {

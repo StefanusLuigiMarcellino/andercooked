@@ -33,7 +33,7 @@
                                     <div class="sub-title-font">{{ $menu->calories }}</div>
                                 </div>
                                 <div class="right-list">
-                                    @include('icons.loveTEMP')
+                                    {{-- @include('icons.loveTEMP') --}}
                                 </div>
                             </div>
                         </div>
