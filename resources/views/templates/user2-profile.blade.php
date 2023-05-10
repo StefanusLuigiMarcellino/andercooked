@@ -1,6 +1,6 @@
 <div class="user-profile" id="toggle-btn">
     <div class="image"></div>
-    <p class="profile-font ml-2 white">william</p>
+    <p class="profile-font ml-2 white">{{ auth()->user()->username }}</p>
     <svg class="ml-2 rotate-normal" id="rotate" width="10" height="4" viewBox="0 0 10 4" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M5 4L9.33013 0.25H0.669873L5 4Z" fill="white"/>
     </svg>      

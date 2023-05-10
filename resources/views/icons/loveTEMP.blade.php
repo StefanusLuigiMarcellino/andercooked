@@ -1,4 +1,13 @@
 <style>
+    button {
+        background-color: transparent;
+        border: none;
+        color: inherit;
+        cursor: pointer;
+        outline: none;
+        appearance: none;
+    }
+
     i{
         /* font-weight: 22px; */
         /* height: 18px; */
@@ -19,8 +28,11 @@
 
 </style>
 
-<form action="">
-    <i onclick="Toggle({{$menu}})" id="like-btn{{ $menu}}" class="fa-regular fa-heart"></i>
+<form action="/favorite/{{ $menu->id }}" method="post">
+    @csrf
+    <button>
+        <i onclick="Toggle({{ $menu }})" id="like-btn{{ $menu }}" class="fa-regular fa-heart"></i>
+    </button>
 </form>
 
 <script>

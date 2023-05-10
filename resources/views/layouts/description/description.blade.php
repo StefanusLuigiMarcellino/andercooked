@@ -38,10 +38,10 @@
                         </div>
                         <div class="description-font-serif">{{ $menu->description }}</div>
                     </div>
-
-                    <div class="lower-section">
+                   
+                    <form class="lower-section" action="{{ route('saved.history') }}" method="post">
                         <a href="#section"><button id="button" class="start-cooking-button white">Start Cooking</button></a>
-                    </div>
+                    </form>
 
                     <div class="nutrient-fact">
                         <h3 class="white">Nutrient Facts</h3>
