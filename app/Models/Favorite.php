@@ -24,4 +24,8 @@ class Favorite extends Model
         return $this->belongsTo(Menu::class, 'menu_id');
     }
     
+    public function favorite()
+    {
+        return $this->hasMany(Favorite::class);
+    }
 }

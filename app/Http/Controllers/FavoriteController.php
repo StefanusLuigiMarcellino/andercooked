@@ -29,13 +29,12 @@ class FavoriteController extends Controller
         // }
 
         // return response()->json(['message' => 'You have already liked this post']);
+        return redirect()->back();
     }
 
     public function index()
     {
-        $favorites = Favorite::where('user_id', auth()->user()->id)
-            ->pluck('menu_id')
-            ->toArray();
+        $favorites = Favorite::where('user_id', auth()->user()->id)->pluck('menu_id')->toArray();
 
         return view('layouts.favorite.favorite', [
             "title" => "Favorite",
