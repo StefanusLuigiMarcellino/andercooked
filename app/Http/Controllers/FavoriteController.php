@@ -13,6 +13,7 @@ class FavoriteController extends Controller
     public function like($id)
     {
         $user = auth()->user()->id;
+        // $menu = Menu::whereIn('id', $id);
 
         // Check if the user has already liked the post
         // if (!$user->likes()->where('post_id', $id)->exists()) {
@@ -21,6 +22,8 @@ class FavoriteController extends Controller
             $favorites->user_id = $user;
             $favorites->menu_id = $id;
             $favorites->save();
+            // $menu->total_of_likes = $menu->total_of_likes + 1;
+            // dd($menu);
 
             // return response()->json(['message' => 'Liked successfully']);
         // }
@@ -30,17 +33,13 @@ class FavoriteController extends Controller
 
     public function index()
     {
-        // $favorites = Favorite::all();
-        // $menus = Menu::all();
-        // foreach($favorites as $f) {
-        //     if($f->user_id == auth()->user()->id) {
-        //         $current_menu = $menus;
-        //     }
-        // }
+        $favorites = Favorite::where('user_id', auth()->user()->id)
+            ->pluck('menu_id')
+            ->toArray();
 
         return view('layouts.favorite.favorite', [
-            "title" => "Details",
-            "menus" => Menu::vip()->get()
+            "title" => "Favorite",
+            "menus" => Menu::whereIn('id', $favorites)->get()
         ]);
     }
 }

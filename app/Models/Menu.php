@@ -65,4 +65,20 @@ class Menu extends Model
     public function favorite(){
         return $this->hasMany(Favorite::class);
     }
+
+    // testing  
+    public function likedByUser()
+    {
+        $user = auth()->user();
+
+        if ($user) {
+            return $this->likes()->where('user_id', $user->id)->exists();
+        }
+
+        return false;
+    }
+    public function likes()
+    {
+        return $this->hasMany(Like::class);
+    }
 }

@@ -6,6 +6,7 @@ use App\Http\Controllers\LikeController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\SigninController;
 use App\Http\Controllers\FavoriteController;
+use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\RegisterController;
 
 /*
@@ -33,19 +34,10 @@ Route::fallback(function () {
 Route::get('/home', function () {
     return view('layouts.home', [
         "title" => "Home",
-        // "menus" => 
+        "menus" => Menu::latest()->filter(request(['category', 'search']))->paginate(10)
     ]);
 })->middleware('auth');
-Route::get('/menu', function () {
-    return view('layouts.menu', [
-        "title" => "Menu"
-    ]);
-});
-// Route::get('/favorite', function () {
-//     return view('layouts.favorite.favorite', [
-//         "title" => "Favorite"
-//     ]);
-// });
+
 Route::get('/history', function () {
     return view('layouts.history.history', [
         "title" => "History"
@@ -53,7 +45,8 @@ Route::get('/history', function () {
 });
 Route::get('/recipe', function () {
     return view('layouts.recipe.recipe', [
-        "title" => "Recipe"
+        "title" => "Recipe",
+        "menus" => Menu::latest()->filter(request(['category', 'search']))->paginate(10)
     ]);
 });
 Route::get('/add-recipe', function () {
@@ -62,29 +55,12 @@ Route::get('/add-recipe', function () {
     ]);
 });
 
-
 Route::get('/profile', function () {
     return view('layouts.profile.profile', [
         "title" => "Profile",
         "semi-white" => "TRUE"
     ]);
 });
-
-Route::get('/food', function () {
-    return view('layouts.categories.food', [
-        "title" => "Food"
-    ]);
-});
-Route::get('/drink', function () {
-    return view('layouts.categories.drink', [
-        "title" => "Drink"
-    ]);
-});
-// Route::get('/menu-details', function () {
-    //     return view('layouts.description.description', [
-        //         "title" => "Details"
-        //     ]);
-        // });
 
 Route::get('/menu', [MenuController::class, 'index']);
 Route::get('/menu-details/{menu:slug}', [MenuController::class, 'show']);
@@ -99,4 +75,5 @@ Route::post('/signin', [SigninController::class, 'authenticate']);
 Route::get('/favorite', [FavoriteController::class, 'index']);
 Route::post('/favorite/{menu:id}', [FavoriteController::class, 'like'])->name('post.like');
 
-Route::post('/history', [HistoryController::class, 'history'])->name('saved.history');
+Route::get('/history', [HistoryController::class, 'index']);
+Route::post('/history/{menu:id}', [HistoryController::class, 'history'])->name('post.like');

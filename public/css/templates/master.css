@@ -259,9 +259,7 @@ button{
     /* width: 100%; */
     height: 35vh;
     border-radius: 25px;
-
     /* background-color: #222222; */
-
     /* background-image: url('../../assets/food-pics/foodexample.png'); */
 }
 a{
@@ -513,7 +511,7 @@ a{
 }
 .like-count{
     margin-top: 1.5vw;
-    width: 200px;
+    width: 80px;
     height: 40px;
     background-color: var(--white);
     border-radius: 20px;
