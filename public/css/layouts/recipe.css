@@ -169,6 +169,9 @@ body{
     border: 2px dashed #CCCCC3;
     border-radius: 10px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center !important;
 }
 .file-input{
     cursor: pointer;

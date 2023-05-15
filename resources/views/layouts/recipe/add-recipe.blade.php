@@ -21,7 +21,7 @@
                 <div class="field mt-5">
                     <label class="label">Upload Photo</label>
                     <label class="file-label mb-3">
-                        <input class="file-input" type="file" name="resume">
+                        {{-- <input class="file-input" type="file" name="resume"> --}}
                         <span class="upload-wrapper">
                             <span class="upload-font">
                                 <span class="green">Click to upload photo </span>or drag and drop
@@ -36,7 +36,7 @@
                 <div class="field mt-5">
                     <label class="label mb-3">Category</label>
                     <select name="bulan" id="bulan" class="input" style="border-radius: 10px; color: #C2C2C2; font-size: 14px; font-weight: 400;">
-                        <option value="-1">Food or Drink</option>
+                        {{-- <option value="-1">Food or Drink</option> --}}
                         <option value="01">Food</option>
                         <option value="02">Drink</option>
                     </select>

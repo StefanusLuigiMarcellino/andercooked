@@ -14,7 +14,7 @@
 <body>
     <section class="fallback-section">
         <div class="fallback-wrapper">
-            <img src="assets/logo/logo.svg" alt="" width="250px">
+            <img src="/assets/logo/logo.svg" alt="" width="250px">
             <div class="fallback-font">
                 <span class="orange">Page</span>
                 <span class="green">not found</span>

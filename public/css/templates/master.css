@@ -97,11 +97,13 @@ button{
     font-size: 18px;
 }
 .profile-font{
-    width: 55px;
+    width: 60px;
     overflow: hidden;
     font-family: var(--sansserif-font);
     font-weight: 500;
-    font-size: 16px;
+    font-size: 13px;
+    white-space: nowrap;
+    /* text-overflow: ellipsis; */
 }
 .sub-title-font{
     font-family: var(--sansserif-font);
@@ -259,9 +261,7 @@ button{
     /* width: 100%; */
     height: 35vh;
     border-radius: 25px;
-
     /* background-color: #222222; */
-
     /* background-image: url('../../assets/food-pics/foodexample.png'); */
 }
 a{
@@ -315,7 +315,7 @@ a{
 
 /* SIDE PAGE (PIE CHART) */
 .user-profile{
-    width: 120px;
+    width: 125px;
     height: 30px;
     border-radius: 40px;
     background-color: #282828;
@@ -410,13 +410,25 @@ a{
 } */
 .pie-chart {
     /* background: conic-gradient(var(--food-cream) 90deg, var(--food-green) 90deg, var(--food-orange) 90deg, var(--food-purple) 90deg); */
-    background: conic-gradient(var(--food-cream) 0 4%, var(--food-green) 0 8%, var(--food-orange) 0 17%, var(--food-purple) 0 48%, #b276b2 0 54%, #faa43a 0);
+    /* background: conic-gradient(var(--food-cream) 0 25%, var(--food-green) 0 50%, var(--food-orange) 0 75%, var(--food-purple) 0 100%); */
     border-radius: 50%;
     width: 13vw;
     height: 13vw;
     padding-top: 50%;
     margin: 0 auto;
+    animation: circleAnimation 2s;
 }
+@keyframes circleAnimation {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
 .information{
     width: 100%;
     height: 8vw;
@@ -501,7 +513,7 @@ a{
 }
 .like-count{
     margin-top: 1.5vw;
-    width: 200px;
+    width: 80px;
     height: 40px;
     background-color: var(--white);
     border-radius: 20px;

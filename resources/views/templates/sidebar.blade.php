@@ -11,7 +11,7 @@
                     <div class="{{ ($title === "Home") ? 'subhead-active' : '' }} sidebar-subheading grey ">Home</div>
                 </div></a>
                 <a href="/menu"><div class="menu-content" id="menu-content">
-                    @include('icons.home')
+                    @include('icons.menu')
                     <div class="{{ ($title === "Menu") ? 'subhead-active' : '' }} sidebar-subheading grey ">Menu</div>
                 </div></a>
                 <a href="/favorite"><div class="menu-content" id="menu-content">
@@ -29,18 +29,18 @@
             </div>
         </div>
 
-        {{-- <div class="menu-item">
+        <div class="menu-item">
             <div class="sidebar-heading black margin-30">Category</div>
             <div class="list-menu">
-                <a href="/food"><div class="menu-content" id="menu-content">
+                <a href="/menu?categories=foodies"><div class="menu-content" id="menu-content">
                     @include('icons.food')
                     <div class="{{ ($title === "Food") ? 'subhead-active' : '' }} sidebar-subheading grey ">Food</div>
                 </div></a>
-                <a href="drink"><div class="menu-content" id="menu-content">
+                <a href="/menu?categories=beverages"><div class="menu-content" id="menu-content">
                     @include('icons.drink')
                     <div class="{{ ($title === "Drink") ? 'subhead-active' : '' }} sidebar-subheading grey ">Drink</div>
                 </div></a>
             </div>
-        </div> --}}
+        </div>
     </div>
 </div>
