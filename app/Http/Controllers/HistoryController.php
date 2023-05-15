@@ -21,6 +21,10 @@ class HistoryController extends Controller
             $histories->user_id = $user;
             $histories->menu_id = $id;
             $histories->save();
+            // return view('layouts.description.description', [
+            //     "title" => "Description",
+            //     "menu" => $menu
+            // ]);
             // $menu->total_of_likes = $menu->total_of_likes + 1;
             // dd($menu);
 

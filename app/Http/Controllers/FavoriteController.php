@@ -38,7 +38,7 @@ class FavoriteController extends Controller
 
         return view('layouts.favorite.favorite', [
             "title" => "Favorite",
-            "menus" => Menu::whereIn('id', $favorites)->get()
+            "menus" => Menu::latest()->whereIn('id', $favorites)->get()
         ]);
     }
 }

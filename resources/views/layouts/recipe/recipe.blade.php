@@ -14,12 +14,12 @@
                 @foreach ($menus as $menu)
                     <div class="list-detail" data-aos="zoom-in-up">
                         <div class="pics">
-                            <img src="{{ asset('assets/menu-pics/' . $menu->menu_pics) }}" alt="">
+                            <img src="{{ asset('storage/' . $menu->menu_pics) }}" alt="">
                         </div>
                         <div class="info">
                             <h1 class="title-recipe-font black">{{ $menu->menu_name }}</h1>
                             <h2 class="subtitle-recipe-font dark-grey">{{ $menu->calories }} cal</h2>
-                            
+
                             <div class="btn-pack mt-5 is-pulled-right">
                                 <div class="preview">Preview Menu</div>
                                 <div class="vertical-line"></div>
@@ -35,7 +35,7 @@
             @if($menus->count() == False)
                 @include('templates.no-result-display')
             @endif
-        </div>      
+        </div>
     </div>
 @endsection
 
@@ -92,16 +92,15 @@
                 </div>
             </div>
         </div>
-        
+
     </section>
 
     <a href="/add-recipe" class="add-recipe-button">
         <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect y="11.4231" width="27" height="4.15385" rx="2" fill="white"/>
             <rect x="11.4231" y="27" width="27" height="4.15385" rx="2" transform="rotate(-90 11.4231 27)" fill="white"/>
-        </svg>    
+        </svg>
     </a>
 
 @endsection
 
-    

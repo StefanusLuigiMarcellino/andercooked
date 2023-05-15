@@ -17,7 +17,7 @@
                             Username
                         </label>
                         <div class="control">
-                            <input type="name" name="username" id="username" class="input" @error('username')is-invalid @enderror
+                            <input type="name" name="username" id="username" class="input @error('username') is-invalid @enderror"
                             placeholder="ander_cooked" required value="{{ old('username') }}">
                         </div>
                         @error('username')
@@ -29,7 +29,7 @@
                             Email
                         </label>
                         <div class="control">
-                            <input type="email" name="email" id="email" class="input" @error('email')is-invalid @enderror
+                            <input type="email" name="email" id="email" class="input @error('email') is-invalid @enderror"
                             placeholder="ander.cooked@gmail.com" required value="{{ old('email') }}">
                         </div>
                         @error('email')
@@ -41,7 +41,7 @@
                             Password
                         </label>
                         <div class="control">
-                            <input type="password" name="password" id="password" class="input" @error('password')is-invalid @enderror
+                            <input type="password" name="password" id="password" class="input @error('password') is-invalid @enderror"
                             placeholder="**********" required>
                         </div>
                         @error('password')
@@ -53,7 +53,7 @@
                             Confirm Password
                         </label>
                         <div class="control">
-                            <input type="password" name="confirm_password" id="confirm_password" class="input" @error('confirm_password')is-invalid @enderror
+                            <input type="password" name="confirm_password" id="confirm_password" class="input @error('confirm_password') is-invalid @enderror"
                             placeholder="**********" required>
                         </div>
                         @error('confirm_password')
@@ -90,7 +90,7 @@
         </div>
         <div class="" style="padding: 0 25px;">
             <div class="kotak2">
-                <img class="" src="assets/menu-pics/90.jpg" alt="">
+                <img class="" src="storage/menu-pics/90.jpg" alt="">
             </div>
         </div>
     </div>

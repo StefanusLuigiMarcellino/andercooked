@@ -26,30 +26,26 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        Category::create([
-            'category'=>'Foodies',
-            'slug'=>'foodies'
-        ]);
 
-        Category::create([
-            'category'=>'Beverages',
-            'slug'=>'beverages'
-        ]);
+        // History::create([
+        //     'user_id'=>1,
+        //     'menu_id'=>1,
+        // ]);
 
+        // History::create([
+        //     'user_id'=>1,
+        //     'menu_id'=>2,
+        // ]);
 
-        History::create([
-            'user_id'=>1,
-            'menu_id'=>1,
-        ]);
+        // History::create([
+        //     'user_id'=>2,
+        //     'menu_id'=>2,
+        // ]);
 
-        History::create([
-            'user_id'=>1,
-            'menu_id'=>2,
-        ]);
-
-        History::create([
-            'user_id'=>2,
-            'menu_id'=>2,
+        $this->call([
+            UserSeeder::class,
+            MenuSeeder::class,
+            CategorySeeder::class
         ]);
     }
 }

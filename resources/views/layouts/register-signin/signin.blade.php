@@ -63,7 +63,7 @@
         </div>
         <div class="" style="padding: 0 25px;">
             <div class="kotak2">
-                <img class="" src="assets/menu-pics/90.jpg" alt="">
+                <img class="" src="storage/menu-pics/90.jpg" alt="">
             </div>
         </div>
     </div>

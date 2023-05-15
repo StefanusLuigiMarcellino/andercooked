@@ -45,7 +45,7 @@ Step 5, Garnish with parsley before serving.',
             'carbohydrates' => 158,
             'protein' => 248,
             'fat' => 312,
-            'menu_pics' => '1.jpg'
+            'menu_pics' => 'menu-pics/1.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -69,7 +69,7 @@ Step 2, Top with more cilantro. Serve with tortilla chips alongside.',
             'carbohydrates' => 40,
             'protein' => 12,
             'fat' => 153,
-            'menu_pics' => '2.jpg'
+            'menu_pics' => 'menu-pics/2.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -106,7 +106,7 @@ Step 6, Divide salmon among plates. Serve with salad and remaining dressing alon
             'carbohydrates' => 52,
             'protein' => 160,
             'fat' => 156,
-            'menu_pics' => '3.jpg'
+            'menu_pics' => 'menu-pics/3.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -131,7 +131,7 @@ Step 2, Serve',
             'carbohydrates' => 164,
             'protein' => 44,
             'fat' => 54,
-            'menu_pics' => '4.jpg'
+            'menu_pics' => 'menu-pics/4.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -160,7 +160,7 @@ Step 3, Gently toss with dressing and serve immediately. ',
             'carbohydrates' => 40,
             'protein' => 20,
             'fat' => 324,
-            'menu_pics' => '5.jpg'
+            'menu_pics' => 'menu-pics/5.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -185,7 +185,7 @@ Step 7, Serve.',
             'carbohydrates' => 32,
             'protein' => 12,
             'fat' => 27,
-            'menu_pics' => '6.jpg'
+            'menu_pics' => 'menu-pics/6.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -211,7 +211,7 @@ Step 3, Serve cold.',
             'carbohydrates' => 8,
             'protein' => 16,
             'fat' => 0,
-            'menu_pics' => '7.jpg'
+            'menu_pics' => 'menu-pics/7.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -245,7 +245,7 @@ Step 5, Warm hoisin sauce, peanut butter, and water in a saucepan over medium-hi
             'carbohydrates' => 116,
             'protein' => 40,
             'fat' => 36,
-            'menu_pics' => '8.jpg'
+            'menu_pics' => 'menu-pics/8.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -274,7 +274,7 @@ Step 5, Season with salt and pepper.',
             'carbohydrates' => 52,
             'protein' => 56,
             'fat' => 144,
-            'menu_pics' => '9.jpg'
+            'menu_pics' => 'menu-pics/9.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -300,7 +300,7 @@ Step 5, Place the baking dish in the preheated oven and bake salmon uncovered un
             'carbohydrates' => 56,
             'protein' => 92,
             'fat' => 108,
-            'menu_pics' => '10.jpg'
+            'menu_pics' => 'menu-pics/10.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -333,7 +333,7 @@ Step 4, Bake in the preheated oven for 25 minutes. Stir and bake until vegetable
             'carbohydrates' => 200,
             'protein' => 28,
             'fat' => 54,
-            'menu_pics' => '11.jpg'
+            'menu_pics' => 'menu-pics/11.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -373,7 +373,7 @@ Step 11, Bake in the preheated oven until chicken is golden and broccoli is cris
             'carbohydrates' => 188,
             'protein' => 124,
             'fat' => 135,
-            'menu_pics' => '12.jpg'
+            'menu_pics' => 'menu-pics/12.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -407,7 +407,7 @@ cooking spray
             'carbohydrates' => 52,
             'protein' => 104,
             'fat' => 189,
-            'menu_pics' => '13.jpg'
+            'menu_pics' => 'menu-pics/13.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -440,7 +440,7 @@ Step 5, Return loaf to the oven and continue baking until no longer pink in the 
             'carbohydrates' => 100,
             'protein' => 80,
             'fat' => 117,
-            'menu_pics' => '14.jpg'
+            'menu_pics' => 'menu-pics/14.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -478,7 +478,7 @@ Step 9, Serve immediately, over hot rice if desired.',
             'carbohydrates' => 128,
             'protein' => 128,
             'fat' => 81,
-            'menu_pics' => '15.jpg'
+            'menu_pics' => 'menu-pics/15.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -512,7 +512,7 @@ Step 6, Garnish with cilantro and serve with lime wedges.',
             'carbohydrates' => 112,
             'protein' => 12,
             'fat' => 54,
-            'menu_pics' => '16.jpg'
+            'menu_pics' => 'menu-pics/16.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -543,7 +543,7 @@ Step 5, Mix coconut milk and salt into soup and simmer until heated through, abo
             'carbohydrates' => 176,
             'protein' => 24,
             'fat' => 225,
-            'menu_pics' => '17.jpg'
+            'menu_pics' => 'menu-pics/17.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -570,7 +570,7 @@ Step 4, Mix zucchini, garbanzo beans, olives, artichoke hearts, and Parmesan che
             'carbohydrates' => 80,
             'protein' => 60,
             'fat' => 180,
-            'menu_pics' => '18.jpg'
+            'menu_pics' => 'menu-pics/18.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -600,7 +600,7 @@ Step 4, Bake in preheated oven until vegetables are tender, 45 minutes.',
             'carbohydrates' => 96,
             'protein' => 52,
             'fat' => 126,
-            'menu_pics' => '19.jpg'
+            'menu_pics' => 'menu-pics/19.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -635,7 +635,7 @@ Step 4, Stir in the beans with can liquid, and simmer all over low heat for 15 t
             'carbohydrates' => 152,
             'protein' => 152,
             'fat' => 90,
-            'menu_pics' => '20.jpg'
+            'menu_pics' => 'menu-pics/20.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -668,7 +668,7 @@ Step 5, Heat a lightly oiled griddle over medium-high heat. Drop batter by large
             'carbohydrates' => 180,
             'protein' => 24,
             'fat' => 90,
-            'menu_pics' => '21.jpg'
+            'menu_pics' => 'menu-pics/21.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -699,7 +699,7 @@ Step 4, Cook patties in hot oil until heated through, 2 to 3 minutes per side.',
             'carbohydrates' => 116,
             'protein' => 36,
             'fat' => 99,
-            'menu_pics' => '22.jpg'
+            'menu_pics' => 'menu-pics/22.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -737,7 +737,7 @@ Step 7, Spoon sorghum into serving bowls. Arrange roasted vegetables on top and 
             'carbohydrates' => 356,
             'protein' => 76,
             'fat' => 369,
-            'menu_pics' => '23.jpg'
+            'menu_pics' => 'menu-pics/23.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -770,7 +770,7 @@ Step 7, Stir in lemon juice and remove from heat and serve with fresh grated Par
             'carbohydrates' => 152,
             'protein' => 48,
             'fat' => 45,
-            'menu_pics' => '24.jpg'
+            'menu_pics' => 'menu-pics/24.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -797,7 +797,7 @@ Step 5, Bake in the preheated oven until beginning to dry, about 15 minutes for 
             'carbohydrates' => 136,
             'protein' => 16,
             'fat' => 45,
-            'menu_pics' => '25.jpg'
+            'menu_pics' => 'menu-pics/25.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -822,7 +822,7 @@ Step 4, Strain the cocktail into a rocks glass filled with ice and garnish with 
             'carbohydrates' => 28,
             'protein' => 0,
             'fat' => 0,
-            'menu_pics' => '26.jpg'
+            'menu_pics' => 'menu-pics/26.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -845,7 +845,7 @@ Step 3, Stir + serve over ice.',
             'carbohydrates' => 92,
             'protein' => 4,
             'fat' => 9,
-            'menu_pics' => '27.jpg'
+            'menu_pics' => 'menu-pics/27.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -866,7 +866,7 @@ Step 3, Once warm – pour into mug and enjoy!',
             'carbohydrates' => 44,
             'protein' => 8,
             'fat' => 36,
-            'menu_pics' => '28.jpg'
+            'menu_pics' => 'menu-pics/28.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -895,7 +895,7 @@ Step 2, Shake and serve in a sugar or salt rimmed glass.',
             'carbohydrates' => 60,
             'protein' => 4,
             'fat' => 9,
-            'menu_pics' => '29.jpg'
+            'menu_pics' => 'menu-pics/29.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -917,7 +917,7 @@ Step 2, Blend until smooth + enjoy!',
             'carbohydrates' => 56,
             'protein' => 132,
             'fat' => 18,
-            'menu_pics' => '30.jpg'
+            'menu_pics' => 'menu-pics/30.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -941,7 +941,7 @@ Step 4, Pour milk mixture into a mug, and top with espresso.',
             'carbohydrates' => 28,
             'protein' => 4,
             'fat' => 27,
-            'menu_pics' => '31.jpg'
+            'menu_pics' => 'menu-pics/31.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -964,7 +964,7 @@ Step 3, If you`d like, froth using a small electric or cup frother. If you don `
             'carbohydrates' => 36,
             'protein' => 8,
             'fat' => 27,
-            'menu_pics' => '32.jpg'
+            'menu_pics' => 'menu-pics/32.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -989,7 +989,7 @@ Step 2, Blend until smooth + enjoy',
             'carbohydrates' => 124,
             'protein' => 12,
             'fat' => 9,
-            'menu_pics' => '33.jpg'
+            'menu_pics' => 'menu-pics/33.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -1012,7 +1012,7 @@ Step 2, Whisk together almond milk, spices and molasses for approximately 30 sec
             'carbohydrates' => 20,
             'protein' => 8,
             'fat' => 45,
-            'menu_pics' => '34.jpg'
+            'menu_pics' => 'menu-pics/34.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -1035,7 +1035,7 @@ Step 3, Shake + serve over ice.',
             'carbohydrates' => 44,
             'protein' => 0,
             'fat' => 0,
-            'menu_pics' => '35.jpg'
+            'menu_pics' => 'menu-pics/35.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -1062,7 +1062,7 @@ Step 3, Fill high ball glasses with ice. Divide strawberry/lime/mint mixture amo
             'carbohydrates' => 104,
             'protein' => 4,
             'fat' => 9,
-            'menu_pics' => '36.jpg'
+            'menu_pics' => 'menu-pics/36.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -1088,7 +1088,7 @@ Step 5, Evenly distribute watermelon/rum mixture in the glasses and top with sel
             'carbohydrates' => 172,
             'protein' => 0,
             'fat' => 0,
-            'menu_pics' => '37.jpg'
+            'menu_pics' => 'menu-pics/37.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -1113,7 +1113,7 @@ Step 6, Serve it hot as is or put the teapot in the fridge for a few hours to en
             'carbohydrates' => 16,
             'protein' => 4,
             'fat' => 9,
-            'menu_pics' => '38.jpg'
+            'menu_pics' => 'menu-pics/38.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -1138,7 +1138,7 @@ Step 5, Goji berry and red dates herbal tea can be enjoyed hot or cold.',
             'carbohydrates' => 20,
             'protein' => 4,
             'fat' => 0,
-            'menu_pics' => '39.jpg'
+            'menu_pics' => 'menu-pics/39.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -1160,7 +1160,7 @@ Step 3, Put all the ingredients into a food processor or blender, then process u
             'carbohydrates' => 104,
             'protein' => 4,
             'fat' => 9,
-            'menu_pics' => '40.jpg'
+            'menu_pics' => 'menu-pics/40.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -1187,7 +1187,7 @@ Step 3, Serve immediately in tall glasses with mint sprigs.',
             'carbohydrates' => 60,
             'protein' => 4,
             'fat' => 0,
-            'menu_pics' => '41.jpg'
+            'menu_pics' => 'menu-pics/41.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -1212,7 +1212,7 @@ Step 2, Place lime slices and ice cubes in each glass and pour drink over. Stir.
             'carbohydrates' => 40,
             'protein' => 42,
             'fat' => 0,
-            'menu_pics' => '42.jpg'
+            'menu_pics' => 'menu-pics/42.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -1246,7 +1246,7 @@ Step 7, Garnish with orange, lime and jalapeño slices and hibiscus flowers, if 
             'carbohydrates' => 40,
             'protein' => 0,
             'fat' => 0,
-            'menu_pics' => '43.jpg'
+            'menu_pics' => 'menu-pics/43.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -1272,7 +1272,7 @@ Step 3, Fill two glasses with ice and pour celery mixture into each glass.',
             'carbohydrates' => 20,
             'protein' => 0,
             'fat' => 0,
-            'menu_pics' => '44.jpg'
+            'menu_pics' => 'menu-pics/44.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -1295,7 +1295,7 @@ Step 3, Transfer to a pitcher and store in the refrigerator until ready to serve
             'carbohydrates' => 52,
             'protein' => 0,
             'fat' => 0,
-            'menu_pics' => '45.jpg'
+            'menu_pics' => 'menu-pics/45.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -1318,7 +1318,7 @@ Step 2, Serve.',
             'carbohydrates' => 180,
             'protein' => 8,
             'fat' => 9,
-            'menu_pics' => '46.jpg'
+            'menu_pics' => 'menu-pics/46.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -1344,7 +1344,7 @@ Step 6, Serve this healthy Ginger Shot first thing in the morning on empty stoma
             'carbohydrates' => 48,
             'protein' => 4,
             'fat' => 0,
-            'menu_pics' => '47.jpg'
+            'menu_pics' => 'menu-pics/47.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -1369,7 +1369,7 @@ Step 5, Serve this healthy Cucumber infused water with cucumber and lemon slices
             'carbohydrates' => 4,
             'protein' => 8,
             'fat' => 9,
-            'menu_pics' => '48.jpg'
+            'menu_pics' => 'menu-pics/48.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -1398,7 +1398,7 @@ Step 7, Serve this healthy Hibiscus Tea hot to comfort your body on cold winter 
             'carbohydrates' => 40,
             'protein' => 0,
             'fat' => 0,
-            'menu_pics' => '49.jpg'
+            'menu_pics' => 'menu-pics/49.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -1421,7 +1421,7 @@ Step 4, Remaining electrolyte solution can be stored in a sealed container for f
             'carbohydrates' => 0,
             'protein' => 0,
             'fat' => 0,
-            'menu_pics' => '50.jpg'
+            'menu_pics' => 'menu-pics/50.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -1449,7 +1449,7 @@ Step 4, Transfer the pasta to a large bowl. Add the sauce and toss with tongs un
             'carbohydrates' => 148,
             'protein' => 68,
             'fat' => 225,
-            'menu_pics' => '51.jpg'
+            'menu_pics' => 'menu-pics/51.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -1482,7 +1482,7 @@ Step 6, Puree the soup in batches in a blender until smooth. (Use caution when p
             'carbohydrates' => 32,
             'protein' => 28,
             'fat' => 198,
-            'menu_pics' => '52.jpg'
+            'menu_pics' => 'menu-pics/52.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -1516,7 +1516,7 @@ Step 6, Remove from heat and stir in vinegar.',
             'carbohydrates' => 80,
             'protein' => 12,
             'fat' => 45,
-            'menu_pics' => '53.jpg'
+            'menu_pics' => 'menu-pics/53.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -1553,7 +1553,7 @@ Step 9, Stir in the beef and potatoes. Sprinkle with scallions, if desired. ',
             'carbohydrates' => 120,
             'protein' => 80,
             'fat' => 135,
-            'menu_pics' => '54.jpg'
+            'menu_pics' => 'menu-pics/54.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -1580,7 +1580,7 @@ Step 3, Carefully add broth and garlic to the pan. Continue roasting until most 
             'carbohydrates' => 112,
             'protein' => 12,
             'fat' => 81,
-            'menu_pics' => '55.jpg'
+            'menu_pics' => 'menu-pics/55.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -1616,7 +1616,7 @@ Step 8, Sprinkle with Parmesan, if desired.',
             'carbohydrates' => 160,
             'protein' => 124,
             'fat' => 144,
-            'menu_pics' => '56.jpg'
+            'menu_pics' => 'menu-pics/56.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -1650,7 +1650,7 @@ Step 5, Garnish with more basil and Parmesan, if using.',
             'carbohydrates' => 152,
             'protein' => 96,
             'fat' => 171,
-            'menu_pics' => '57.jpg'
+            'menu_pics' => 'menu-pics/57.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -1681,7 +1681,7 @@ Step 5, Serve with lemon wedges.',
             'carbohydrates' => 152,
             'protein' => 96,
             'fat' => 171,
-            'menu_pics' => '58.jpg'
+            'menu_pics' => 'menu-pics/58.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -1716,7 +1716,7 @@ Step 8, Add the spaghetti and spinach; toss to coat well.',
             'carbohydrates' => 204,
             'protein' => 52,
             'fat' => 144,
-            'menu_pics' => '59.jpg'
+            'menu_pics' => 'menu-pics/59.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -1752,7 +1752,7 @@ Step 8, Serve topped with cilantro, if desired.',
             'carbohydrates' => 120,
             'protein' => 24,
             'fat' => 144,
-            'menu_pics' => '60.jpg'
+            'menu_pics' => 'menu-pics/60.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -1790,7 +1790,7 @@ Step 7, Return the chicken to the pan and turn to coat with the sauce.',
             'carbohydrates' => 12,
             'protein' => 108,
             'fat' => 153,
-            'menu_pics' => '61.jpg'
+            'menu_pics' => 'menu-pics/61.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -1824,7 +1824,7 @@ Step 4, Top each serving of soup with 1 teaspoon pesto.',
             'carbohydrates' => 112,
             'protein' => 52,
             'fat' => 72,
-            'menu_pics' => '62.jpg'
+            'menu_pics' => 'menu-pics/62.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -1866,7 +1866,7 @@ Step 12, Transfer to a wire rack and let cool for 10 minutes. Serve warm or at r
             'carbohydrates' => 52,
             'protein' => 20,
             'fat' => 90,
-            'menu_pics' => '63.jpg'
+            'menu_pics' => 'menu-pics/63.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -1891,7 +1891,7 @@ Step 3, Chill until ready to serve. ',
             'carbohydrates' => 8,
             'protein' => 44,
             'fat' => 27,
-            'menu_pics' => '64.jpg'
+            'menu_pics' => 'menu-pics/64.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -1925,7 +1925,7 @@ Step 7, Serve with warmed marinara. Drizzle with balsamic glaze, and sprinkle wi
             'carbohydrates' => 84,
             'protein' => 28,
             'fat' => 27,
-            'menu_pics' => '65.jpg'
+            'menu_pics' => 'menu-pics/65.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -1957,7 +1957,7 @@ Step 7, Let cool in the pan on a wire rack for 20 minutes, then remove to the ra
             'carbohydrates' => 32,
             'protein' => 20,
             'fat' => 36,
-            'menu_pics' => '66.jpg'
+            'menu_pics' => 'menu-pics/66.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -1988,7 +1988,7 @@ Step 4, To Make Ahead Cover and refrigerate for up to 3 hours.',
             'carbohydrates' => 24,
             'protein' => 8,
             'fat' => 27,
-            'menu_pics' => '67.jpg'
+            'menu_pics' => 'menu-pics/67.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -2016,7 +2016,7 @@ Step 5, To Make Ahead Cover and refrigerate in an airtight container for up to 2
             'carbohydrates' => 16,
             'protein' => 24,
             'fat' => 153,
-            'menu_pics' => '68.jpg'
+            'menu_pics' => 'menu-pics/68.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -2046,7 +2046,7 @@ Step 5, To Make Ahead Prepare through Step 2 and refrigerate for up to 2 hours. 
             'carbohydrates' => 60,
             'protein' => 20,
             'fat' => 144,
-            'menu_pics' => '69.jpg'
+            'menu_pics' => 'menu-pics/69.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -2076,7 +2076,7 @@ Step 7, Serve the chicken topped with the sauce and parsley.',
             'carbohydrates' => 32,
             'protein' => 100,
             'fat' => 171,
-            'menu_pics' => '70.jpg'
+            'menu_pics' => 'menu-pics/70.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -2101,7 +2101,7 @@ Step 3, Slice in half and serve.',
             'carbohydrates' => 160,
             'protein' => 52,
             'fat' => 126,
-            'menu_pics' => '71.jpg'
+            'menu_pics' => 'menu-pics/71.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -2125,7 +2125,7 @@ Step 2, Top toast with the avocado mixture and fried egg. Garnish with Sriracha 
             'carbohydrates' => 72,
             'protein' => 48,
             'fat' => 162,
-            'menu_pics' => '72.jpg'
+            'menu_pics' => 'menu-pics/72.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -2150,7 +2150,7 @@ Step 4, Top with milk, sweetener, cinnamon, dried fruits or nuts, if desired. ',
             'carbohydrates' => 108,
             'protein' => 20,
             'fat' => 27,
-            'menu_pics' => '73.jpg'
+            'menu_pics' => 'menu-pics/73.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -2174,7 +2174,7 @@ Step 4, Add the cooked ravioli and pesto; stir gently to combine.',
             'carbohydrates' => 140,
             'protein' => 171,
             'fat' => 56,
-            'menu_pics' => '74.jpg'
+            'menu_pics' => 'menu-pics/74.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -2204,7 +2204,7 @@ Step 8, Sprinkle with the remaining 1 tablespoon scallions and the remaining bac
             'carbohydrates' => 56,
             'protein' => 24,
             'fat' => 72,
-            'menu_pics' => '75.jpg'
+            'menu_pics' => 'menu-pics/75.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -2224,7 +2224,7 @@ Step 2, With the motor running, add fruit through the hole in the lid and contin
             'carbohydrates' => 224,
             'protein' => 48,
             'fat' => 18,
-            'menu_pics' => '76.jpg'
+            'menu_pics' => 'menu-pics/76.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -2246,7 +2246,7 @@ Step 2, blend until smooth.',
             'carbohydrates' => 164,
             'protein' => 104,
             'fat' => 144,
-            'menu_pics' => '77.jpg'
+            'menu_pics' => 'menu-pics/77.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -2269,7 +2269,7 @@ Step 2, Process until smooth, adding more cashew milk, if needed, for desired co
             'carbohydrates' => 184,
             'protein' => 28,
             'fat' => 153,
-            'menu_pics' => '78.jpg'
+            'menu_pics' => 'menu-pics/78.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -2294,7 +2294,7 @@ Step 2, Puree until smooth.',
             'carbohydrates' => 144,
             'protein' => 76,
             'fat' => 126,
-            'menu_pics' => '79.jpg'
+            'menu_pics' => 'menu-pics/79.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -2317,7 +2317,7 @@ Step 2, Puree until smooth and frothy. ',
             'carbohydrates' => 100,
             'protein' => 8,
             'fat' => 0,
-            'menu_pics' => '80.jpg'
+            'menu_pics' => 'menu-pics/80.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -2344,7 +2344,7 @@ Step 4, Serve immediately. ',
             'carbohydrates' => 184,
             'protein' => 16,
             'fat' => 72,
-            'menu_pics' => '81.jpg'
+            'menu_pics' => 'menu-pics/81.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -2367,7 +2367,7 @@ Step 4, Serve immediately. ',
             'carbohydrates' => 148,
             'protein' => 76,
             'fat' => 198,
-            'menu_pics' => '82.jpg'
+            'menu_pics' => 'menu-pics/82.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -2389,7 +2389,7 @@ Step 4, Serve immediately. ',
             'carbohydrates' => 232,
             'protein' => 72,
             'fat' => 72,
-            'menu_pics' => '83.jpg'
+            'menu_pics' => 'menu-pics/83.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -2411,7 +2411,7 @@ Step 5, Drop the reserved mint into the cups to decorate if you like.',
             'carbohydrates' => 12,
             'protein' => 0.4,
             'fat' => 0,
-            'menu_pics' => '84.jpg'
+            'menu_pics' => 'menu-pics/84.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -2433,7 +2433,7 @@ Step 4, Sweeten with honey if you like.',
             'carbohydrates' => 16,
             'protein' => 0.9,
             'fat' => 0.8,
-            'menu_pics' => '85.jpg'
+            'menu_pics' => 'menu-pics/85.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -2457,7 +2457,7 @@ Step 2, Once hot, pour into mugs and sprinkle with a little more cinnamon to ser
             'carbohydrates' => 12,
             'protein' => 4,
             'fat' => 18,
-            'menu_pics' => '86.jpg'
+            'menu_pics' => 'menu-pics/86.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -2480,7 +2480,7 @@ Step 2, If the consistency is too thick, add a little water.',
             'carbohydrates' => 60,
             'protein' => 36,
             'fat' => 99,
-            'menu_pics' => '87.jpg'
+            'menu_pics' => 'menu-pics/87.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -2501,7 +2501,7 @@ Step 4, Discard the water in the warmed tea bowl, then pour in the prepared matc
             'carbohydrates' => 4,
             'protein' => 4,
             'fat' => 1.8,
-            'menu_pics' => '88.jpg'
+            'menu_pics' => 'menu-pics/88.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -2524,7 +2524,7 @@ Step 4, Add honey to taste and the reserved ginger slice.',
             'carbohydrates' => 12,
             'protein' => 0.8,
             'fat' => 0,
-            'menu_pics' => '89.jpg'
+            'menu_pics' => 'menu-pics/89.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -2546,7 +2546,7 @@ Step 3, Increase speed to medium-high and blend until very smooth. ',
             'carbohydrates' => 120,
             'protein' => 40,
             'fat' => 63,
-            'menu_pics' => '90.jpg'
+            'menu_pics' => 'menu-pics/90.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -2570,7 +2570,7 @@ Step 2, Blend until smooth.',
             'carbohydrates' => 216,
             'protein' => 52,
             'fat' => 54,
-            'menu_pics' => '91.jpg'
+            'menu_pics' => 'menu-pics/91.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -2592,7 +2592,7 @@ Step 2, Blend until smooth. ',
             'carbohydrates' => 212,
             'protein' => 60,
             'fat' => 63,
-            'menu_pics' => '92.jpg'
+            'menu_pics' => 'menu-pics/92.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -2615,7 +2615,7 @@ Step 3, Increase speed to medium-high and blend until very smooth.',
             'carbohydrates' => 192,
             'protein' => 12,
             'fat' => 162,
-            'menu_pics' => '93.jpg'
+            'menu_pics' => 'menu-pics/93.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -2639,7 +2639,7 @@ Step 3, Increase speed to medium-high and blend until very smooth. ',
             'carbohydrates' => 204,
             'protein' => 48,
             'fat' => 189,
-            'menu_pics' => '94.jpg'
+            'menu_pics' => 'menu-pics/94.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -2668,7 +2668,7 @@ Step 4, Pour into glasses and if desired, top with chocolate shavings, chocolate
             'carbohydrates' => 136,
             'protein' => 52,
             'fat' => 108,
-            'menu_pics' => '95.jpg'
+            'menu_pics' => 'menu-pics/95.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -2693,7 +2693,7 @@ Step 3, Divide between 2 glasses. Serve immediately. ',
             'carbohydrates' => 232,
             'protein' => 16,
             'fat' => 9,
-            'menu_pics' => '96.jpg'
+            'menu_pics' => 'menu-pics/96.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -2717,7 +2717,7 @@ Step 4, Pour into glasses. If desired, garnish with orange peel curls. ',
             'carbohydrates' => 52,
             'protein' => 4,
             'fat' => 0,
-            'menu_pics' => '97.jpg'
+            'menu_pics' => 'menu-pics/97.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -2740,7 +2740,7 @@ Step 3, Increase speed to medium-high and blend until very smooth.',
             'carbohydrates' => 192,
             'protein' => 40,
             'fat' => 45,
-            'menu_pics' => '98.jpg'
+            'menu_pics' => 'menu-pics/98.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -2761,7 +2761,7 @@ Step 2, Process until smooth, adding more almond milk, if needed, for desired co
             'carbohydrates' => 156,
             'protein' => 24,
             'fat' => 99,
-            'menu_pics' => '99.jpg'
+            'menu_pics' => 'menu-pics/99.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -2782,7 +2782,7 @@ Step 2, Puree until smooth ',
             'carbohydrates' => 96,
             'protein' => 36,
             'fat' => 81,
-            'menu_pics' => '100.jpg'
+            'menu_pics' => 'menu-pics/100.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -2813,7 +2813,7 @@ Step 8, As butter melts, whisk to emulsify mixture. Spoon sauce over fillets. Sp
             'carbohydrates' => 76,
             'protein' => 104,
             'fat' => 27,
-            'menu_pics' => '101.jpg'
+            'menu_pics' => 'menu-pics/101.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -2845,7 +2845,7 @@ Step 5, Stir in chicken and peas and cook until pasta reaches desired doneness a
             'carbohydrates' => 96,
             'protein' => 92,
             'fat' => 81,
-            'menu_pics' => '102.jpg'
+            'menu_pics' => 'menu-pics/102.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -2881,7 +2881,7 @@ Step 8, Let stand for 10 minutes; slice. Garnish with thyme and serve. ',
             'carbohydrates' => 28,
             'protein' => 68,
             'fat' => 180,
-            'menu_pics' => '103.jpg'
+            'menu_pics' => 'menu-pics/103.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -2914,7 +2914,7 @@ Step 9, Remove from heat; let stand 2 minutes. Sprinkle skillet with scallions a
             'carbohydrates' => 76,
             'protein' => 52,
             'fat' => 153,
-            'menu_pics' => '104.jpg'
+            'menu_pics' => 'menu-pics/104.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -2937,7 +2937,7 @@ Step 6, Transfer the pancakes to a plate. Lightly oil the pan again and repeat w
             'carbohydrates' => 56,
             'protein' => 28,
             'fat' => 45,
-            'menu_pics' => '105.jpg'
+            'menu_pics' => 'menu-pics/105.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -2968,7 +2968,7 @@ Step 7, Let stand 5 minutes before removing from the tin. ',
             'carbohydrates' => 44,
             'protein' => 56,
             'fat' => 144,
-            'menu_pics' => '106.jpg'
+            'menu_pics' => 'menu-pics/106.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -3004,7 +3004,7 @@ Step 9, Clean the bowl, add confectioners` sugar and whisk in the remaining 1 te
             'carbohydrates' => 180,
             'protein' => 32,
             'fat' => 99,
-            'menu_pics' => '107.jpg'
+            'menu_pics' => 'menu-pics/107.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -3037,7 +3037,7 @@ Step 7, To assemble the tostada, layer the bean mixture, avocado mixture and let
             'carbohydrates' => 160,
             'protein' => 60,
             'fat' => 171,
-            'menu_pics' => '108.jpg'
+            'menu_pics' => 'menu-pics/108.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -3065,7 +3065,7 @@ Step 6, Serve the scramble with toast and raspberries.',
             'carbohydrates' => 84,
             'protein' => 72,
             'fat' => 144,
-            'menu_pics' => '109.jpg'
+            'menu_pics' => 'menu-pics/109.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -3088,7 +3088,7 @@ Step 2, Season with a pinch each of salt, pepper and crushed red pepper. ',
             'carbohydrates' => 140,
             'protein' => 48,
             'fat' => 81,
-            'menu_pics' => '110.jpg'
+            'menu_pics' => 'menu-pics/110.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -3113,7 +3113,7 @@ Step 3, Divide the mixture between tortillas and top each with 1/2 cup spinach a
             'carbohydrates' => 128,
             'protein' => 85,
             'fat' => 216,
-            'menu_pics' => '111.jpg'
+            'menu_pics' => 'menu-pics/111.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -3146,7 +3146,7 @@ Step 9, Serve immediately, garnished with more dill and pepper, if desired. ',
             'carbohydrates' => 12,
             'protein' => 68,
             'fat' => 171,
-            'menu_pics' => '112.jpg'
+            'menu_pics' => 'menu-pics/112.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -3178,7 +3178,7 @@ Step 6, Top the omelet with the kale salad and avocado. ',
             'carbohydrates' => 36,
             'protein' => 60,
             'fat' => 252,
-            'menu_pics' => '113.jpg'
+            'menu_pics' => 'menu-pics/113.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -3207,7 +3207,7 @@ Step 6, Divide the egg mixture among the pitas. ',
             'carbohydrates' => 84,
             'protein' => 80,
             'fat' => 144,
-            'menu_pics' => '114.jpg'
+            'menu_pics' => 'menu-pics/114.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -3238,7 +3238,7 @@ Step 6, Serve warm or at room temperature. ',
             'carbohydrates' => 104,
             'protein' => 20,
             'fat' => 54,
-            'menu_pics' => '115.jpg'
+            'menu_pics' => 'menu-pics/115.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -3274,7 +3274,7 @@ Step 9, Add the spaghetti and spinach; toss to coat well.',
             'carbohydrates' => 204,
             'protein' => 52,
             'fat' => 144,
-            'menu_pics' => '116.jpg'
+            'menu_pics' => 'menu-pics/116.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -3313,7 +3313,7 @@ Step 9, Ladle the soup into bowls. Garnish each serving with 1 tablespoon Parmes
             'carbohydrates' => 164,
             'protein' => 128,
             'fat' => 117,
-            'menu_pics' => '117.jpg'
+            'menu_pics' => 'menu-pics/117.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -3339,7 +3339,7 @@ Step 4, Cut the crusts from the sandwich and cut it in half diagonally.',
             'carbohydrates' => 116,
             'protein' => 48,
             'fat' => 198,
-            'menu_pics' => '118.jpg'
+            'menu_pics' => 'menu-pics/118.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -3363,7 +3363,7 @@ Step 5, Refrigerate for at least 15 minutes and up to 1 week.',
             'carbohydrates' => 40,
             'protein' => 8,
             'fat' => 27,
-            'menu_pics' => '119.jpg'
+            'menu_pics' => 'menu-pics/119.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -3395,7 +3395,7 @@ Step 8, Serve garnished with sage, if desired.',
             'carbohydrates' => 12,
             'protein' => 8,
             'fat' => 45,
-            'menu_pics' => '120.jpg'
+            'menu_pics' => 'menu-pics/120.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -3422,7 +3422,7 @@ Step 8, Let cool for 5 to 10 minutes and serve warm.',
             'carbohydrates' => 60,
             'protein' => 28,
             'fat' => 144,
-            'menu_pics' => '121.jpg'
+            'menu_pics' => 'menu-pics/121.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -3448,7 +3448,7 @@ Step 5, Drizzle with maple syrup, if desired.',
             'carbohydrates' => 84,
             'protein' => 8,
             'fat' => 36,
-            'menu_pics' => '122.jpg'
+            'menu_pics' => 'menu-pics/122.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -3475,7 +3475,7 @@ Step 6, Uncover, stir and cook, stirring every 15 minutes, until tender and star
             'carbohydrates' => 72,
             'protein' => 4,
             'fat' => 18,
-            'menu_pics' => '123.jpg'
+            'menu_pics' => 'menu-pics/123.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -3502,7 +3502,7 @@ Step 4, Stir in parsley before serving.',
             'carbohydrates' => 52,
             'protein' => 12,
             'fat' => 45,
-            'menu_pics' => '124.jpg'
+            'menu_pics' => 'menu-pics/124.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -3532,7 +3532,7 @@ Step 7, Let stand for 8 to 10 minutes.',
             'carbohydrates' => 100,
             'protein' => 8,
             'fat' => 135,
-            'menu_pics' => '125.jpg'
+            'menu_pics' => 'menu-pics/125.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -3562,7 +3562,7 @@ Step 5, Sprinkle with a little more salt and pepper before serving',
             'carbohydrates' => 196,
             'protein' => 24,
             'fat' => 117,
-            'menu_pics' => '126.jpg'
+            'menu_pics' => 'menu-pics/126.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -3592,7 +3592,7 @@ Step 5, Butter a baking dish, and then spoon the mixture into the dish, top with
             'carbohydrates' => 192,
             'protein' => 60,
             'fat' => 468,
-            'menu_pics' => '127.jpg'
+            'menu_pics' => 'menu-pics/127.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -3619,7 +3619,7 @@ Step 4, Meanwhile, combine the sour cream and mayonnaise with the Sriracha. Driz
             'carbohydrates' => 4,
             'protein' => 20,
             'fat' => 117,
-            'menu_pics' => '128.jpg'
+            'menu_pics' => 'menu-pics/128.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -3657,7 +3657,7 @@ Step 7, Remove the bay leaf and stir in the vinegar. Season with salt and black 
             'carbohydrates' => 200,
             'protein' => 80,
             'fat' => 45,
-            'menu_pics' => '129.jpg'
+            'menu_pics' => 'menu-pics/129.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -3689,7 +3689,7 @@ Step 6, Using a stick blender, puree to your preferred consistency. Serve immedi
             'carbohydrates' => 220,
             'protein' => 96,
             'fat' => 72,
-            'menu_pics' => '130.jpg'
+            'menu_pics' => 'menu-pics/130.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -3724,7 +3724,7 @@ Step 9, Bake until the cheese is melted and browned in spots, about 10 minutes.'
             'carbohydrates' => 136,
             'protein' => 44,
             'fat' => 162,
-            'menu_pics' => '131.jpg'
+            'menu_pics' => 'menu-pics/131.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -3770,7 +3770,7 @@ Step 15, Serve warm with the yogurt sauce. ',
             'carbohydrates' => 116,
             'protein' => 44,
             'fat' => 63,
-            'menu_pics' => '132.jpg'
+            'menu_pics' => 'menu-pics/132.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -3805,7 +3805,7 @@ Step 6, Add the carrot, cucumber, peanuts, cilantro, mint, basil and watercress 
             'carbohydrates' => 220,
             'protein' => 139,
             'fat' => 0,
-            'menu_pics' => '133.jpg'
+            'menu_pics' => 'menu-pics/133.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -3834,7 +3834,7 @@ Step 6, Sprinkle with 3/4 teaspoon salt and 1/4 teaspoon pepper and serve hot.',
             'carbohydrates' => 40,
             'protein' => 16,
             'fat' => 117,
-            'menu_pics' => '134.jpg'
+            'menu_pics' => 'menu-pics/134.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -3863,7 +3863,7 @@ Step 8, Sprinkle with the pepitas and serve immediately.',
             'carbohydrates' => 24,
             'protein' => 4,
             'fat' => 54,
-            'menu_pics' => '135.jpg'
+            'menu_pics' => 'menu-pics/135.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -3889,7 +3889,7 @@ Step 6, Sprinkle with salt and pepper and serve.',
             'carbohydrates' => 60,
             'protein' => 4,
             'fat' => 36,
-            'menu_pics' => '136.jpg'
+            'menu_pics' => 'menu-pics/136.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -3929,7 +3929,7 @@ Step 10, Add the rice, curry powder, cinnamon, cayenne and 1/2 teaspoon salt and
             'carbohydrates' => 312,
             'protein' => 36,
             'fat' => 171,
-            'menu_pics' => '137.jpg'
+            'menu_pics' => 'menu-pics/137.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -3961,7 +3961,7 @@ Step 5, Make sure the stuffing in the cavity is secured by wrapping the legs tig
             'carbohydrates' => 244,
             'protein' => 52,
             'fat' => 81,
-            'menu_pics' => '138.jpg'
+            'menu_pics' => 'menu-pics/138.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -4002,7 +4002,7 @@ Step 13, Bake until golden on top and bubbling, about 20 minutes.',
             'carbohydrates' => 171,
             'protein' => 36,
             'fat' => 81,
-            'menu_pics' => '139.jpg'
+            'menu_pics' => 'menu-pics/139.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -4035,7 +4035,7 @@ Step 7, Serve immediately.',
             'carbohydrates' => 220,
             'protein' => 96,
             'fat' => 9,
-            'menu_pics' => '140.jpg'
+            'menu_pics' => 'menu-pics/140.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -4080,7 +4080,7 @@ Step 14, Ladle the soup into serving bowls and serve.',
             'carbohydrates' => 92,
             'protein' => 124,
             'fat' => 54,
-            'menu_pics' => '141.jpg'
+            'menu_pics' => 'menu-pics/141.jpg'
         ]);
 
         DB::table('menus')->insert([
@@ -4120,7 +4120,7 @@ Step 9, Ladle the soup into bowls and garnish with cheese. ',
             'carbohydrates' => 112,
             'protein' => 48,
             'fat' => 117,
-            'menu_pics' => '142.jpg'
+            'menu_pics' => 'menu-pics/142.jpg'
         ]);
     }
 }
