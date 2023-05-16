@@ -23,9 +23,17 @@
                             <div class="btn-pack mt-5 is-pulled-right">
                                 <div class="preview">Preview Menu</div>
                                 <div class="vertical-line"></div>
-                                <div class="del-btn">
+                                <form action="/layout/recipe/{{ $menu->id }}" method="post">
+                                    @method('delete')
+                                    @csrf
+                                    <button class="del-btn">
+                                        @include('icons.delete')
+                                    </button>
+                                </form>
+                                {{-- <div class="del-btn">
                                     @include('icons.delete')
-                                </div>
+
+                                </div> --}}
                             </div>
                         </div>
                     </div>
