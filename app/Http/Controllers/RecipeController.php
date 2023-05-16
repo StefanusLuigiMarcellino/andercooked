@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Menu;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class RecipeController extends Controller
 {
@@ -35,6 +36,18 @@ class RecipeController extends Controller
         $validateData['category_id'] = 1;
 
         Menu::create($validateData);
+        return redirect('/recipe');
+    }
+
+    public function destroy($id){
+        $validatedData = $id->validate([
+            'delete' => 'required', // Validasi password harus ada
+        ]);
+
+        $Menu = Menu::findOrFail($id);
+        Storage::delete($Menu->menu_pics);
+
+        $Menu->delete();
         return redirect('/recipe');
     }
 }

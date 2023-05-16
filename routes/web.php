@@ -81,3 +81,5 @@ Route::post('/menu-details/{menu:id}', [HistoryController::class, 'history'])->n
 
 Route::get('/add-recipe', [RecipeController::class, 'index']);
 Route::post('/add-recipe', [RecipeController::class, 'store']);
+
+Route::delete('/layout/recipe/{menu:slug}', [RecipeController::class, 'destroy']);
