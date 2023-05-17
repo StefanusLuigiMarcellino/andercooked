@@ -25,7 +25,7 @@
                             <div class="image-wrapper">
                                 <a href="/menu-details/{{ $menu->slug }}"><img src="{{ asset('storage/' . $menu->menu_pics) }}" alt=""></a>
                             </div>
-                            <div class="filter"></div>
+                            {{-- <div class="filter"></div> --}}
                             <div class="list-information">
                                 <div class="left-list">
                                     <div class="title-font">{{ $menu->menu_name }}</div>
@@ -43,5 +43,10 @@
             @if ($menus->count() == False)
                 @include('templates.no-result-display')
             @endif
+
+            <div class="">
+                {{ $menus->links('vendor.pagination.bulma') }}
+            </div>
+
     </section>
 @endsection
