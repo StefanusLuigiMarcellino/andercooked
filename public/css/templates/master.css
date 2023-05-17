@@ -275,10 +275,11 @@ a{
     border-radius: 25px
 }
 .list img{
+    object-fit: cover;
     margin-top: -50px;
     width: 100%;
     height: fit-content;
-    border-radius: 25px;
+    /* border-radius: 25px; */
     transition: 0.3s;
 }
 .list img:hover{
