@@ -43,5 +43,10 @@
             @if ($menus->count() == False)
                 @include('templates.no-result-display')
             @endif
+
+            <div class="">
+                {{ $menus->links('vendor.pagination.bulma') }}
+            </div>
+
     </section>
 @endsection

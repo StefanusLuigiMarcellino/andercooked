@@ -14,16 +14,20 @@ class FavoriteController extends Controller
     {
         $user = auth()->user()->id;
         // $menu = Menu::whereIn('id', $id);
+        $curr = Favorite::where('menu_id', $id)->exists();
 
         // Check if the user has already liked the post
-        // if (!$user->likes()->where('post_id', $id)->exists()) {
+        if (!$curr) {
             // Store the like in the database
             $favorites = new Favorite();
             $favorites->user_id = $user;
             $favorites->menu_id = $id;
             $favorites->save();
-            // $menu->total_of_likes = $menu->total_of_likes + 1;
-            // dd($menu);
+            // $favorites->menu_id->total_of_likes = $favorites->menu_id->total_of_likes + 1;
+            // return response()->json(['message' => 'Liked successfully']);
+        } else {
+            dd("ELSe");
+        }
 
             // return response()->json(['message' => 'Liked successfully']);
         // }
