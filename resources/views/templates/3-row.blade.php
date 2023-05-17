@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/css/templates/sidebar.css">
     <link rel="stylesheet" href="/css/templates/data-aos.css">
     <title>AnderCooked | {{ $title }}</title>
-    <link rel="icon" type="image/png" href="assets/logo/logo-png.png">
+    <link rel="icon" type="image/png" href="/assets/logo/logo-png.png">
 </head>
 <body>
     <div class="columns">

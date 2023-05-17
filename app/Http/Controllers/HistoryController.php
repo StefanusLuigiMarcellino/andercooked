@@ -33,7 +33,7 @@ class HistoryController extends Controller
 
         // return response()->json(['message' => 'You have already liked this post']);
 
-        // return redirect()->back();
+        return redirect('/history');
     }
 
     public function index()
