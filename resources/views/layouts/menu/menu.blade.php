@@ -25,7 +25,7 @@
                             <div class="image-wrapper">
                                 <a href="/menu-details/{{ $menu->slug }}"><img src="{{ asset('storage/' . $menu->menu_pics) }}" alt=""></a>
                             </div>
-                            <div class="filter"></div>
+                            {{-- <div class="filter"></div> --}}
                             <div class="list-information">
                                 <div class="left-list">
                                     <div class="title-font">{{ $menu->menu_name }}</div>
