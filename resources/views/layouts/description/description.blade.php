@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/css/templates/sidebar.css">
     <link rel="stylesheet" href="/css/templates/data-aos.css">
     <title>AnderCooked | {{ $title }}</title>
+    <link rel="icon" type="image/png" href="/assets/logo/logo-png.png">
 </head>
 <body>
     <div class="columns">
@@ -38,10 +39,9 @@
                         <div class="description-font-serif">{{ $menu->description }}</div>
                     </div>
 
-                    <form class="lower-section" action="/menu-details/{{ $menu->id }}" method="post">
-                        @csrf
+                    <div class="lower-section" id="start-cooking" onclick="startCooking()">
                         <a href="#section"><button id="button" class="start-cooking-button white">Start Cooking</button></a>
-                    </form>
+                    </div>
 
                     <div class="nutrient-fact">
                         <h3 class="white">Nutrient Facts</h3>
@@ -105,6 +105,14 @@
                     {!! nl2br($menu->cooking_steps) !!}
                 </div>
                 <div class="box is-invisible"></div>
+                
+                <form class="lower-section" action="/menu-details/{{ $menu->id }}" method="post">
+                    @csrf
+                    <a href="#section"><button id="button" class="start-cooking-button white">Finish Cooking</button></a>
+                </form>
+
+                <div class="box is-invisible"></div>
+
             </section>
 
             {{-- JS when press button shows the cooking steps in detail --}}
@@ -115,6 +123,14 @@
                 button.addEventListener('click', function() {
                     section.style.display = 'block';
                 })
+
+                function startCooking() {
+                    var startButton = document.getElementById("start-cooking");
+                    var finishButton = document.getElementById("finish-cooking");
+
+                    startButton.style.display = "none";
+                    finishButton.style.display = "block";
+                }
             </script>
 
         </div>

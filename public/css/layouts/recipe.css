@@ -101,6 +101,9 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    border: none;
+    background: none;
+    outline: none;
 }
 .del-btn:hover{
     background-color: var(--semi-white);
