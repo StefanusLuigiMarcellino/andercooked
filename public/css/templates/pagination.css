@@ -1,0 +1,23 @@
+.pagination{
+    /* display: none; */
+    margin-top: 2.5vw;
+    background-color: white;
+    padding: 5px 5px;
+    border-radius: 20px;
+    width: fit-content !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+.active{
+    background-color: #4B8077 !important;
+    border: none;
+    font-weight: 700;
+}
+.current{
+    border: none;
+    color: #4B8077 !important;
+    font-weight: 700;
+}
+.current:hover{
+    background-color: #D3D3D3;
+}

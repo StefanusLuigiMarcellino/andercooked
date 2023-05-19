@@ -1,4 +1,4 @@
-f/* create css here */
+/* create css here */
 :root{
     /* Color */
     --black: #222222;
@@ -30,7 +30,7 @@ f/* create css here */
     grid-template-columns: 70% 30%;
 }
 .main-section{
-    padding: 60px 2.5vw;
+    padding: 60px 2.5vw 30px 2.5vw;
     background-color: var(--semi-white);
     height: 100%;
 }
@@ -46,15 +46,25 @@ f/* create css here */
     margin-top: 10px;
     display: flex;
 }
-.category-set{
+.button{
+    border: none !important;
     background-color: var(--white);
-    padding: 4px 10px;
-    border-radius: 10px;
-    color: var(--black);
-    margin-right: 10px;
-    font-size: 12px;
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    border-radius: 10px !important;
+    color: var(--black) !important;
+    height: auto !important;
+    margin-right: 5px !important;
+    font-size: 12px !important;
+
 }
 .category-set:hover{
     background-color: var(--dark-orange);
-    color: var(--white);
+    color: var(--white) !important;
+}
+.active-btn{
+    background-color: var(--dark-orange) !important;
+    color: var(--white) !important;
 }
