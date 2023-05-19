@@ -32,11 +32,11 @@
         <div class="menu-item">
             <div class="sidebar-heading black margin-30">Category</div>
             <div class="list-menu">
-                <a href="/menu?categories=foodies"><div class="menu-content" id="menu-content">
+                <a href="/menu?category=foodies"><div class="menu-content" id="menu-content">
                     @include('icons.food')
                     <div class="{{ ($title === "Food") ? 'subhead-active' : '' }} sidebar-subheading grey ">Food</div>
                 </div></a>
-                <a href="/menu?categories=beverages"><div class="menu-content" id="menu-content">
+                <a href="/menu?category=beverages"><div class="menu-content" id="menu-content">
                     @include('icons.drink')
                     <div class="{{ ($title === "Drink") ? 'subhead-active' : '' }} sidebar-subheading grey ">Drink</div>
                 </div></a>

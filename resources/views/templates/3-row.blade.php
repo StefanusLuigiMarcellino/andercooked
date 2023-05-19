@@ -12,7 +12,7 @@
     <link rel="icon" type="image/png" href="/assets/logo/logo-png.png">
 </head>
 <body>
-    <div class="columns">
+    <div class="columns" style="margin-bottom: 0 !important;">
         {{-- LEFT SIDE --}}
         <div class="column is-2 has-background-white">
             @include('templates.sidebar')

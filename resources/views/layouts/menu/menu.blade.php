@@ -24,12 +24,12 @@
                     @endif
                     <div class="field is-grouped">
                         <p class="control">
-                            <button class="button category-set" type="submit" name="category" value="foodies"
-                            {{ request('category') === 'foodies' ? 'disabled' : '' }}>Food</button>
+                            <button class="button category-set {{ request('category') === 'foodies' ? 'active-btn' : '' }}" type="submit" name="category" value="foodies"
+                            {{ request('category') === 'foodies' ? 'active' : '' }}>Food</button>
                         </p>
                         <p class="control">
-                            <button class="button category-set" type="submit" name="category" value="beverages"
-                            {{ request('category') === 'beverages' ? 'disabled' : '' }}>Drinks</button>
+                            <button class="button category-set {{ request('category') === 'beverages' ? 'active-btn' : '' }}" type="submit" name="category" value="beverages"
+                            {{ request('category') === 'beverages' ? 'active' : '' }}>Drinks</button>
                         </p>
                     </div>
                 </form>
