@@ -32,5 +32,11 @@ class SigninController extends Controller
         return back()->with('failed', 'Login failed.');
     }
 
+    public function logout(){
+        Auth::logout();
+        request()->session()->invalidate();
+        request()->session()->regenerateToken();
+        return redirect('/signin');
+    }
 
 }
