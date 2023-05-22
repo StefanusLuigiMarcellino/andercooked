@@ -73,6 +73,8 @@ Route::post('/register', [RegisterController::class, 'store']);
 Route::get('/signin', [SigninController::class, 'index'])->middleware('guest')->name('login');
 Route::post('/signin', [SigninController::class, 'authenticate']);
 
+Route::post('/logout', [SigninController::class, 'logout']);
+
 Route::get('/favorite', [FavoriteController::class, 'index']);
 Route::post('/favorite/{menu:id}', [FavoriteController::class, 'like'])->name('post.like');
 
