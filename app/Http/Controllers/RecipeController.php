@@ -31,7 +31,7 @@ class RecipeController extends Controller
 
         $validateData['user_id'] = auth()->user()->id;
         $validateData['menu_pics'] = $request->file('menu_pics')->store('menu-pics');
-        $validateData['published_at'] = '2023-05-15';
+        $validateData['published_at'] = date("Y-m-d");
         $validateData['total_of_likes'] = 0;
         $validateData['category_id'] = 1;
 
