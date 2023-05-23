@@ -13,8 +13,9 @@ class FavoriteController extends Controller
     public function like($id)
     {
         $user = auth()->user()->id;
-        // $menu = Menu::whereIn('id', $id);
-        $curr = Favorite::where('menu_id', $id)->exists();
+        $menu = Menu::where('id', $id)->first();
+        // $curr = Favorite::where(['menu_id', $id], ['user_id', $user])->first();
+        $curr = Favorite::where('menu_id', $id)->where('user_id', $user)->first();
 
         // Check if the user has already liked the post
         if (!$curr) {
@@ -23,10 +24,15 @@ class FavoriteController extends Controller
             $favorites->user_id = $user;
             $favorites->menu_id = $id;
             $favorites->save();
-            // $favorites->menu_id->total_of_likes = $favorites->menu_id->total_of_likes + 1;
+            // $menu->total_of_likes = Menu::where('total_of_likes', $menu->total_of_likes)->count();
+            $menu->total_of_likes = $menu->total_of_likes + 1;
+            $menu->save();
             // return response()->json(['message' => 'Liked successfully']);
         } else {
-            dd("ELSe");
+            $curr->delete();
+            $menu->total_of_likes = $menu->total_of_likes - 1;
+            $menu->save();
+            return back();
         }
 
             // return response()->json(['message' => 'Liked successfully']);
@@ -36,15 +42,26 @@ class FavoriteController extends Controller
         return redirect()->back();
     }
 
+    // public function index()
+    // {
+    //     $favorites = Favorite::where('user_id', auth()->user()->id)->pluck('menu_id')->toArray();
+
+    //     return view('layouts.favorite.favorite', [
+    //         "title" => "Favorite",
+    //         "menus" => Menu::latest()->whereIn('id', $favorites)->get()
+    //     ]);
+    // }
     public function index()
     {
-        $favorites = Favorite::where('user_id', auth()->user()->id)->pluck('menu_id')->toArray();
+        // $favorites = Favorite::where('user_id', auth()->user()->id)->pluck('menu_id')->toArray();
 
         return view('layouts.favorite.favorite', [
             "title" => "Favorite",
-            "menus" => Menu::latest()->whereIn('id', $favorites)->get()
+            "favorites" => Favorite::latest()->where('user_id', auth()->user()->id)->get()
         ]);
     }
+
+
 }
 
 // <?php

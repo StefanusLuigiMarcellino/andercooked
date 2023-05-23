@@ -32,4 +32,5 @@
     {{-- JS for Animate on Scroll --}}
     @include('templates.data-aos')
 </body>
+    @yield('script')
 </html>

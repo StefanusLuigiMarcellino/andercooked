@@ -44,7 +44,7 @@ class HistoryController extends Controller
 
         return view('layouts.history.history', [
             "title" => "History",
-            "menus" => Menu::whereIn('id', $histories)->get()
+            "histories" => History::latest()->where('user_id', auth()->user()->id)->get()
         ]);
     }
 }
