@@ -23,10 +23,10 @@ class RecipeController extends Controller
             'menu_pics' => 'required|image|file|max:4096',
             'ingredients' => 'required',
             'cooking_steps' => 'required',
-            'calories' => 'required',
-            'carbohydrates' => 'required',
-            'fat' => 'required',
-            'protein' => 'required',
+            'calories' => 'required|numeric',
+            'carbohydrates' => 'required|numeric',
+            'fat' => 'required|numeric',
+            'protein' => 'required|numeric',
         ]);
 
         $validateData['user_id'] = auth()->user()->id;
@@ -40,10 +40,6 @@ class RecipeController extends Controller
     }
 
     public function destroy($id){
-        $validatedData = $id->validate([
-            'delete' => 'required', // Validasi password harus ada
-        ]);
-
         $Menu = Menu::findOrFail($id);
         Storage::delete($Menu->menu_pics);
 

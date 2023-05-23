@@ -35,7 +35,7 @@ Route::fallback(function () {
 Route::get('/home', function () {
     return view('layouts.home', [
         "title" => "Home",
-        "menus" => Menu::latest()->filter(request(['category', 'search']))->paginate(10)
+        "menus" => Menu::orderBy('total_of_likes', 'desc')->paginate(4)
     ]);
 })->middleware('auth');
 
