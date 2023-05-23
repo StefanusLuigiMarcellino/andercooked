@@ -1,5 +1,6 @@
 <head>
-    <link rel="stylesheet" href="css/layouts/favorite-history.css">
+    <link rel="stylesheet" href="/css/layouts/favorite-history.css">
+    <link rel="stylesheet" href="/css/layouts/love.css">
 </head>
 
 @extends('templates.2-row')
@@ -56,7 +57,12 @@
                                     <div class="sub-title-font">{{ $menu->calories }} cal</div>
                                 </div>
                                 <div class="right-list">
-                                    @include('icons.loveTEMP')
+                                    <form action="/favorite/{{ $menu->id }}" method="post">
+                                        @csrf
+                                        <button>
+                                            <i class="far fa-heart {{ $menu->likedByUser() ? 'fas fa-heart' : 'far fa-heart' }}"></i>
+                                        </button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -73,4 +79,8 @@
             </div>
 
     </section>
+@endsection
+
+@section('script')
+    <script src="https://kit.fontawesome.com/1e23f5acef.js" crossorigin="anonymous"></script>
 @endsection

@@ -1,0 +1,32 @@
+button {
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    outline: none;
+    appearance: none;
+}
+
+i{
+    /* font-weight: 22px; */
+    /* height: 18px; */
+    font-size: 19px;
+    transition: .3s;
+    transition: transform 500ms;
+    transition-timing-function: cubic-bezier(.75, -3, .25, 4);
+}
+
+i:hover{
+    color: #f50057;
+    transform: scale(1.1);
+}
+
+.fas{
+    color: #f50057;
+}
+
+.far
+{
+    color: #f50057;
+    /* border: 1px black; */
+}

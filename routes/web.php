@@ -76,10 +76,10 @@ Route::post('/signin', [SigninController::class, 'authenticate']);
 Route::post('/logout', [SigninController::class, 'logout']);
 
 Route::get('/favorite', [FavoriteController::class, 'index']);
-Route::post('/favorite/{menu:id}', [FavoriteController::class, 'like'])->name('post.like');
+Route::post('/favorite/{menu:id}', [FavoriteController::class, 'like']);
 
 Route::get('/history', [HistoryController::class, 'index']);
-Route::post('/menu-details/{menu:id}', [HistoryController::class, 'history'])->name('post.like');
+Route::post('/menu-details/{menu:id}', [HistoryController::class, 'history']);
 
 Route::get('/add-recipe', [RecipeController::class, 'index']);
 Route::post('/add-recipe', [RecipeController::class, 'store']);
