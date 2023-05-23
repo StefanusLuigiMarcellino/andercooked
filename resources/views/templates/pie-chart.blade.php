@@ -1,5 +1,5 @@
 {{-- PIE CHART --}}
-<div class="header-font margin-20">Weekly Report</div>
+<div class="header-font mt-6">Weekly Report</div>
 
 
 <div class="container">
@@ -12,7 +12,7 @@
     
     {{-- <div class="pie-chart" 
     style="background: conic-gradient(var(--food-cream) 0 {{ $food_cream }}%, var(--food-green) 0 {{ $food_green }}%, var(--food-orange) 0 {{ $food_orange }}%, var(--food-purple) 0 {{ $food_purple }}%);"></div> --}}
-    <div class="chart-container" style="width: 250px; margin: 0 auto;">
+    <div class="chart-container" style="width: 18vw; margin: 0 auto;">
         <canvas class="my-chart"></canvas>
     </div>
     <script src="/javascript/pie-chart.js"></script>
@@ -98,11 +98,11 @@
     </div>
 </div>
 
-{{-- <div class="container"> --}}
+{{-- <div class="container">
     <div class="chart-container">
         <canvas class="my-chart"></canvas>
     </div>
-{{-- </div> --}}
+</div> --}}
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>

@@ -4,10 +4,14 @@
 }
 /* Sidebar Heading */
 .sidebar-heading{
+    width: 70%;
     font-family: var(--sansserif-font);
     font-weight: 600;
     font-size: 20px;
     text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;  
 }
 .sidebar-subheading{
     font-family: var(--sansserif-font);
@@ -48,7 +52,7 @@
 .menu-content{
     display: grid;
     row-gap: 10px;
-    grid-template-columns: 20% auto;
+    grid-template-columns: 35px auto;
     height: 50px;
     width: 100%;
     align-items: center;
@@ -69,6 +73,9 @@
 .margin-30{
     margin-left: 30px;
 }
+.margin-40{
+    margin-left: 40px;
+}
 
 .content{
     margin-top: 4vh;
@@ -77,4 +84,10 @@
 /* SVG Config */
 .my-svg{
     fill: var(--dark-green);
+}
+
+@media screen and (max-width: 1024px){
+    .sidebar-subheading{
+        display: none;
+    }
 }

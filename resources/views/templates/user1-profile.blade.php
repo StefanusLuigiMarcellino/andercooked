@@ -10,7 +10,7 @@
     <a href="/profile" class="profile-list"><div class="menu white">Profile</div></a>
     <a href="/" class="profile-list"><div class="menu white">Setting</div></a>
     <div class="line"></div>
-    <form action="/logout" method="post">
+    <form action="/logout" method="post"z>
         @csrf
         <button class="profile-list p-0"> <div class="menu white">Log out</div></button>
     </form>

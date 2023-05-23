@@ -68,3 +68,7 @@
     background-color: var(--dark-orange) !important;
     color: var(--white) !important;
 }
+
+.control{
+    margin-right: 0.5vw !important;
+}

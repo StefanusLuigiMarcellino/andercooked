@@ -90,11 +90,16 @@ button{
     font-family: var(--sansserif-font);
     font-weight: 400;
     font-size: 14px;
+    /* width: 90%; */
 }
 .title-font{
     font-family: var(--sansserif-font);
     font-weight: 600;
     font-size: 18px;
+    max-height: 58px;
+    /* white-space: nowrap; */
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 .profile-font{
     width: 60px;
@@ -202,7 +207,7 @@ button{
 
 .search-bar{
     display: grid;
-    grid-template-columns: 6% auto 10%;
+    grid-template-columns: 6% auto 60px;
     width: 100%;
     height: 40px;
     background-color: var(--white);
@@ -236,21 +241,22 @@ button{
 
 .banner{
     width: 100%;
-    height: 15vh;
+    /* height: 15vh; */
     background-color: var(--dark-orange);
     border-radius: 20px;
-    padding: 20px 35px;
+    padding: 1.5vw 2.7vw;
     display: grid;
-    grid-template-columns: 90% 10%;
+    grid-template-columns: 43vw 10vw;
 }
 .add-btn{
     display: flex;
     align-items: center;
+    /* justify-content: c; */
     transition: 0.3s;
 }
-.add-btn:hover{
+/* .add-btn:hover{
     transform: scale(1.05);
-}
+} */
 .menu-list{
     display: grid;
     grid-template-columns: auto auto;
@@ -274,16 +280,19 @@ a{
     overflow: hidden;
     border-radius: 25px
 }
+.list{
+    height: 35vh;
+}
 .list img{
     object-fit: cover;
-    margin-top: -50px;
+    /* margin-top: -50px; */
     width: 100%;
     height: fit-content;
     /* border-radius: 25px; */
-    transition: 0.3s;
+    transition: 0.5s;
 }
 .list img:hover{
-    transform: scale(1.07);
+    transform: scale(1.05);
 }
 /* .filter{
     position: absolute;
@@ -429,7 +438,7 @@ a{
     100% {
       transform: scale(1);
     }
-  }
+}
 .information{
     width: 100%;
     height: 8vw;
@@ -495,7 +504,8 @@ a{
 }
 .background-image img{
     width: 100vw;
-    /* height: 100%; */
+    height: 100%;
+    object-fit: cover;
 }
 .main-page-large{
     width: 84vw;
