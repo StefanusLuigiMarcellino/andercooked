@@ -11,9 +11,17 @@ class Favorite extends Model
     use HasFactory;
     protected $guarded = ['id'];
 
-    public function scopeVip($query){
-        dd($query->where('user_id', '==', auth()->user()->id));
-        return $query->where('user_id', '==', auth()->user()->id);
+    public function scopeFilter($query, array $filters) {
+        $query->when($filters['search'] ?? false, function($query, $search) {
+            return $query->whereHas('menu', function($query) use ($search) {
+                 $query->where('menu_name', 'like', '%' . $search . '%')
+                             ->orWhereHas('user', function($query) use ($search){
+                                $query->where('username', 'like', '%'. $search . '%');
+                             })
+                             ->orWhere('description', 'like', '%' . $search . '%')
+                             ->orWhere('ingredients', 'like', '%' . $search . '%');
+             });
+         });
     }
 
     public function user(){

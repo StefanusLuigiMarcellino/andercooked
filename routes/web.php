@@ -35,7 +35,7 @@ Route::fallback(function () {
 Route::get('/home', function () {
     return view('layouts.home', [
         "title" => "Home",
-        "menus" => Menu::latest()->filter(request(['category', 'search']))->paginate(10)
+        "menus" => Menu::orderBy('total_of_likes', 'desc')->paginate(4)
     ]);
 })->middleware('auth');
 
@@ -44,12 +44,12 @@ Route::get('/home', function () {
 //         "title" => "History"
 //     ]);
 // });
-Route::get('/recipe', function () {
-    return view('layouts.recipe.recipe', [
-        "title" => "Recipe",
-        "menus" => Menu::latest()->filter(request(['category', 'search']))->paginate(10)
-    ]);
-});
+// Route::get('/recipe', function () {
+//     return view('layouts.recipe.recipe', [
+//         "title" => "Recipe",
+//         "menus" => Menu::latest()->filter(request(['category', 'search']))->paginate(10)
+//     ]);
+// });
 // Route::get('/add-recipe', function () {
 //     return view('layouts.recipe.add-recipe', [
 //         "title" => "Add Recipe"
@@ -81,6 +81,7 @@ Route::post('/favorite/{menu:id}', [FavoriteController::class, 'like']);
 Route::get('/history', [HistoryController::class, 'index']);
 Route::post('/menu-details/{menu:id}', [HistoryController::class, 'history']);
 
+Route::get('/recipe', [RecipeController::class, 'show']);
 Route::get('/add-recipe', [RecipeController::class, 'index']);
 Route::post('/add-recipe', [RecipeController::class, 'store']);
 

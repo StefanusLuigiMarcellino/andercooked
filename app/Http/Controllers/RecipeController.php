@@ -2,13 +2,24 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\History;
 use App\Models\Menu;
 use App\Models\Category;
+use App\Models\Favorite;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
 class RecipeController extends Controller
 {
+    public function show(){
+        $user = auth()->user()->id;
+        $menu = Menu::where('user_id', $user)->latest()->filter(request(['category', 'search']))->paginate(10);
+        return view('layouts.recipe.recipe', [
+            "title" => "Recipe",
+            "menus" => $menu
+        ]);
+    }
+
     public function index(){
         return view('layouts.recipe.add-recipe', [
             "title" => "Add Recipe",
@@ -23,10 +34,10 @@ class RecipeController extends Controller
             'menu_pics' => 'required|image|file|max:4096',
             'ingredients' => 'required',
             'cooking_steps' => 'required',
-            'calories' => 'required',
-            'carbohydrates' => 'required',
-            'fat' => 'required',
-            'protein' => 'required',
+            'calories' => 'required|numeric',
+            'carbohydrates' => 'required|numeric',
+            'fat' => 'required|numeric',
+            'protein' => 'required|numeric',
         ]);
 
         $validateData['user_id'] = auth()->user()->id;
@@ -40,14 +51,15 @@ class RecipeController extends Controller
     }
 
     public function destroy($id){
-        $validatedData = $id->validate([
-            'delete' => 'required', // Validasi password harus ada
-        ]);
-
         $Menu = Menu::findOrFail($id);
+        $Favorite = Favorite::where('menu_id', $id);
+        $History = History::where('menu_id', $id);
         Storage::delete($Menu->menu_pics);
-
         $Menu->delete();
+        $Favorite->delete();
+        $History->delete();
+
+        // @dd($Favorite);
         return redirect('/recipe');
     }
 }

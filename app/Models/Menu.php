@@ -38,6 +38,9 @@ class Menu extends Model
         $query->when($filters['search'] ?? false, function($query, $search) {
             return $query->where(function($query) use ($search) {
                  $query->where('menu_name', 'like', '%' . $search . '%')
+                             ->orWhereHas('user', function($query) use ($search){
+                                $query->where('username', 'like', '%'. $search . '%');
+                             })
                              ->orWhere('description', 'like', '%' . $search . '%')
                              ->orWhere('ingredients', 'like', '%' . $search . '%');
              });

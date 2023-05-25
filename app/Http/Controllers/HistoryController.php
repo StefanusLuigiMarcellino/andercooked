@@ -12,26 +12,15 @@ class HistoryController extends Controller
     public function history($id)
     {
         $user = auth()->user()->id;
-        // $menu = Menu::whereIn('id', $id);
+        $history = History::where('menu_id', $id)->where('user_id', $user)->first();
 
-        // Check if the user has already liked the post
-        // if (!$user->likes()->where('post_id', $id)->exists()) {
-            // Store the like in the database
+        // Check if menu has not been seen before
+        if(!$history){
             $histories = new History();
             $histories->user_id = $user;
             $histories->menu_id = $id;
             $histories->save();
-            // return view('layouts.description.description', [
-            //     "title" => "Description",
-            //     "menu" => $menu
-            // ]);
-            // $menu->total_of_likes = $menu->total_of_likes + 1;
-            // dd($menu);
-
-            // return response()->json(['message' => 'Liked successfully']);
-        // }
-
-        // return response()->json(['message' => 'You have already liked this post']);
+        }
 
         return redirect('/history');
     }
@@ -44,7 +33,7 @@ class HistoryController extends Controller
 
         return view('layouts.history.history', [
             "title" => "History",
-            "histories" => History::latest()->where('user_id', auth()->user()->id)->get()
+            "histories" => History::latest()->where('user_id', auth()->user()->id)->filter(request(['search']))->get()
         ]);
     }
 }

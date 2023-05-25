@@ -7,7 +7,17 @@
 {{-- Mid Section --}}
 @section('mid-section')
     <section class="main-page">
-        @include('templates.search')
+        <form action="/menu" class="search-bar" data-aos="fade-down">
+            @if (request('page'))
+                <input type="hidden" name="page" value="{{ request('page') }}">
+            @endif
+            @if (request('category'))
+                <input type="hidden" name="category" value="{{ request('category') }}">
+            @endif
+            @include('icons.search')
+            <input class="search-font grey" type="search" name="search" placeholder="Search by food or drink name" value="{{ request('search') }}">
+            <button class="search-button">Search</button>
+        </form>
 
         <div class="banner margin-3" data-aos="zoom-in">
             <div class="text">
