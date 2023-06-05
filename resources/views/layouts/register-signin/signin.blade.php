@@ -34,7 +34,7 @@
                         </label>
                         <div class="control">
                             <input type="email" name="email" id="email" class="input @error('email')is-invalid @enderror"
-                            placeholder="ander.cooked@gmail.com" required value="{{ old('email') }}">
+                            placeholder="andercooked@gmail.com" required value="{{ old('email') }}">
                         </div>
 
                         @error('email')
@@ -46,7 +46,7 @@
                             Password
                         </label>
                         <div class="control">
-                            <input type="password" name="password" id="password" class="input" placeholder="**********" required>
+                            <input type="password" name="password" id="password" class="input" placeholder="•••••••••" required>
                         </div>
                     </div>
                 </div>
@@ -63,7 +63,7 @@
         </div>
         <div class="" style="padding: 0 25px;">
             <div class="kotak2">
-                <img class="" src="storage/menu-pics/90.jpg" alt="">
+                <img class="" src="{{ asset('storage/' . $picture) }}" alt="">
             </div>
         </div>
     </div>

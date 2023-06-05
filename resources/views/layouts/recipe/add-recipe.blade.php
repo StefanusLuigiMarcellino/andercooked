@@ -41,7 +41,6 @@
                                 <span class="green">Click to upload picture </span>or drag and drop
                             </span> --}}
                             <span class="detail-font">
-                                {{-- JPG or PNG files up to 4Mb --}}
                                 No file uploaded
                             </span>
                         </span>
@@ -54,7 +53,6 @@
                 <div class="field mt-5">
                     <label class="label mb-3">Category</label>
                     <select name="category_id" id="category_id" class="select" style="border-radius: 10px; color: #C2C2C2; font-size: 14px; font-weight: 400;">
-                        {{-- <option value="-1">Food or Drink</option> --}}
                         @foreach ($categories as $category)
                             @if(old('category_id') == $category->id)
                             <option value="{{ $category->id }}" selected>{{ $category->category }}</option>
@@ -147,10 +145,3 @@ Step 3" required>{{ old('cooking_steps') }}</textarea>
         }
     </script>
 @endsection
-
-{{-- Right Section
-@section('right-section')
-    <section class="side-page" data-aos="fade-left">
-        @include('templates.pie-chart')
-    </section>
-@endsection --}}

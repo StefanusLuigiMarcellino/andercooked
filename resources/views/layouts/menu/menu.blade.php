@@ -7,7 +7,6 @@
 
 @section('main-section')
     <section class="main-section">
-        {{-- code here --}}
         <div class="header">
             <form action="/menu" class="search-bar" data-aos="fade-down">
                 @if (request('page'))
@@ -24,7 +23,9 @@
         </div>
 
         <div class="cooking-menus row-3 margin-2">
-            <div class="header-font">Food Category</div>
+            <div class="header-font">
+                {{ request('category') === 'foodies' ? 'Food Category' : (request('category') === 'beverages' ? 'Drink Category' : 'Menu')}}
+            </div>
             <div class="category-wrapper">
                 <form action="/menu" method="GET">
                     @if (request('page'))
@@ -60,7 +61,6 @@
                                 <a href="/menu-details/{{ $menu->slug }}"><img
                                         src="{{ asset('storage/' . $menu->menu_pics) }}" alt=""></a>
                             </div>
-                            {{-- <div class="filter"></div> --}}
                             <div class="list-information">
                                 <div class="left-list">
                                     <div class="title-font">{{ $menu->menu_name }}</div>

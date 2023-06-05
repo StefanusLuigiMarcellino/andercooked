@@ -8,6 +8,9 @@
     margin-left: auto !important;
     margin-right: auto !important;
 }
+.pagination-list{
+    flex-wrap: nowrap;
+}
 .active{
     background-color: #4B8077 !important;
     border: none;

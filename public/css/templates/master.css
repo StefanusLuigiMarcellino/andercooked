@@ -3,6 +3,7 @@
 /* Scroll Bar */
 ::-webkit-scrollbar {
     width: 7.5px;
+    height: 5px;
 }
 
 ::-webkit-scrollbar-track {
@@ -90,11 +91,16 @@ button{
     font-family: var(--sansserif-font);
     font-weight: 400;
     font-size: 14px;
+    /* width: 90%; */
 }
 .title-font{
     font-family: var(--sansserif-font);
     font-weight: 600;
     font-size: 18px;
+    max-height: 52px;
+    /* white-space: nowrap; */
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 .profile-font{
     width: 60px;
@@ -202,7 +208,7 @@ button{
 
 .search-bar{
     display: grid;
-    grid-template-columns: 6% auto 10%;
+    grid-template-columns: 6% auto 60px;
     width: 100%;
     height: 40px;
     background-color: var(--white);
@@ -236,21 +242,22 @@ button{
 
 .banner{
     width: 100%;
-    height: 15vh;
+    /* height: 15vh; */
     background-color: var(--dark-orange);
     border-radius: 20px;
-    padding: 20px 35px;
+    padding: 1.5vw 2.7vw;
     display: grid;
-    grid-template-columns: 90% 10%;
+    grid-template-columns: 43vw 10vw;
 }
 .add-btn{
     display: flex;
     align-items: center;
+    /* justify-content: c; */
     transition: 0.3s;
 }
-.add-btn:hover{
+/* .add-btn:hover{
     transform: scale(1.05);
-}
+} */
 .menu-list{
     display: grid;
     grid-template-columns: auto auto;
@@ -274,16 +281,19 @@ a{
     overflow: hidden;
     border-radius: 25px
 }
+.list{
+    height: 35vh;
+}
 .list img{
     object-fit: cover;
-    margin-top: -50px;
+    /* margin-top: -50px; */
     width: 100%;
     height: fit-content;
     /* border-radius: 25px; */
-    transition: 0.3s;
+    transition: 0.5s;
 }
 .list img:hover{
-    transform: scale(1.07);
+    transform: scale(1.05);
 }
 /* .filter{
     position: absolute;
@@ -342,15 +352,18 @@ a{
 .user-profile-setting{
     position: absolute;
     z-index: 100;
-    width: 170px;
+    width: 150px;
     /* margin-top: 5px; */
-    height: 100px;
+    height: 70px;
     border-radius: 5px;
     background-color: #484848;
     right: 20px;
     display: grid;
     padding: 4px;
     filter: drop-shadow(0px 5px 3px rgba(0, 0, 0, 0.25));
+}
+.user-profile-setting form button{
+    background-color: #484848;
 }
 .margin1{
     margin-top: 5px;
@@ -362,6 +375,11 @@ a{
     padding: 10px 20px;
     display: flex;
     align-items: center;
+}
+.user-profile-setting form button{
+    /* display: none; */
+    width: 100%;
+    height: 100%;
 }
 .profile-list:hover{
     background-color: #7C7C7C;
@@ -393,51 +411,32 @@ a{
 }
 
 /* PIE CHART */
-.container{
+.container-pie-chart{
     padding: 30px 20px;
     margin-top: 25px;
     width: 100%;
-    height: 60vh;
+    height: auto;
     background-color: var(--light-orange);
     border-radius: 25px;
     display: grid;
     row-gap: 20px;
+    transition: 0.3s;
 }
-/* .pie-chart{
-    width: 100%;
-    height: 100%;
-    background-color: var(--black);
-    border-radius: 100%;
-} */
-.pie-chart {
-    /* background: conic-gradient(var(--food-cream) 90deg, var(--food-green) 90deg, var(--food-orange) 90deg, var(--food-purple) 90deg); */
-    /* background: conic-gradient(var(--food-cream) 0 25%, var(--food-green) 0 50%, var(--food-orange) 0 75%, var(--food-purple) 0 100%); */
-    border-radius: 50%;
-    width: 13vw;
-    height: 13vw;
-    padding-top: 50%;
-    margin: 0 auto;
-    animation: circleAnimation 2s;
+.container-pie-chart:hover{
+    filter: drop-shadow(0px 5px 3px rgba(0.05, 0.05, 0.05, 0.1));
 }
-@keyframes circleAnimation {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.05);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
 .information{
     width: 100%;
-    height: 8vw;
+    height: auto;
     background-color: var(--white);
     border-radius: 20px;
+    padding: 20px 25px 15px 25px;
+    overflow: hidden;
+}
+.ovr{
+    overflow-x: scroll;
     display: grid;
     grid-template-columns: auto auto;
-    padding: 20px 25px;
     row-gap: 0px;
     column-gap: 50px;
 }
@@ -495,7 +494,8 @@ a{
 }
 .background-image img{
     width: 100vw;
-    /* height: 100%; */
+    height: 100%;
+    object-fit: cover;
 }
 .main-page-large{
     width: 84vw;
@@ -554,7 +554,7 @@ a{
     bottom: 30px;
     border: 3px solid var(--white);
     border-radius: 20px;
-    width: 18vw;
+    width: 19vw;
     height: auto;
     padding: 0.8rem 1.5rem;
 }
@@ -566,6 +566,7 @@ a{
     display: grid;
     grid-template-columns: auto auto;
     column-gap: 40px;
+    overflow-x: scroll;
 }
 .content-wrapper{
     display: grid;
@@ -610,4 +611,8 @@ a{
     box-shadow:  14px 14px 28px #cccccc,
     -14px -14px 28px #f4f4f4;
 }
+
+/* .column{
+    flex-grow: 0 !important;
+} */
 

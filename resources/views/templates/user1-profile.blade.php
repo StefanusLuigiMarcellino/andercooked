@@ -6,10 +6,10 @@
     </svg>
 </div>
 
-<div class="user-profile-setting hidden" id="content" style="margin-top: 5px;">
+<div class="user-profile-setting hidden" id="content" style="margin-top: 5px;" aria-labelledby="dropdownMenuButton">
     <a href="/profile" class="profile-list"><div class="menu white">Profile</div></a>
-    <a href="/" class="profile-list"><div class="menu white">Setting</div></a>
-    <div class="line"></div>
+    {{-- <a href="/" class="profile-list"><div class="menu white">Setting</div></a> --}}
+    {{-- <div class="line"></div> --}}
     <form action="/logout" method="post">
         @csrf
         <button class="profile-list p-0"> <div class="menu white">Log out</div></button>
@@ -35,5 +35,12 @@
         iconSVG.classList.remove("rotate-upside-down");
         iconSVG.classList.add("rotate-normal");
     }
+    });
+
+    document.addEventListener('click', function(event) {
+        if (!toggleBtn.contains(event.target)) {
+            //   dropdownMenu.style.display = 'none';
+            content.classList.add("hidden");
+        }
     });
 </script>

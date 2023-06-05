@@ -6,10 +6,6 @@
 
 @section('main-section')
     <section>
-        {{-- <div class="header">
-            <h3 class="header-font black">Account Setting</h3>
-        </div> --}}
-
         <div class="wrapper columns is-3 m-6" data-aos="zoom-in">
             <div class="column is-8">
                 <div class="form-wrapper">
@@ -25,21 +21,21 @@
                             <div class="field">
                                 <label class="label">Name</label>
                                 <div class="control">
-                                    <input class="input" type="text" placeholder="e.g Alex Smith">
+                                    <input class="input" type="text" value="{{ $user->name }}">
                                 </div>
                             </div>
     
                             <div class="field">
                                 <label class="label">Username</label>
                                 <div class="control">
-                                    <input class="input" type="text" placeholder="e.g. alexsmith">
+                                    <input class="input" type="text" value="{{ $user->username }}">
                                 </div>
                             </div>
     
                             <div class="field">
                                 <label class="label">Email</label>
                                 <div class="control">
-                                    <input class="input" type="email" placeholder="e.g. alexsmith@gmail.com">
+                                    <input class="input" type="email" value="{{ $user->email }}">
                                 </div>
                             </div>
                     </div>
@@ -60,23 +56,23 @@
                             <h3 class="form-title black">Change Password</h3>
     
                             <div class="field">
-                                <label class="label">Old Password <span class="required-tag">*</span></label>
+                                <label class="label">Current Password <span class="required-tag"></span></label>
                                 <div class="control">
-                                    <input class="input" type="password" placeholder="e.g Alex Smith" required>
+                                    <input class="input" type="password" placeholder="•••••••••" required>
                                 </div>
                             </div>
     
                             <div class="field">
-                                <label class="label">New Password <span class="required-tag">*</span></label>
+                                <label class="label">New Password <span class="required-tag"></span></label>
                                 <div class="control">
-                                    <input class="input" type="password" placeholder="e.g. alexsmith" required>
+                                    <input class="input" type="password" placeholder="•••••••••" required>
                                 </div>
                             </div>
     
                             <div class="field">
-                                <label class="label">Confirm Password <span class="required-tag">*</span></label>
+                                <label class="label">Confirm New Password <span class="required-tag"></span></label>
                                 <div class="control">
-                                    <input class="input" type="password" placeholder="e.g. alexsmith@gmail.com" required>
+                                    <input class="input" type="password" placeholder="•••••••••" required>
                                 </div>
                             </div>
                     </div>

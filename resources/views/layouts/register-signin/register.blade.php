@@ -5,7 +5,7 @@
 <div class="container pt-5 pb-5 is-centered" data-aos="fade-up">
     <div class="pembungkus grid mb-2">
         <div class="kotak1 is-4">
-            <form action="\register" method="post">
+            <form action="/register" method="post">
                 @csrf
                 <div class="field">
                     <h1 class="header-font">Create an account</h1>
@@ -18,7 +18,7 @@
                         </label>
                         <div class="control">
                             <input type="name" name="username" id="username" class="input @error('username') is-invalid @enderror"
-                            placeholder="ander_cooked" required value="{{ old('username') }}">
+                            placeholder="andercooked" required value="{{ old('username') }}">
                         </div>
                         @error('username')
                         <p class="help is-danger">{{ $message }}</p>
@@ -30,7 +30,7 @@
                         </label>
                         <div class="control">
                             <input type="email" name="email" id="email" class="input @error('email') is-invalid @enderror"
-                            placeholder="ander.cooked@gmail.com" required value="{{ old('email') }}">
+                            placeholder="andercooked@gmail.com" required value="{{ old('email') }}">
                         </div>
                         @error('email')
                         <p class="help is-danger">{{ $message }}</p>
@@ -42,7 +42,7 @@
                         </label>
                         <div class="control">
                             <input type="password" name="password" id="password" class="input @error('password') is-invalid @enderror"
-                            placeholder="**********" required>
+                            placeholder="•••••••••" required>
                         </div>
                         @error('password')
                         <p class="help is-danger">{{ $message }}</p>
@@ -54,7 +54,7 @@
                         </label>
                         <div class="control">
                             <input type="password" name="confirm_password" id="confirm_password" class="input @error('confirm_password') is-invalid @enderror"
-                            placeholder="**********" required>
+                            placeholder="•••••••••" required>
                         </div>
                         @error('confirm_password')
                         <p class="help is-danger">{{ $message }}</p>
@@ -67,7 +67,7 @@
                         <tr>
                             <div style="display: flex;">
                                 <input type="checkbox" name="checkbox" id="checkbox" value="1" style="margin-bottom: auto; margin-top: auto;">
-                                <label for="TNC">I agree with the</label>
+                                <label for="TNC">I agree with the&nbsp;</label>
                                 <a href="#" class="tnc">Terms and Conditions</a>
                             </div>
                             @error('checkbox')
@@ -90,7 +90,7 @@
         </div>
         <div class="" style="padding: 0 25px;">
             <div class="kotak2">
-                <img class="" src="storage/menu-pics/90.jpg" alt="">
+                <img class="" src="{{ asset('storage/' . $picture) }}" alt="">
             </div>
         </div>
     </div>

@@ -12,6 +12,7 @@
     <link rel="icon" type="image/png" href="/assets/logo/logo-png.png">
 </head>
 <body>
+    {{-- <div class="{{ ($title === 'Sign In') ? 'box' : '' }} is-invisible"></div> --}}
     <div class="bgImage is-centered mb-2">
         <img src="/assets/logo/full-logo.svg" alt="" data-aos="fade-down">
     </div>

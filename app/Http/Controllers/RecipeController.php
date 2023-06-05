@@ -16,7 +16,20 @@ class RecipeController extends Controller
         $menu = Menu::where('user_id', $user)->latest()->filter(request(['category', 'search']))->paginate(10);
         return view('layouts.recipe.recipe', [
             "title" => "Recipe",
-            "menus" => $menu
+            "menus" => $menu,
+            "curr" =>  $menu->first()
+        ]);
+    }
+
+    // NOTES: ini yang bikin $curr nya error di recipe.blade.php
+    public function detail($slug){
+        $user = auth()->user()->id;
+        $menu = Menu::where('user_id', $user)->latest()->filter(request(['category', 'search']))->paginate(10);
+        $curr = Menu::where('user_id', $user)->where('slug', $slug)->first();
+        return view('layouts.recipe.recipe', [
+            "title" => "Recipe",
+            "menus" => $menu,
+            "curr" =>  $curr
         ]);
     }
 
@@ -59,7 +72,6 @@ class RecipeController extends Controller
         $Favorite->delete();
         $History->delete();
 
-        // @dd($Favorite);
         return redirect('/recipe');
     }
 }
