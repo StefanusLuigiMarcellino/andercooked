@@ -25,7 +25,7 @@
                 <div class="search-font white">Upload your own-home made recipe and share it with other member of our community</div>
             </div>
             <div class="add-btn">
-                <a href="/recipe"><svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <a href="/add-recipe"><svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="25" cy="25" r="23.5" stroke="white" stroke-width="3"/>
                     <rect x="12.9412" y="23.5293" width="24.1176" height="2.35294" rx="1.17647" fill="white"/>
                     <rect x="23.8237" y="36.7646" width="24.1176" height="2.35294" rx="1.17647" transform="rotate(-90 23.8237 36.7646)" fill="white"/>
@@ -61,7 +61,6 @@
 
                 </div>
             @endforeach
-                {{-- notes: nanti akan dibuat animasi spt ini -->https://codepen.io/pugson/pen/wMBjLz --}}
 
         </div>
 

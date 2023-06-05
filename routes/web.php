@@ -1,8 +1,8 @@
 <?php
 
 use App\Models\Menu;
+use Illuminate\Foundation\Auth\User;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\LikeController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\RecipeController;
 use App\Http\Controllers\SigninController;
@@ -21,51 +21,37 @@ use App\Http\Controllers\RegisterController;
 |
 */
 
-// nanti semua di masukin di AnderCookedController.php
-
 Route::get('/', function () {
-    return view('piechart.pie-chart-google');
+    return view('welcome', [
+        "title" => "AnderCooked"
+    ]);
 });
 
 // ini terjadi ketika user mengetik alamat yang invalid, kayak default site yang akan ditampilkan
 Route::fallback(function () {
-    return view('fallback');
+    return view('fallback', [
+        "title" => "Page not found"
+    ]);
 });
 
 Route::get('/home', function () {
     return view('layouts.home', [
         "title" => "Home",
+        "user" => auth()->user(),
         "menus" => Menu::orderBy('total_of_likes', 'desc')->paginate(4)
     ]);
 })->middleware('auth');
 
-// Route::get('/history', function () {
-//     return view('layouts.history.history', [
-//         "title" => "History"
-//     ]);
-// });
-// Route::get('/recipe', function () {
-//     return view('layouts.recipe.recipe', [
-//         "title" => "Recipe",
-//         "menus" => Menu::latest()->filter(request(['category', 'search']))->paginate(10)
-//     ]);
-// });
-// Route::get('/add-recipe', function () {
-//     return view('layouts.recipe.add-recipe', [
-//         "title" => "Add Recipe"
-//     ]);
-// });
-
 Route::get('/profile', function () {
     return view('layouts.profile.profile', [
         "title" => "Profile",
-        "semi-white" => "TRUE"
+        "semi-white" => "TRUE",
+        "user" => User::where('id', auth()->user()->id)->first()
     ]);
 });
 
 Route::get('/menu', [MenuController::class, 'index']);
 Route::get('/menu-details/{menu:slug}', [MenuController::class, 'show']);
-// Route::get('/menu-details', [MenuController::class, 'show']);
 
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
@@ -82,6 +68,8 @@ Route::get('/history', [HistoryController::class, 'index']);
 Route::post('/menu-details/{menu:id}', [HistoryController::class, 'history']);
 
 Route::get('/recipe', [RecipeController::class, 'show']);
+// NOTES: ini yang bikin $curr nya error di recipe.blade.php (gara gara ada /recipe/ nya, kalo cuma /recipe aja aman)
+Route::get('/recipe/{menu:slug}', [RecipeController::class, 'detail']);
 Route::get('/add-recipe', [RecipeController::class, 'index']);
 Route::post('/add-recipe', [RecipeController::class, 'store']);
 

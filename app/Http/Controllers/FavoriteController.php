@@ -14,12 +14,10 @@ class FavoriteController extends Controller
     {
         $user = auth()->user()->id;
         $menu = Menu::where('id', $id)->first();
-        // $curr = Favorite::where(['menu_id', $id], ['user_id', $user])->first();
         $curr = Favorite::where('menu_id', $id)->where('user_id', $user)->first();
 
         // Check if the user has already liked the post
         if (!$curr) {
-            // Store the like in the database
             $favorites = new Favorite();
             $favorites->user_id = $user;
             $favorites->menu_id = $id;

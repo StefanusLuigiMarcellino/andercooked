@@ -1,17 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/node_modules/bulma/css/bulma.min.css">
-    <link rel="stylesheet" href="/css/templates/master.css">
-    <link rel="stylesheet" href="/css/templates/sidebar.css">
-    <link rel="stylesheet" href="/css/templates/data-aos.css">
-    <title>AnderCooked | {{ $title }}</title>
-    <link rel="icon" type="image/png" href="/assets/logo/logo-png.png">
-</head>
-<body>
+@extends('templates.master')
+
+@section('content')
     <div class="columns" style="margin-bottom: 0 !important;">
         {{-- LEFT SIDE --}}
         <div class="column is-2 has-background-white">
@@ -19,14 +8,12 @@
         </div>
 
         {{-- MAIN SIDE --}}
-        <div class="column is-10 has-background-semi-white">
+        <div class="column is-10 {{ ($title === 'Details') ? '' : 'has-background-semi-white'}}">
             @yield('main-section')
         </div>
-
     </div>
 
     {{-- JS for Animate on Scroll --}}
     @include('templates.data-aos')
-</body>
-    @yield('script')
-</html>
+@endsection
+

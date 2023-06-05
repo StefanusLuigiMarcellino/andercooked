@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Menu;
 use App\Models\User;
+use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 
 class RegisterController extends Controller
 {
@@ -12,7 +14,8 @@ class RegisterController extends Controller
     {
         return view('layouts.register-signin.register', [
             "title" => "Register",
-            "active"=> "register"
+            "active"=> "register",  
+            "picture" => Menu::inRandomOrder()->pluck('menu_pics')->first()
         ]);
     }
 

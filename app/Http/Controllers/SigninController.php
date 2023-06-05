@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Menu;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
 
 class SigninController extends Controller
@@ -12,7 +14,8 @@ class SigninController extends Controller
     {
         return view('layouts.register-signin.signin', [
             "title" => "Sign In",
-            "active"=> "signin"
+            "active"=> "signin",
+            "picture" => Menu::inRandomOrder()->pluck('menu_pics')->first()
         ]);
     }
 

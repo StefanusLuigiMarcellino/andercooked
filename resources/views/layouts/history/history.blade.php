@@ -7,7 +7,6 @@
 
 @section('main-section')
     <section class="main-section">
-        {{-- code here --}}
         <div class="header">
             <form action="/history" class="search-bar" data-aos="fade-down">
                 {{-- @if (request('page'))
@@ -32,7 +31,6 @@
                             <div class="image-wrapper">
                                 <a href="/menu-details/{{ $history->menu->slug }}"><img src="{{ asset('storage/' . $history->menu->menu_pics) }}" alt=""></a>
                             </div>
-                            {{-- <div class="filter"></div> --}}
                             <div class="list-information">
                                 <div class="left-list">
                                     <div class="title-font">{{ $history->menu->menu_name }}</div>
