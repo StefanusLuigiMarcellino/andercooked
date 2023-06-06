@@ -26,7 +26,7 @@ class RecipeController extends Controller
         $user = auth()->user()->id;
         $menu = Menu::where('user_id', $user)->latest()->filter(request(['category', 'search']))->paginate(10);
         $curr = Menu::where('user_id', $user)->where('slug', $slug)->first();
-        return view('layouts.recipe.recipe', [
+        return view('layouts.recipe.recipe',  [
             "title" => "Recipe",
             "menus" => $menu,
             "curr" =>  $curr

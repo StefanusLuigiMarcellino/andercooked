@@ -73,4 +73,4 @@ Route::get('/recipe/{menu:slug}', [RecipeController::class, 'detail']);
 Route::get('/add-recipe', [RecipeController::class, 'index']);
 Route::post('/add-recipe', [RecipeController::class, 'store']);
 
-Route::delete('/layout/recipe/{menu:slug}', [RecipeController::class, 'destroy']);
+Route::delete('/recipe/{menu:id}', [RecipeController::class, 'destroy']);
