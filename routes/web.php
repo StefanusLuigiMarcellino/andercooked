@@ -42,6 +42,13 @@ Route::get('/home', function () {
     ]);
 })->middleware('auth');
 
+Route::get('/add-nutrient', function() {
+    return view('add-nutrient', [
+        "title" => "User Nutrient",
+        "user" => auth()->user()
+    ]);
+});
+
 Route::get('/profile', function () {
     return view('layouts.profile.profile', [
         "title" => "Profile",
