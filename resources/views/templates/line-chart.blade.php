@@ -1,7 +1,4 @@
 {{-- PIE CHART --}}
-<div class="header-font mt-6">Weekly Report</div>
-
-<div class="container-pie-chart">
     <div class="chart-container" style="width: 18vw; margin: 0 auto;">
         <canvas class="my-chart"></canvas>
     </div>
@@ -22,7 +19,7 @@
         const myChart = document.querySelector(".my-chart");
 
         new Chart(myChart, {
-        type: "doughnut",
+        type: "bar",
         data: {
             labels: chartData.labels,
             datasets: [
@@ -62,38 +59,35 @@
 
     </script>
 
-    <a href="/add-nutrient">
-        <div class="information">
-            <div class="ovr">
-                <div class="nutrient">
-                    <div class="color-nutrient food-cream"></div>
-                    <div class="explanation">
-                        <div class="nutrient-title black">Calories</div>
-                        <div class="nutrient-amount dark-grey">{{$user->total_calories}}cal</div>
-                    </div>
+    {{-- <div class="information">
+        <div class="ovr">
+            <div class="nutrient">
+                <div class="color-nutrient food-cream"></div>
+                <div class="explanation">
+                    <div class="nutrient-title black">Calories</div>
+                    <div class="nutrient-amount dark-grey">{{$user->total_calories}}cal</div>
                 </div>
-                <div class="nutrient">
-                    <div class="color-nutrient food-orange"></div>
-                    <div class="explanation">
-                        <div class="nutrient-title black">Fats</div>
-                        <div class="nutrient-amount dark-grey">{{$user->total_fat}}g</div>
-                    </div>
+            </div>
+            <div class="nutrient">
+                <div class="color-nutrient food-orange"></div>
+                <div class="explanation">
+                    <div class="nutrient-title black">Fats</div>
+                    <div class="nutrient-amount dark-grey">{{$user->total_fat}}g</div>
                 </div>
-                <div class="nutrient">
-                    <div class="color-nutrient food-purple"></div>
-                    <div class="explanation">
-                        <div class="nutrient-title black">Carbs</div>
-                        <div class="nutrient-amount dark-grey">{{$user->total_carbohydrates}}g</div>
-                    </div>
+            </div>
+            <div class="nutrient">
+                <div class="color-nutrient food-purple"></div>
+                <div class="explanation">
+                    <div class="nutrient-title black">Carbs</div>
+                    <div class="nutrient-amount dark-grey">{{$user->total_carbohydrates}}g</div>
                 </div>
-                <div class="nutrient">
-                    <div class="color-nutrient food-green"></div>
-                    <div class="explanation">
-                        <div class="nutrient-title black">Protein</div>
-                        <div class="nutrient-amount dark-grey">{{$user->total_protein}}g</div>
-                    </div>
+            </div>
+            <div class="nutrient">
+                <div class="color-nutrient food-green"></div>
+                <div class="explanation">
+                    <div class="nutrient-title black">Protein</div>
+                    <div class="nutrient-amount dark-grey">{{$user->total_protein}}g</div>
                 </div>
             </div>
         </div>
-    </a>
-</div>
+    </div> --}}
