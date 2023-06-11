@@ -142,15 +142,16 @@
 }
 
 .upper-wrap{
-    display: grid;
-    grid-template-columns: 70% auto;
+    /* display: grid;
+    grid-template-columns: 70% auto; */
     column-gap: 20px;
+    height: auto;
 }
 .insider{
     background-color: white;
     border-radius: 25px;
     width: 100%;
-    height: 200px;
+    height: auto;
 }
 .center{
     display: flex;

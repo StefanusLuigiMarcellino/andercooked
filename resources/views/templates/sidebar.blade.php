@@ -26,6 +26,10 @@
                     @include('icons.recipe')
                     <div class="{{ ($title === "Recipe") ? 'subhead-active' : '' }} sidebar-subheading grey ">Recipe</div>
                 </div></a>
+                <a href="/add-nutrient"><div class="menu-content" id="menu-content">
+                    @include('icons.information')
+                    <div class="{{ ($title === "User Nutrient") ? 'subhead-active' : '' }} sidebar-subheading grey ">Nutrient</div>
+                </div></a>
             </div>
         </div>
 

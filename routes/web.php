@@ -8,6 +8,7 @@ use App\Http\Controllers\RecipeController;
 use App\Http\Controllers\SigninController;
 use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\FavoriteController;
+use App\Http\Controllers\NutrientController;
 use App\Http\Controllers\RegisterController;
 
 /*
@@ -42,13 +43,6 @@ Route::get('/home', function () {
     ]);
 })->middleware('auth');
 
-Route::get('/add-nutrient', function() {
-    return view('add-nutrient', [
-        "title" => "User Nutrient",
-        "user" => auth()->user()
-    ]);
-});
-
 Route::get('/profile', function () {
     return view('layouts.profile.profile', [
         "title" => "Profile",
@@ -81,3 +75,9 @@ Route::get('/add-recipe', [RecipeController::class, 'index']);
 Route::post('/add-recipe', [RecipeController::class, 'store']);
 
 Route::delete('/recipe/{menu:id}', [RecipeController::class, 'destroy']);
+
+Route::get('add-nutrient', [NutrientController::class, 'index']);
+Route::post('add-nutrient/calories', [NutrientController::class, 'calories']);
+Route::post('add-nutrient/calories', [NutrientController::class, 'fats']);
+Route::post('add-nutrient/calories', [NutrientController::class, 'carbohydrates']);
+Route::post('add-nutrient/calories', [NutrientController::class, 'protein']);

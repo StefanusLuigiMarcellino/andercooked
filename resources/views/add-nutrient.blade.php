@@ -21,19 +21,8 @@
             @include('templates.user2-profile')
         </div>
 
-        <div class="header-font mt-6">Hi, <span>{{ $user->username }}</span></div>
+        <div class="header-font mt-6 black">Hi, <span>{{ $user->username }}</span></div>
         <div class="upper-wrap mt-3">
-            <div class="insider" style="padding: 25px;">
-                tes
-            </div>
-            <div class="insider center">
-                @include('templates.line-chart')
-            </div>
-        </div>
-
-        <div class="margin-2">
-            <h3 class="header-font black">Nutrient Detail</h3>
-
             <div class="nutrient-wrapper mt-5">
                 {{-- Calories --}}
                 <div class="nutrient-info bg-white calories" data-aos="zoom-in-up">
@@ -46,7 +35,10 @@
                         <h1 class="title-font mt-4">Calories</h1>
                         <h1 class="number-font">{{$user->total_calories}}cal</h1>
                     </div>
-                    <div class="button-base bg-cream has-text-centered hover">Add</div>
+                    <form action="/add-nutrient/calories" method="post">
+                        @csrf
+                        <button class="button-base bg-cream has-text-centered hover" style="width: 100% !important;">Add</button>
+                    </form>
 
                 </div>
                 {{-- Fats --}}
@@ -61,7 +53,11 @@
                         <h1 class="title-font mt-4">Fats</h1>
                         <h1 class="number-font">{{$user->total_fat}}g</h1>
                     </div>
-                    <div class="button-base bg-orange has-text-centered hover">Add</div>
+
+                    <form action="/add-nutrient/calories" method="POST">
+                        @csrf
+                        <button class="button-base bg-orange has-text-centered hover" style="width: 100% !important;">Add</button>
+                    </form>
                 </div>
                 {{-- Carbs --}}
                 <div class="nutrient-info bg-white" data-aos="zoom-in-up">
@@ -77,7 +73,11 @@
                         <h1 class="title-font mt-4">Carbohydrates</h1>
                         <h1 class="number-font">{{$user->total_carbohydrates}}g</h1>
                     </div>
-                    <div class="button-base bg-purple has-text-centered hover">Add</div>
+
+                    <form action="/add-nutrient/calories" method="POST">
+                        @csrf
+                        <button class="button-base bg-purple has-text-centered hover" style="width: 100% !important;">Add</button>
+                    </form>
                 </div>
                 {{-- Protein --}}
                 <div class="nutrient-info bg-white" data-aos="zoom-in-up">
@@ -92,8 +92,20 @@
                         <h1 class="title-font mt-4">Protein</h1>
                         <h1 class="number-font">{{$user->total_protein}}g</h1>
                     </div>
-                    <div class="button-base bg-green has-text-centered hover">Add</div>
+
+                    <form action="/add-nutrient/calories" method="POST">
+                        @csrf
+                        <button class="button-base bg-green has-text-centered hover" style="width: 100% !important;">Add</button>
+                    </form>
                 </div>
+            </div>
+        </div>
+
+        <div class="margin-2">
+            <h3 class="header-font black">Nutrient Detail</h3>
+
+            <div class="insider mt-5" style="padding: 25px;">
+                @include('templates.dynamic-line-chart')
             </div>
         </div>
     </section>
