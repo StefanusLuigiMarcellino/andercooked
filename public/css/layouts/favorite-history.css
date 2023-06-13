@@ -146,6 +146,7 @@
     grid-template-columns: 70% auto; */
     column-gap: 20px;
     height: auto;
+    overflow-x: scroll;
 }
 .insider{
     background-color: white;

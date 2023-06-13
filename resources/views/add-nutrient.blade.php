@@ -54,7 +54,7 @@
                         <h1 class="number-font">{{$user->total_fat}}g</h1>
                     </div>
 
-                    <form action="/add-nutrient/calories" method="POST">
+                    <form action="/add-nutrient/fats" method="POST">
                         @csrf
                         <button class="button-base bg-orange has-text-centered hover" style="width: 100% !important;">Add</button>
                     </form>
@@ -74,13 +74,13 @@
                         <h1 class="number-font">{{$user->total_carbohydrates}}g</h1>
                     </div>
 
-                    <form action="/add-nutrient/calories" method="POST">
+                    <form action="/add-nutrient/carbohydrates" method="POST">
                         @csrf
                         <button class="button-base bg-purple has-text-centered hover" style="width: 100% !important;">Add</button>
                     </form>
                 </div>
                 {{-- Protein --}}
-                <div class="nutrient-info bg-white" data-aos="zoom-in-up">
+                <div class="nutrient-info bg-white mb-2" data-aos="zoom-in-up">
                     <div class="nutrient-detail">
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M17.4461 14.8499C15.3128 14.8499 14.7112 12.1077 16.6008 11.1922C17.3322 10.8379 18.1144 11.0503 18.7131 11.5741C19.3012 12.0887 19.3992 12.9874 19.142 13.6716C19.0823 13.8306 18.9854 13.9861 18.8778 14.1182C18.5532 14.5165 18.0401 14.8499 17.4461 14.8499ZM8.85445 18.6513C8.85445 19.169 8.83751 19.2481 8.97136 19.7706C9.08114 20.199 9.29998 20.5038 9.69473 20.7161C10.2548 21.0173 10.899 20.9718 11.4201 20.5989C11.5422 20.5115 12.1485 19.8731 12.4264 19.6581C12.7462 19.4108 13.0539 19.0809 13.5149 18.7687C14.4182 18.1569 15.0534 17.7459 16.1783 17.4762C17.4891 17.1617 18.2893 17.4945 19.4782 16.2948C19.8765 15.8928 20.2128 15.5836 20.4856 15.0461C20.8979 14.2337 20.9693 13.7708 20.9693 12.8411C20.9693 12.0335 20.6258 11.2372 20.2093 10.6341C20.0668 10.4278 19.9289 10.2708 19.7563 10.0982C19.0802 9.42258 18.0405 8.8543 17.0134 8.8543C16.4623 8.8543 16.1241 8.8387 15.5877 9.00479C14.7291 9.27054 14.2311 9.61962 13.575 10.2681L12.663 11.2414C12.6012 11.3082 12.5978 11.3303 12.5395 11.396C12.3646 11.5928 12.1957 11.7724 12.0374 11.9756C10.8488 13.5011 9.81918 14.9134 9.20549 16.8082C9.05252 17.2806 8.8543 18.0591 8.8543 18.6513L8.85445 18.6513Z" fill="#222222"/>
@@ -93,7 +93,7 @@
                         <h1 class="number-font">{{$user->total_protein}}g</h1>
                     </div>
 
-                    <form action="/add-nutrient/calories" method="POST">
+                    <form action="/add-nutrient/protein" method="POST">
                         @csrf
                         <button class="button-base bg-green has-text-centered hover" style="width: 100% !important;">Add</button>
                     </form>
