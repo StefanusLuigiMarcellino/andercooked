@@ -9,22 +9,6 @@ use Illuminate\Routing\Controller;
 
 class HistoryController extends Controller
 {
-    public function history($id)
-    {
-        $user = auth()->user()->id;
-        $history = History::where('menu_id', $id)->where('user_id', $user)->first();
-
-        // Check if menu has not been seen before
-        if(!$history){
-            $histories = new History();
-            $histories->user_id = $user;
-            $histories->menu_id = $id;
-            $histories->save();
-        }
-
-        return redirect('/history');
-    }
-
     public function index()
     {
         $histories = History::where('user_id', auth()->user()->id)

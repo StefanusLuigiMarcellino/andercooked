@@ -42,7 +42,7 @@ class NutrientController extends Controller
         $user = $request->user();
         $user->total_protein = $user->total_protein + 1;
         $user->save();
-        
+
         return redirect()->back();
     }
 }

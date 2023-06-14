@@ -66,7 +66,7 @@ Route::get('/favorite', [FavoriteController::class, 'index']);
 Route::post('/favorite/{menu:id}', [FavoriteController::class, 'like']);
 
 Route::get('/history', [HistoryController::class, 'index']);
-Route::post('/menu-details/{menu:id}', [HistoryController::class, 'history']);
+Route::post('/menu-details/{menu:id}', [MenuController::class, 'history']);
 
 Route::get('/recipe', [RecipeController::class, 'show']);
 // NOTES: ini yang bikin $curr nya error di recipe.blade.php (gara gara ada /recipe/ nya, kalo cuma /recipe aja aman)
@@ -78,6 +78,6 @@ Route::delete('/recipe/{menu:id}', [RecipeController::class, 'destroy']);
 
 Route::get('add-nutrient', [NutrientController::class, 'index']);
 Route::post('add-nutrient/calories', [NutrientController::class, 'calories']);
-Route::post('add-nutrient/fats', [NutrientController::class, 'fats']);
-Route::post('add-nutrient/carbohydrates', [NutrientController::class, 'carbohydrates']);
-Route::post('add-nutrient/protein', [NutrientController::class, 'protein']);
+Route::post('add-nutrient/calories', [NutrientController::class, 'fats']);
+Route::post('add-nutrient/calories', [NutrientController::class, 'carbohydrates']);
+Route::post('add-nutrient/calories', [NutrientController::class, 'protein']);
