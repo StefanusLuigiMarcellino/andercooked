@@ -18,7 +18,7 @@
                             <img src="{{ asset('storage/' . $menu->menu_pics) }}" alt="">
                         </div>
                         <div class="info">
-                            <h1 class="title-recipe-font black">{{ $menu->menu_name }}</h1>
+                            <h1 class="title-recipe-font black">{{ $menu->name }}</h1>
                             <h2 class="subtitle-recipe-font dark-grey">{{ $menu->calories }} cal</h2>
 
                             <div class="btn-pack mt-5 is-pulled-right">
@@ -121,6 +121,8 @@
                     </div>
                 </div>
             </div>
+        @else
+            <p>Nothing to display here!</p>
         @endif
 
     </section>

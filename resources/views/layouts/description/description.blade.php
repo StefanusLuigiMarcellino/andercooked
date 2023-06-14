@@ -11,7 +11,7 @@
         </div>
         <section class="main-page-large">
             <div class="upper-section">
-                <div class="header-font-serif white">{{ $menu->menu_name }}</div>
+                <div class="header-font-serif white">{{ $menu->name }}</div>
                 <div class="like-count" style="background-color: white">
                     <div class="center gap-10">
                         {{-- <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">

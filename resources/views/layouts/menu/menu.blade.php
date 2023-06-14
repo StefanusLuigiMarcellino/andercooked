@@ -63,7 +63,7 @@
                             </div>
                             <div class="list-information">
                                 <div class="left-list">
-                                    <div class="title-font">{{ $menu->menu_name }}</div>
+                                    <div class="title-font">{{ $menu->name }}</div>
                                     <div class="sub-title-font">{{ $menu->calories }} cal</div>
                                 </div>
                                 <div class="right-list">

@@ -78,6 +78,6 @@ Route::delete('/recipe/{menu:id}', [RecipeController::class, 'destroy']);
 
 Route::get('add-nutrient', [NutrientController::class, 'index']);
 Route::post('add-nutrient/calories', [NutrientController::class, 'calories']);
-Route::post('add-nutrient/calories', [NutrientController::class, 'fats']);
-Route::post('add-nutrient/calories', [NutrientController::class, 'carbohydrates']);
-Route::post('add-nutrient/calories', [NutrientController::class, 'protein']);
+Route::post('add-nutrient/fats', [NutrientController::class, 'fats']);
+Route::post('add-nutrient/carbohydrates', [NutrientController::class, 'carbohydrates']);
+Route::post('add-nutrient/protein', [NutrientController::class, 'protein']);

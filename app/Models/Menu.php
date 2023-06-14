@@ -16,7 +16,7 @@ class Menu extends Model
     {
         parent::boot();
         static::created(function ($menu) {
-            $menu->slug = $menu->generateSlug($menu->menu_name);
+            $menu->slug = $menu->generateSlug($menu->name);
             $menu->save();
         });
     }
@@ -24,20 +24,23 @@ class Menu extends Model
     {
         if (static::whereSlug($slug = Str::slug($name))->exists()) {
             $max = static::whereName($name)->latest('id')->skip(1)->value('slug');
+
             if (isset($max[-1]) && is_numeric($max[-1])) {
-                return preg_replace_callback('/(\d+)$/', function($mathces) {
+                return preg_replace_callback('/(\d+)$/', function ($mathces) {
                     return $mathces[1] + 1;
                 }, $max);
             }
+
             return "{$slug}-2";
         }
+
         return $slug;
     }
 
     public function scopeFilter($query, array $filters) {
         $query->when($filters['search'] ?? false, function($query, $search) {
             return $query->where(function($query) use ($search) {
-                 $query->where('menu_name', 'like', '%' . $search . '%')
+                 $query->where('name', 'like', '%' . $search . '%')
                              ->orWhereHas('user', function($query) use ($search){
                                 $query->where('username', 'like', '%'. $search . '%');
                              })

@@ -15,12 +15,11 @@ return new class extends Migration
     {
         Schema::create('menus', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('category_id');
-            $table->foreignId('user_id');
-            $table->string('menu_name');
+            $table->foreignId('category_id')->references('id')->on('categories')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
+            $table->string('name');
             $table->string('slug')->nullable();
             $table->text('description');
-            $table->date('published_at');
             $table->integer('total_of_likes');
             $table->text('ingredients');
             $table->text('cooking_steps');

@@ -19,33 +19,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
-
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
-
-
-        // History::create([
-        //     'user_id'=>1,
-        //     'menu_id'=>1,
-        // ]);
-
-        // History::create([
-        //     'user_id'=>1,
-        //     'menu_id'=>2,
-        // ]);
-
-        // History::create([
-        //     'user_id'=>2,
-        //     'menu_id'=>2,
-        // ]);
-
         $this->call([
             UserSeeder::class,
-            MenuSeeder::class,
-            CategorySeeder::class
+            CategorySeeder::class,
+            MenuSeeder::class
         ]);
     }
 }

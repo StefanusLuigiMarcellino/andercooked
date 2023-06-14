@@ -35,7 +35,7 @@
                             {{-- <div class="filter"></div> --}}
                             <div class="list-information">
                                 <div class="left-list">
-                                    <div class="title-font">{{ $favorite->menu->menu_name }}</div>
+                                    <div class="title-font">{{ $favorite->menu->name }}</div>
                                     <div class="sub-title-font">{{ $favorite->menu->calories }} cal</div>
                                 </div>
                                 <div class="right-list">

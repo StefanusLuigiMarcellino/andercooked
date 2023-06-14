@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\History;
 use App\Models\Menu;
 use App\Models\user;
-use Illuminate\Http\Request;
+use Ilebluminate\Http\Request;
 
 class MenuController extends Controller
 {

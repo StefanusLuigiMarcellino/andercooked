@@ -15,9 +15,9 @@
                 <div class="field">
                     <label class="label mb-3">Menu Name</label>
                     <div class="control">
-                        <input class="input placeholder-font @error('menu_name') is-danger @enderror" name="menu_name" type="text" placeholder="e.g Stuffed Peppers" required autofocus value="{{ old('menu_name') }}">
+                        <input class="input placeholder-font @error('name') is-danger @enderror" name="name" type="text" placeholder="e.g Stuffed Peppers" required autofocus value="{{ old('name') }}">
                     </div>
-                    @error('menu_name')
+                    @error('name')
                         <p class="help is-danger">{{ $message }}</p>
                     @enderror
                 </div>

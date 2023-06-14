@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Menu;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -15,13 +16,11 @@ class MenuSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Stuffed Peppers',
-            'slug' => 'stuffed-peppers',
+            'name' => 'Stuffed Peppers',
             "description" => 'Stuffed peppers hold a special place in our heart. From cheesesteak stuffed peppers to vegetarian stuffed peppers, this versatile veggie is one of our favorites to experiment with. Strong enough to hold their shape, peppers are large enough to hold a decent amount of filling while taking to a variety of flavors—they are the perfect vessel for a variety of fillings and ingredients.',
-            'published_at' => '2023-03-08',
             'total_of_likes' => 78,
             'ingredients' => '1/2 c. uncooked rice
 2 tbsp. extra-virgin olive oil, plus more for drizzling
@@ -48,13 +47,11 @@ Step 5, Garnish with parsley before serving.',
             'menu_pics' => 'menu-pics/1.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Best Guacamole',
-            'slug' => 'best-guacamole',
+            'name' => 'Best Guacamole',
             "description" => 'Whether you serve it as a simple dip, load it on top of your tacos, or smear it on a bun as a burger topping, we can all agree—it`s not a party without Mexico`s most famous dip. Though some recipes like to go wild with the mix-ins, we prefer to keep it simple to really let the avocados shine.',
-            'published_at' => '2023-03-28',
             'total_of_likes' => 5,
             'ingredients' => '3 avocados, pitted
 1 small jalapeño, seeds removed if desired, finely chopped
@@ -72,14 +69,12 @@ Step 2, Top with more cilantro. Serve with tortilla chips alongside.',
             'menu_pics' => 'menu-pics/2.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Everything Bagel Crusted Salmon',
-            'slug' => 'everything-bagel-crusted-salmon',
+            'name' => 'Everything Bagel Crusted Salmon',
             "description" => 'A fluffy, chewy, everything bagel topped with cream cheese, smoked salmon, and all the fixin`s is my idea of a solid brunch. It`s time to bring the brunch vibes to dinnertime with everything bagel seasoning crusted salmon and a refreshing salad that`s reminiscent of the toppings on your favorite loaded lox sandwich. And if you`ve never turned cream cheese into a salad dressing, now is the time to start.
             If you don`t have everything bagel seasoning at your local grocery store, do not despair! We`ve got the recipe for the most delicious version of this savory, seedy blend.',
-            'published_at' => '2023-02-25',
             'total_of_likes' => 2,
             'ingredients' => '4 (6-oz.) skin-on salmon fillets
 Kosher salt
@@ -109,13 +104,11 @@ Step 6, Divide salmon among plates. Serve with salad and remaining dressing alon
             'menu_pics' => 'menu-pics/3.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Watermelon Quinoa Salad',
-            'slug' => 'watermelon-quinoa-salad',
+            'name' => 'Watermelon Quinoa Salad',
             "description" => 'We love to snack on bites of watermelon all summer long, but one of our favorite ways to enjoy the juicy, sweet fruit is in a refreshing salad. If you`re looking to bulk up the classic watermelon salad, this watermelon quinoa salad will be your new go-to. With mint, feta, red onion, cucumber, and a balsamic glaze, it`   s got everything you love about the traditional summer salad, but with an additional protein boost from one of our favorite grains, fluffy and nutritious quinoa. Perfect for a more-filling BBQ side or a light and refreshing summer lunch, this creative take on a classic is truly anything but boring.',
-            'published_at' => '2023-03-22',
             'total_of_likes' => 1,
             'ingredients' => '2 c. quinoa, cooked and cooled
 3 c. watermelon, cut in 1/2-inch cubes
@@ -134,13 +127,11 @@ Step 2, Serve',
             'menu_pics' => 'menu-pics/4.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Avocado Tomato Salad',
-            'slug' => 'avocado-tomato-salad',
+            'name' => 'Avocado Tomato Salad',
             "description" => 'Don`t confuse this colorful salad with guac—there`s way more depth of flavor and variety of texture, which makes it one of our favorite summer sides of all time. But the real beauty? You`re totally welcome to still eat it with tortilla chips.',
-            'published_at' => '2023-03-23',
             'total_of_likes' => 13,
             'ingredients' => '1/4 c. extra-virgin olive oil
 Juice of 1 lemon
@@ -163,13 +154,11 @@ Step 3, Gently toss with dressing and serve immediately. ',
             'menu_pics' => 'menu-pics/5.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Baked Kale Chips',
-            'slug' => 'baked-kale-chips',
+            'name' => 'Baked Kale Chips',
             "description" => 'Imagine being able to munch as many crunchy snacks as you want while you`re binging that show you love without feeling guilty later. That`s the beauty of these homemade baked kale chips. Made by quickly tossing together three simple ingredients fresh kale, olive oil, and flaked sea salt and baked low and slow for only 20 minutes, these crispy kale chips are easy to make, there are no mystery additives, and even fussy eaters snap them up.',
-            'published_at' => '2023-02-15',
             'total_of_likes' => 27,
             'ingredients' => '1 bunch kale
 1 tablespoon olive oil
@@ -188,13 +177,11 @@ Step 7, Serve.',
             'menu_pics' => 'menu-pics/6.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Shrimp Salsa',
-            'slug' => 'shirmp-salsa',
+            'name' => 'Shrimp Salsa',
             "description" => 'This is an awesomely simple, light, and refreshing salsa that goes great with tortilla chips.',
-            'published_at' => '2023-03-20',
             'total_of_likes' => 14,
             'ingredients' => '½ pound salad shrimp
 2 roma (plum) tomatoes, diced
@@ -214,13 +201,11 @@ Step 3, Serve cold.',
             'menu_pics' => 'menu-pics/7.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Thai Basil Rolls with Hoisin-Peanut Sauce',
-            'slug' => 'thai-basil-rolls-with-hosin-peanut-sauce',
+            'name' => 'Thai Basil Rolls with Hoisin-Peanut Sauce',
             "description" => 'Shrimp and pork - layered with rice noodles, bean sprouts, and herbs - all rolled together in a fresh rice wrapper and served with a hoisin-peanut sauce for dipping. Great for an appetizer or lunch!',
-            'published_at' => '2023-02-14',
             'total_of_likes' => 29,
             'ingredients' => 'Rolls
 ½ pound medium shrimp
@@ -248,13 +233,11 @@ Step 5, Warm hoisin sauce, peanut butter, and water in a saucepan over medium-hi
             'menu_pics' => 'menu-pics/8.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Healthier Sloppy Joes II',
-            'slug' => 'healthier-sloppy-joes-ii',
+            'name' => 'Healthier Sloppy Joes II',
             "description" => 'This healthier version of sloppy joes includes more veggies and real garlic. Be sure to serve on whole wheat buns!',
-            'published_at' => '2023-03-10',
             'total_of_likes' => 43,
             'ingredients' => '1 pound lean ground beef
 ¼ cup chopped onion
@@ -277,13 +260,11 @@ Step 5, Season with salt and pepper.',
             'menu_pics' => 'menu-pics/9.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Maple Salmon',
-            'slug' => 'maple-salmon',
+            'name' => 'Maple Salmon',
             "description" => 'This maple glazed salmon is delicious and very easy to prepare. I love maple syrup in everything and decided to use it in the marinade. My husband totally loved it; he wasn`t a salmon fan until now.',
-            'published_at' => '2023-03-12',
             'total_of_likes' => 21,
             'ingredients' => '¼ cup maple syrup
 2 tablespoons soy sauce
@@ -303,13 +284,11 @@ Step 5, Place the baking dish in the preheated oven and bake salmon uncovered un
             'menu_pics' => 'menu-pics/10.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Vegetarian Sheet Pan Dinner with Chickpeas and Veggies',
-            'slug' => 'vegetarian-sheet-pan-dinner-with-chickpeas-and-veggies',
+            'name' => 'Vegetarian Sheet Pan Dinner with Chickpeas and Veggies',
             "description" => 'Adding chickpeas to root vegetables on a sheet pan makes for an easy dinner! Make sure to cut all the vegetables the same size or they won`t cook properly!',
-            'published_at' => '2023-01-02',
             'total_of_likes' => 31,
             'ingredients' => '2 (15 ounce) cans chickpeas, rinsed and drained
 ½ butternut squash - peeled, seeded, and cut into 1-inch pieces
@@ -336,13 +315,11 @@ Step 4, Bake in the preheated oven for 25 minutes. Stir and bake until vegetable
             'menu_pics' => 'menu-pics/11.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Sheet Pan Citrus and Sage Chicken with Roasted Broccoli and Potatoes',
-            'slug' => 'sheet-pan-citrus-and-sage-chicken-with-roasted-broccoli-and-potatoes',
+            'name' => 'Sheet Pan Citrus and Sage Chicken with Roasted Broccoli and Potatoes',
             "description" => 'A whole meal made on one baking sheet! Clementine and sage are the main flavor components in this dish, but can be subbed for other citrus, herbs, or spices to change it up.',
-            'published_at' => '2023-02-19',
             'total_of_likes' => 11,
             'ingredients' => '1 pound skinless, boneless chicken breast halves
 1 pound small red potatoes, halved
@@ -376,13 +353,11 @@ Step 11, Bake in the preheated oven until chicken is golden and broccoli is cris
             'menu_pics' => 'menu-pics/12.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Easy Sheet Pan Beef Bulgogi',
-            'slug' => 'easy-sheet-pan-beef-bulgogi',
+            'name' => 'Easy Sheet Pan Beef Bulgogi',
             "description" => 'Learn how to cook beef bulgogi on a sheet pan in a super hot oven to deliver a delicious weeknight meal. For best results, you`ll want some meat with marbling. Serve over rice.',
-            'published_at' => '2023-01-27',
             'total_of_likes' => 76,
             'ingredients' => '1 ½ pounds flat iron steak
 ¼ cup soy sauce
@@ -410,13 +385,11 @@ cooking spray
             'menu_pics' => 'menu-pics/13.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Best Turkey Meatloaf',
-            'slug' => 'best-turkey-meatloaf',
+            'name' => 'Best Turkey Meatloaf',
             "description" => 'For a healthier turkey meatloaf, after much trial and error I came up with this recipe. It`s important to make this on a jelly-roll pan (rimmed baking sheet) so the liquids can be drained off. Also, don`t put the topping on before the meatloaf has cooked for 30 minutes; ground turkey creates a lot of juices, so if you put the topping on first it will become watery and runny.',
-            'published_at' => '2023-03-22',
             'total_of_likes' => 87,
             'ingredients' => 'Meatloaf:
 1 ½ pounds ground turkey
@@ -443,13 +416,11 @@ Step 5, Return loaf to the oven and continue baking until no longer pink in the 
             'menu_pics' => 'menu-pics/14.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Garlic Chicken Stir Fry',
-            'slug' => 'garlic-chicken-stir-fry',
+            'name' => 'Garlic Chicken Stir Fry',
             "description" => 'A stir fry recipe I developed to satisfy a family of garlic lovers.',
-            'published_at' => '2023-02-22',
             'total_of_likes' => 65,
             'ingredients' => '2 tablespoons peanut oil
 6 cloves garlic, minced
@@ -481,13 +452,11 @@ Step 9, Serve immediately, over hot rice if desired.',
             'menu_pics' => 'menu-pics/15.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Spiralized Cucumber and Jicama Tostada Salad with Avocado',
-            'slug' => 'spiralized-cucumber-and-jicama-tostada-salad-with-avocado',
+            'name' => 'Spiralized Cucumber and Jicama Tostada Salad with Avocado',
             "description" => 'Amaze your friends with these easy-to-make spiralized veggies atop a creamy avocado-based tostada. Perfect for the summertime, paired with your favorite margarita. Change up the veggies or the dressing to suit your taste.',
-            'published_at' => '2023-02-08',
             'total_of_likes' => 34,
             'ingredients' => '1 jicama, cut into spirals
 1 English cucumber, cut into spirals
@@ -515,13 +484,11 @@ Step 6, Garnish with cilantro and serve with lime wedges.',
             'menu_pics' => 'menu-pics/16.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Claire`s Curried Butternut Squash Soup',
-            'slug' => 'claires-curried-butternut-squash-soup',
+            'name' => 'Claire`s Curried Butternut Squash Soup',
             "description" => 'So easy and so perfect for fall, this one`s from the collection I created for my kiddo when she was a starving college student. I top it with toasted pumpkin seeds or curried almonds.',
-            'published_at' => '2023-02-07',
             'total_of_likes' => 2,
             'ingredients' => '1 butternut squash
 1 tablespoon olive oil, or as needed
@@ -546,13 +513,11 @@ Step 5, Mix coconut milk and salt into soup and simmer until heated through, abo
             'menu_pics' => 'menu-pics/17.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Zucchini Artichoke Summer Salad',
-            'slug' => 'zucchini-artichoke-summer-salad',
+            'name' => 'Zucchini Artichoke Summer Salad',
             "description" => 'I made up this salad because our garden is simply overflowing with zucchini! We ate it as a main dish for dinner tonight with Italian seasoning-covered rolls on the side, but it could easily be eaten as a side dish.',
-            'published_at' => '2023-01-14',
             'total_of_likes' => 8,
             'ingredients' => '2 skinless, boneless chicken breast halves
 salt and ground black pepper to taste
@@ -573,13 +538,11 @@ Step 4, Mix zucchini, garbanzo beans, olives, artichoke hearts, and Parmesan che
             'menu_pics' => 'menu-pics/18.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Ratatouille',
-            'slug' => 'ratatouille',
+            'name' => 'Ratatouille',
             "description" => 'This easy ratatouille recipe is a terrific side dish that`s loaded with healthy vegetables.',
-            'published_at' => '2023-02-17',
             'total_of_likes' => 82,
             'ingredients' => '2 tablespoons olive oil, divided
 3 cloves garlic, minced
@@ -603,13 +566,11 @@ Step 4, Bake in preheated oven until vegetables are tender, 45 minutes.',
             'menu_pics' => 'menu-pics/19.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'White Chili II',
-            'slug' => 'white-chili-ii',
+            'name' => 'White Chili II',
             "description" => 'This recipe can be made in a slow cooker, or on the stove top. White corn chips and shredded Jack cheese complete the meal. This is a nice low fat meal.',
-            'published_at' => '2023-03-20-',
             'total_of_likes' => 46,
             'ingredients' => '1 ½ pounds skinless, boneless chicken breast halves - cubed
 1 bunch green onions, thinly sliced
@@ -638,13 +599,11 @@ Step 4, Stir in the beans with can liquid, and simmer all over low heat for 15 t
             'menu_pics' => 'menu-pics/20.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Vegan Pumpkin Pancakes',
-            'slug' => 'vegan-pumpkin-pancakes',
+            'name' => 'Vegan Pumpkin Pancakes',
             "description" => 'These vegan pancakes take on a hint of fall with the savory goodness of pumpkin, cinnamon, and pecans! Serve with toppings of choice, including additional pecans and maple syrup.',
-            'published_at' => '2023-02-16',
             'total_of_likes' => 7,
             'ingredients' => '2 cups almond milk
 2 tablespoons distilled white vinegar
@@ -671,13 +630,11 @@ Step 5, Heat a lightly oiled griddle over medium-high heat. Drop batter by large
             'menu_pics' => 'menu-pics/21.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Quinoa Black Bean Burgers',
-            'slug' => 'quinoa-black-bean-burgers',
+            'name' => 'Quinoa Black Bean Burgers',
             "description" => 'These vegetarian black bean and quinoa burgers are delicious! Your carnivorous friends will be impressed. My favorite way to serve them is on a whole wheat bun with garlic-lemon mayonnaise, fresh spinach leaves, sliced tomato, and caramelized onions.',
-            'published_at' => '2023-03-30',
             'total_of_likes' => 26,
             'ingredients' => '¼ cup quinoa
 ½ cup water
@@ -702,13 +659,11 @@ Step 4, Cook patties in hot oil until heated through, 2 to 3 minutes per side.',
             'menu_pics' => 'menu-pics/22.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Sorghum Buddha Bowl',
-            'slug' => 'sorghum-buddha-bowl',
+            'name' => 'Sorghum Buddha Bowl',
             "description" => 'Sorghum grains, roasted vegetables, black beans, and a tangy miso dressing make up a filling meal in a bowl.',
-            'published_at' => '2023-03-28',
             'total_of_likes' => 4,
             'ingredients' => '2 cups water
 ½ cup whole grain sorghum
@@ -740,13 +695,11 @@ Step 7, Spoon sorghum into serving bowls. Arrange roasted vegetables on top and 
             'menu_pics' => 'menu-pics/23.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Creamy Italian White Bean Soup',
-            'slug' => 'creamy-italian-white-bean-soup',
+            'name' => 'Creamy Italian White Bean Soup',
             "description" => 'Hearty and healthy soup that is a favorite with friends and family. Sounds more difficult than it is. Try it! We`re positive you`ll be pleased. Serve with grated Parmesan cheese.',
-            'published_at' => '2023-01-22',
             'total_of_likes' => 43,
             'ingredients' => '1 tablespoon vegetable oil
 1 onion, chopped
@@ -773,13 +726,11 @@ Step 7, Stir in lemon juice and remove from heat and serve with fresh grated Par
             'menu_pics' => 'menu-pics/24.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Granola Bars',
-            'slug' => 'granola-bars',
+            'name' => 'Granola Bars',
             "description" => 'This granola bar recipe is super easy to make with oats, coconut, and peanut butter for a wholesome snack any time of the day!',
-            'published_at' => '2023-02-10',
             'total_of_likes' => 20,
             'ingredients' => 'cooking spray
 2 cups rolled oats
@@ -800,13 +751,11 @@ Step 5, Bake in the preheated oven until beginning to dry, about 15 minutes for 
             'menu_pics' => 'menu-pics/25.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 2,
             'user_id' => 1,
-            'menu_name' => 'Bourbon & Honey Gold Rush Cocktail',
-            'slug' => 'bourbon-honey-gold-rush-cocktail',
+            'name' => 'Bourbon & Honey Gold Rush Cocktail',
             "description" => 'The Gold Rush is a modern classic whiskey cocktail that was invented by New York City bartender T.J. Siegal. This easy mix of bourbon, lemon and honey is made with ingredients you likely have in your pantry and makes a tasty addition to happy hour, no matter the season.',
-            'published_at' => '2023-03-09',
             'total_of_likes' => 50,
             'ingredients' => '1 teaspoon honey
 1 teaspoon water
@@ -825,13 +774,11 @@ Step 4, Strain the cocktail into a rocks glass filled with ice and garnish with 
             'menu_pics' => 'menu-pics/26.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 2,
             'user_id' => 1,
-            'menu_name' => 'Healthy Honey Mint Lemonade',
-            'slug' => 'healthy-honey-mint-lemonade',
+            'name' => 'Healthy Honey Mint Lemonade',
             "description" => 'This yummy Healthy Honey Mint Lemonade recipe is an easy to make, refreshing drink to cool off with! Sweetened with honey & made with only 4 ingredients!',
-            'published_at' => '2023-02-16',
             'total_of_likes' => 21,
             'ingredients' => '1/2 cup honey
 1 cup lemon juice
@@ -848,13 +795,11 @@ Step 3, Stir + serve over ice.',
             'menu_pics' => 'menu-pics/27.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 2,
             'user_id' => 1,
-            'menu_name' => 'Healthy Hot Chocolate',
-            'slug' => 'healthy-hot-chocolate',
+            'name' => 'Healthy Hot Chocolate',
             "description" => 'Healthy Hot Chocolate is the perfect cozy winter drink. Dairy free, refined sugar free, low calorie & made with only 3 ingredients!',
-            'published_at' => '2023-02-28',
             'total_of_likes' => 98,
             'ingredients' => '4 cups almond milk (dairy, almond, coconut milk all will work)
 4 tablespoons cocoa powder
@@ -869,13 +814,11 @@ Step 3, Once warm – pour into mug and enjoy!',
             'menu_pics' => 'menu-pics/28.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 2,
             'user_id' => 1,
-            'menu_name' => 'The Best Skinny Margarita Recipe',
-            'slug' => 'the-best-skinny-margarita-recipe',
+            'name' => 'The Best Skinny Margarita Recipe',
             "description" => 'The best skinny margarita recipe that is so simple to make. Easy, fresh, low calorie and delicious – this is perfect for a healthy cocktail!',
-            'published_at' => '2023-04-01',
             'total_of_likes' => 76,
             'ingredients' => 'Margarita
 3 tablespoons silver tequila 1 shot
@@ -898,13 +841,11 @@ Step 2, Shake and serve in a sugar or salt rimmed glass.',
             'menu_pics' => 'menu-pics/29.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 2,
             'user_id' => 1,
-            'menu_name' => 'Best Green Protein Smoothie For Breakfast + Benefits',
-            'slug' => 'best-green-protein-smoothie-for-breakfast-benefits',
+            'name' => 'Best Green Protein Smoothie For Breakfast + Benefits',
             "description" => 'A Healthy Green Smoothie Recipe that is so easy to make. Learn how to make the best green smoothie recipe that is delicious and good for you!',
-            'published_at' => '2023-04-02',
             'total_of_likes' => 73,
             'ingredients' => '2-3 cups fresh spinach
 1/2 cup almond milk
@@ -920,13 +861,11 @@ Step 2, Blend until smooth + enjoy!',
             'menu_pics' => 'menu-pics/30.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 2,
             'user_id' => 1,
-            'menu_name' => 'Peppermint Mocha Recipe',
-            'slug' => 'peppermint-mocha-recipe',
+            'name' => 'Peppermint Mocha Recipe',
             "description" => 'This Healthy Peppermint Mocha is the perfect holiday drink! Requiring only 5 ingredients, it`s easy to make, paleo, vegan, and cheaper than Starbucks!',
-            'published_at' => '2023-03-02',
             'total_of_likes' => 93,
             'ingredients' => '1 cup almond milk
 1/4 cup espresso (1 large 1-2 oz shot)
@@ -944,13 +883,11 @@ Step 4, Pour milk mixture into a mug, and top with espresso.',
             'menu_pics' => 'menu-pics/31.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 2,
             'user_id' => 1,
-            'menu_name' => 'Pumpkin Spice Latte Recipe',
-            'slug' => 'pumpkin-spice-latte-recipe',
+            'name' => 'Pumpkin Spice Latte Recipe',
             "description" => 'A Healthy Pumpkin Spice Latte Recipe that is dairy free, paleo, vegan and delicious! Made with only 5 simple ingredients in under 5 minutes. The perfect way to warm up on a chilly fall day!',
-            'published_at' => '2023-04-05',
             'total_of_likes' => 103,
             'ingredients' => '1 cup almond milk
 2 tablespoon pumpkin puree
@@ -967,13 +904,11 @@ Step 3, If you`d like, froth using a small electric or cup frother. If you don `
             'menu_pics' => 'menu-pics/32.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 2,
             'user_id' => 1,
-            'menu_name' => 'Immunity Smoothie',
-            'slug' => 'immunity-smoothie',
+            'name' => 'Immunity Smoothie',
             "description" => 'This Immunity Smoothie Recipe is easy to make and delicious. It can help boost your immune system* and is a yummy breakfast or snack! This post is sponsored by Rritual.',
-            'published_at' => '2023-04-07',
             'total_of_likes' => 66,
             'ingredients' => '1/2 cup orange juice
 1/2 cup water
@@ -992,13 +927,11 @@ Step 2, Blend until smooth + enjoy',
             'menu_pics' => 'menu-pics/33.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 2,
             'user_id' => 1,
-            'menu_name' => 'Healthy Gingerbread Latte',
-            'slug' => 'healthy-gingerbread-latte',
+            'name' => 'Healthy Gingerbread Latte',
             "description" => 'This Healthy Gingerbread Latte is Whole30, paleo, refined sugar free + easy to make! Simply delicious + a much healthier version of Starbucks holiday drink!',
-            'published_at' => '2023-04-11',
             'total_of_likes' => 102,
             'ingredients' => '1 1/2 cup almond milk
 1/4 cup espresso (1-2 oz shot)
@@ -1015,13 +948,11 @@ Step 2, Whisk together almond milk, spices and molasses for approximately 30 sec
             'menu_pics' => 'menu-pics/34.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 2,
             'user_id' => 1,
-            'menu_name' => 'The Best Cucumber Vodka Cocktail With Lemonade',
-            'slug' => 'the-best-cucumber-vodka-cocktail-with-lemonade',
+            'name' => 'The Best Cucumber Vodka Cocktail With Lemonade',
             "description" => 'This Cucumber Cocktail with Vodka and lemonade is the best drink to cool off with! Low in sugar & super tasty-the perfect cucumber cocktail! Enjoy a cucumber vodka drink that requires only 5 ingredients and 5 minutes to make!',
-            'published_at' => '2023-04-08',
             'total_of_likes' => 88,
             'ingredients' => '½ cup cucumber chopped in small pieces
 ¼ cup fresh mint leaves
@@ -1038,13 +969,11 @@ Step 3, Shake + serve over ice.',
             'menu_pics' => 'menu-pics/35.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 2,
             'user_id' => 1,
-            'menu_name' => 'Healthy Strawberry Mojito',
-            'slug' => 'healthy-strawberry-mojito',
+            'name' => 'Healthy Strawberry Mojito',
             "description" => 'This Healthy Strawberry Mojito recipe is the perfect refreshing cocktail! Sweetened only with honey and fruit, it’s low in sugar and delicious!',
-            'published_at' => '2023-04-18',
             'total_of_likes' => 38,
             'ingredients' => '1 cup strawberries chopped into small pieces
 2 tablespoons honey
@@ -1065,13 +994,11 @@ Step 3, Fill high ball glasses with ice. Divide strawberry/lime/mint mixture amo
             'menu_pics' => 'menu-pics/36.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 2,
             'user_id' => 1,
-            'menu_name' => 'Lighter Watermelon Mojitos',
-            'slug' => 'lighter-watermelon-mojitos',
+            'name' => 'Lighter Watermelon Mojitos',
             "description" => 'These Watermelon Mojitos are made with only a few simple ingredients like honey, watermelon and lime juice. The perfect healthier, refreshing cocktail!',
-            'published_at' => '2023-04-06',
             'total_of_likes' => 23,
             'ingredients' => '1 cup watermelon cubed
 1/4 cup lime juice
@@ -1091,13 +1018,11 @@ Step 5, Evenly distribute watermelon/rum mixture in the glasses and top with sel
             'menu_pics' => 'menu-pics/37.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 2,
             'user_id' => 1,
-            'menu_name' => 'Chinese Herbal Tea',
-            'slug' => 'chinese-herbal-tea',
+            'name' => 'Chinese Herbal Tea',
             "description" => 'Our Chinese Herbal Tea is the perfect way to balance your energy. Served hot or cold, it only needs 4 ingredients and can be easily modified!',
-            'published_at' => '2023-03-08',
             'total_of_likes' => 58,
             'ingredients' => '30 g dried prunella vulgaris
 2 1/2 Lcup water
@@ -1116,13 +1041,11 @@ Step 6, Serve it hot as is or put the teapot in the fridge for a few hours to en
             'menu_pics' => 'menu-pics/38.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 2,
             'user_id' => 1,
-            'menu_name' => 'Goji Berry and Red Dates Herbal Tea',
-            'slug' => 'goji-berry-and-red-dates-herbal-tea',
+            'name' => 'Goji Berry and Red Dates Herbal Tea',
             "description" => 'Goji Berry and Red Dates Herbal Tea is a delicately sweet delicious nourishing tea to revitalize blood, balances mood and spirit, beautifies the skin, delays aging, filled with antioxidants and just what your body needs to recover and heal.',
-            'published_at' => '2023-02-08',
             'total_of_likes' => 42,
             'ingredients' => '1 cup Goji Berries and Red Date Herbal Tea or about 8 dried Chinese red dates
 ½ cup dried goji berries
@@ -1141,13 +1064,11 @@ Step 5, Goji berry and red dates herbal tea can be enjoyed hot or cold.',
             'menu_pics' => 'menu-pics/39.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 2,
             'user_id' => 1,
-            'menu_name' => 'Mango & banana smoothie',
-            'slug' => 'mango-banana-smoothie',
+            'name' => 'Mango & banana smoothie',
             "description" => 'Cool down this summer with a fresh and fruity smoothie',
-            'published_at' => '2023-02-19',
             'total_of_likes' => 28,
             'ingredients' => '1 medium mango
 1 banana
@@ -1163,13 +1084,11 @@ Step 3, Put all the ingredients into a food processor or blender, then process u
             'menu_pics' => 'menu-pics/40.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 2,
             'user_id' => 1,
-            'menu_name' => 'Berry Kombucha Sangria',
-            'slug' => 'berry-kombucha-sangria',
+            'name' => 'Berry Kombucha Sangria',
             "description" => 'Add some sparkle to your Christmas with this non-alcoholic kombucha sangria.',
-            'published_at' => '2023-01-10',
             'total_of_likes' => 49,
             'ingredients' => '1 cup ice
 1 large orange, halved then sliced into half moons
@@ -1190,13 +1109,11 @@ Step 3, Serve immediately in tall glasses with mint sprigs.',
             'menu_pics' => 'menu-pics/41.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 2,
             'user_id' => 1,
-            'menu_name' => 'Melon and ginger sparkler',
-            'slug' => 'melon-and-ginger-sparkler',
+            'name' => 'Melon and ginger sparkler',
             "description" => 'A healthy drink made of refreshing melon and ginger sparkle. It`s easy to try at home with easily available ingredients',
-            'published_at' => '2023-02-27',
             'total_of_likes' => 9,
             'ingredients' => '1 honeydew or cantaloupe melon (3 cups chopped)
 2 stalks celery, chopped
@@ -1215,13 +1132,11 @@ Step 2, Place lime slices and ice cubes in each glass and pour drink over. Stir.
             'menu_pics' => 'menu-pics/42.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 2,
             'user_id' => 1,
-            'menu_name' => 'Smoky Jalapeno Hibiscus Cooler',
-            'slug' => 'smoky-jalapeno-hibiscus-cooler',
+            'name' => 'Smoky Jalapeno Hibiscus Cooler',
             "description" => 'Light, fruity, flavorful mocktails are so simple—and good. Thanks to fruit, sparkling water, spices and herbs, you can make this alcohol-free, added-sugar free beverage shine with a refreshing taste. This recipe is a great alternative to both sugary and alcoholic drinks. Alcohol increases the risk of at least 6 types of cancer and consuming high amounts of added sugar especially from sugary beverages can contribute to weight gain, increasing the risk for cancer and other chronic diseases.',
-            'published_at' => '2023-03-02',
             'total_of_likes' => 65,
             'ingredients' => 'Spice Glass Rim: (optional)
 1/2 lime
@@ -1249,13 +1164,11 @@ Step 7, Garnish with orange, lime and jalapeño slices and hibiscus flowers, if 
             'menu_pics' => 'menu-pics/43.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 2,
             'user_id' => 1,
-            'menu_name' => 'Celery Rosemary Tonic',
-            'slug' => 'celery-rosemary-tonic',
+            'name' => 'Celery Rosemary Tonic',
             "description" => 'Cool, herbal, vegetable-infused beverages are all the rage—and it’s a good thing. Simple beverages filled with puréed vegetables are a great way to hydrate, along with fitting in important servings of veggies into your diet. This healthful tonic includes celery, lemon juice and rosemary for a cool green drink with just a touch of spice, thanks to cayenne. With just the barest touch of sweetener, it’s a healthful drink you can feel good about enjoying. Plus, the ingredients provide you with fiber, antioxidant compounds, vitamins and minerals—so what’s.',
-            'published_at' => '2023-01-16',
             'total_of_likes' => 110,
             'ingredients' => '2 medium stalks of celery with leaves, chopped into quarters
 1/2 tsp. fresh rosemary
@@ -1275,13 +1188,11 @@ Step 3, Fill two glasses with ice and pour celery mixture into each glass.',
             'menu_pics' => 'menu-pics/44.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 2,
             'user_id' => 1,
-            'menu_name' => 'Ginger Pink Lemonade',
-            'slug' => 'ginger-pink-lemonade',
+            'name' => 'Ginger Pink Lemonade',
             "description" => 'The spicy sweetness of ginger pairs beautifully in a tart lemonade, softened with red berries that lend a pretty pink shade and sweet flavor. With only a touch of agave nectar, the berries offer the bulk of the natural sweetness to compliment lemons in this thirst-quenching beverage, which is as beautiful as it is delicious. Serve it over ice in pitchers at parties, for a picnic on a sunny day or keep it in the fridge for a healthy hydration option during the week.',
-            'published_at' => '2023-02-20',
             'total_of_likes' => 123,
             'ingredients' => '2 1/2 cups water
 1 inch piece fresh ginger, peeled
@@ -1298,13 +1209,11 @@ Step 3, Transfer to a pitcher and store in the refrigerator until ready to serve
             'menu_pics' => 'menu-pics/45.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 2,
             'user_id' => 1,
-            'menu_name' => 'Caribbean Health Drink',
-            'slug' => 'caribbean-health-drink',
+            'name' => 'Caribbean Health Drink',
             "description" => 'Full of vitamins and minerals.',
-            'published_at' => '2023-04-12',
             'total_of_likes' => 88,
             'ingredients' => '1 cup chopped carrot
 1 banana
@@ -1321,13 +1230,11 @@ Step 2, Serve.',
             'menu_pics' => 'menu-pics/46.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 2,
             'user_id' => 1,
-            'menu_name' => 'Ginger Shorts Recipe',
-            'slug' => 'ginger-shorts-recipe',
+            'name' => 'Ginger Shorts Recipe',
             "description" => 'Ginger Shots are spicy, healthy, and non-alcoholic wellness drinks. It is usually made with fresh ginger, lemon, orange, black pepper, and honey. The recipe I have shared here shows you how to make Ginger Shot with easy step-by-step instructions for you to try and enjoy at home.',
-            'published_at' => '2023-02-24',
             'total_of_likes' => 80,
             'ingredients' => 'Ginger
 Lemon Juice
@@ -1347,13 +1254,11 @@ Step 6, Serve this healthy Ginger Shot first thing in the morning on empty stoma
             'menu_pics' => 'menu-pics/47.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 2,
             'user_id' => 1,
-            'menu_name' => 'Cucumber Water',
-            'slug' => 'cucumber-water',
+            'name' => 'Cucumber Water',
             "description" => 'Cucumber Water is a healthy, refreshing, and hydrating weight loss drink loaded with good health benefits. It is usually made with fresh cucumber, filtered water, and sometimes with lemon and mint leaves. This Cucumber infused water is one of the best summer drinks to quench your thirst on regular or hot sunny days.',
-            'published_at' => '2023-01-29',
             'total_of_likes' => 39,
             'ingredients' => '½ Cucumber, washed
 Lemon, to garnish
@@ -1372,13 +1277,11 @@ Step 5, Serve this healthy Cucumber infused water with cucumber and lemon slices
             'menu_pics' => 'menu-pics/48.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 2,
             'user_id' => 1,
-            'menu_name' => 'Hibiscus tea Recipe',
-            'slug' => 'hibiscus-tea-recipe',
+            'name' => 'Hibiscus tea Recipe',
             "description" => 'Hibiscus Tea also called Agua De Jamaica is a sweet, tart, and refreshing Mexican iced drink. It is usually made with dried hibiscus flowers, lemon, ginger, cinnamon, and sugar. This Hibiscus Tea is a perfect detox drink to enjoy on hot summer days or hot to keep yourself warm on cold winter days. And the best part is it is also loaded with a lot of health benefits.',
-            'published_at' => '2023-04-15',
             'total_of_likes' => 101,
             'ingredients' => '3 cups Water
 1 tsp Ginger
@@ -1401,13 +1304,11 @@ Step 7, Serve this healthy Hibiscus Tea hot to comfort your body on cold winter 
             'menu_pics' => 'menu-pics/49.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 2,
             'user_id' => 1,
-            'menu_name' => 'Water',
-            'slug' => 'water',
+            'name' => 'Water',
             "description" => 'Water makes up so much of what we eat and drink—why not obsess a little bit over getting the best-tasting water possible?',
-            'published_at' => '2023-03-05',
             'total_of_likes' => 88,
             'ingredients' => '2 liters distilled or purified water, divided
 1.5g magnesium chloride
@@ -1424,13 +1325,11 @@ Step 4, Remaining electrolyte solution can be stored in a sealed container for f
             'menu_pics' => 'menu-pics/50.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Super Green Pasta',
-            'slug' => 'super-green-pasta',
+            'name' => 'Super Green Pasta',
             "description" => 'Pack in your veggies with this quick and easy green pasta. Plenty of kale and spinach transform into a vibrant green sauce once cooked and blended with basil, pine nuts and Parmesan cheese for a pesto-like flavor. Enjoy this easy vegetarian pasta as is, or add grilled chicken or white beans for a boost of protein.',
-            'published_at' => '2023-03-05',
             'total_of_likes' => 129,
             'ingredients' => '8 ounces whole-wheat fettuccine or spaghetti
 1 (8-ounce) bunch lacinato kale, stemmed
@@ -1452,13 +1351,11 @@ Step 4, Transfer the pasta to a large bowl. Add the sauce and toss with tongs un
             'menu_pics' => 'menu-pics/51.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Carrot Soup',
-            'slug' => 'carrot-soup',
+            'name' => 'Carrot Soup',
             "description" => 'The easiest way to make your carrot soup creamy is to simply add cream after it`s blended (We prefer half-and-half to cut back on saturated fat.) If you want to skip the cream entirely, using a high-powered stand blender can give you light and creamy results. A regular stand blender works well too, but you may have to blend it for longer. When using any stand blender, be sure to remove the center piece from the lid and hold a clean towel over the hole to prevent burns. An immersion blender will blend the soup, but it tends to not blend it as finely so the result will be less creamy.',
-            'published_at' => '2022-09-20',
             'total_of_likes' => 33,
             'ingredients' => '1 tablespoon butter
 1 tablespoon extra-virgin olive oil
@@ -1485,13 +1382,11 @@ Step 6, Puree the soup in batches in a blender until smooth. (Use caution when p
             'menu_pics' => 'menu-pics/52.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Weight-Loss Cabbage Soup',
-            'slug' => 'weight-loss-cabbage-soup',
+            'name' => 'Weight-Loss Cabbage Soup',
             "description" => 'Loaded with cabbage, carrots, bell pepper, tomato and plenty of seasoning, this healthy cabbage soup recipe packs in lots of flavor and is ultra-satisfying. This easy recipe makes a big batch for lunches or veggie-packed snacks all week. If you want to bump up the satisfaction factor even more, top with a little cheese or avocado.',
-            'published_at' => '2022-10-28',
             'total_of_likes' => 18,
             'ingredients' => '2 tablespoons extra-virgin olive oil
 1 medium onion, chopped
@@ -1519,13 +1414,11 @@ Step 6, Remove from heat and stir in vinegar.',
             'menu_pics' => 'menu-pics/53.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Ground Beef & Potatoes Skillet',
-            'slug' => 'ground-beef-potatoes-skillet',
+            'name' => 'Ground Beef & Potatoes Skillet',
             "description" => 'In this healthy ground beef and potatoes recipe, ground beef and potatoes are paired with colorful veggies, including kale, tomato and peppers. Everything is cooked in one skillet, which allows for layers of flavor to build quickly while also cutting back on the number of dishes.',
-            'published_at' => '2022-08-18',
             'total_of_likes' => 17,
             'ingredients' => '3 tablespoons extra-virgin olive oil, divided
 1 pound 90% lean ground beef
@@ -1556,13 +1449,11 @@ Step 9, Stir in the beef and potatoes. Sprinkle with scallions, if desired. ',
             'menu_pics' => 'menu-pics/54.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Melting Potatoes',
-            'slug' => 'melting-potatoes',
+            'name' => 'Melting Potatoes',
             "description" => 'The name for this potato recipe hints at the creamy interior. Roasting these melting potatoes at high heat ensures they get crunchy on the outside. Then, adding a little broth at the end allows the potatoes to absorb the liquid, making the insides extra moist.',
-            'published_at' => '2022-09-14',
             'total_of_likes' => 13,
             'ingredients' => '2 pounds Yukon Gold potatoes, peeled and cut into 1-inch slices
 2 tablespoons butter, melted
@@ -1583,13 +1474,11 @@ Step 3, Carefully add broth and garlic to the pan. Continue roasting until most 
             'menu_pics' => 'menu-pics/55.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'American Goulash',
-            'slug' => 'american-goulash',
+            'name' => 'American Goulash',
             "description" => 'American goulash, also known as old-fashioned goulash, is the perfect economical family meal. The pasta cooks right in the sauce, so this satisfying dish can cook in just one pot.',
-            'published_at' => '2022-06-01',
             'total_of_likes' => 28,
             'ingredients' => '1 tablespoon extra-virgin olive oil
 1 ½ cups chopped onion
@@ -1619,13 +1508,11 @@ Step 8, Sprinkle with Parmesan, if desired.',
             'menu_pics' => 'menu-pics/56.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'One-Skillet Cheesy Ground Chicken Pasta',
-            'slug' => 'one-skillet-cheesy-ground-chicken-pasta',
+            'name' => 'One-Skillet Cheesy Ground Chicken Pasta',
             "description" => 'Make this cheesy ground chicken pasta recipe for a busy weeknight dinner. Serve with a simple side salad and a glass of red wine.',
-            'published_at' => '2021-09-24',
             'total_of_likes' => 11,
             'ingredients' => '1 tablespoon extra-virgin olive oil
 1 pound ground chicken
@@ -1653,13 +1540,11 @@ Step 5, Garnish with more basil and Parmesan, if using.',
             'menu_pics' => 'menu-pics/57.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Grilled Red Snapper',
-            'slug' => 'grilled-red-snapper',
+            'name' => 'Grilled Red Snapper',
             "description" => 'This simple grilled red snapper recipe has clean flavors and a nice char from the grill. It is well-seasoned but not overly spicy. Serve with grilled veggies or a green salad to make it a meal.',
-            'published_at' => '2022-12-22',
             'total_of_likes' => 1,
             'ingredients' => '1 tablespoon smoked paprika
 1 teaspoon ground pepper
@@ -1684,13 +1569,11 @@ Step 5, Serve with lemon wedges.',
             'menu_pics' => 'menu-pics/58.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Spaghetti & Spinach with Sun-Dried Tomato Cream Sauce',
-            'slug' => 'spaghetti-spinach-with-sun-dried-tomato-cream-sauce',
+            'name' => 'Spaghetti & Spinach with Sun-Dried Tomato Cream Sauce',
             "description" => 'To achieve flavor quickly in this sun-dried tomato pasta recipe, we use the oil from sun-dried tomatoes to create the base of the cream sauce. Meanwhile, the residual heat of the pasta wilts the spinach in record time for a fast weeknight dinner.',
-            'published_at' => '2022-10-12',
             'total_of_likes' => 26,
             'ingredients' => '5 ounces baby spinach, coarsely chopped
 8 ounces whole-wheat spaghetti
@@ -1719,13 +1602,11 @@ Step 8, Add the spaghetti and spinach; toss to coat well.',
             'menu_pics' => 'menu-pics/59.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Chhole Chickpea Curry',
-            'slug' => 'chhole-chickpea-curry',
+            'name' => 'Chhole Chickpea Curry',
             "description" => 'This healthy Indian recipe is a flavorful chickpea curry that you can make in just 20 minutes. If you want to add a vegetable, stir in some roasted cauliflower. Serve with brown basmati rice or warm naan. Also called chana masala, this dish is a comforting and delicious dinner.',
-            'published_at' => '2023-03-23',
             'total_of_likes' => 53,
             'ingredients' => '1 medium serrano pepper, cut into thirds
 4 large cloves garlic
@@ -1755,13 +1636,11 @@ Step 8, Serve topped with cilantro, if desired.',
             'menu_pics' => 'menu-pics/60.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Creamy Garlic Skillet Chicken with Spinach',
-            'slug' => 'creamy-garlic-skillet-chicken-with-spinach',
+            'name' => 'Creamy Garlic Skillet Chicken with Spinach',
             "description" => 'Quick-cooking chicken cutlets are coated in a garlic cream sauce, while spinach adds a boost of color and nutrition in this easy, one-skillet recipe.',
-            'published_at' => '2021-12-29',
             'total_of_likes' => 12,
             'ingredients' => '1 pound chicken cutlets
 ½ teaspoon salt, divided
@@ -1793,13 +1672,11 @@ Step 7, Return the chicken to the pan and turn to coat with the sauce.',
             'menu_pics' => 'menu-pics/61.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Vegetable Weight-Loss Soup',
-            'slug' => 'vegetable-weight-loss-soup',
+            'name' => 'Vegetable Weight-Loss Soup',
             "description" => 'A big bowl of this vegetable soup will leave you satisfied for hours without consuming a lot of calories, which is helpful when trying to lose weight. Plus, it is an easy way to boost your vegetable servings for the day—something all of us could benefit from. Top with a dollop of pesto before devouring this delicious vegetable soup and consider serving with a hunk of toasted whole-wheat bread to help round out the meal.',
-            'published_at' => '2022-12-22',
             'total_of_likes' => 39,
             'ingredients' => '2 tablespoons extra-virgin olive oil
 1 medium onion, chopped
@@ -1827,13 +1704,11 @@ Step 4, Top each serving of soup with 1 teaspoon pesto.',
             'menu_pics' => 'menu-pics/62.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Spinach Puffs',
-            'slug' => 'spinach-puffs',
+            'name' => 'Spinach Puffs',
             "description" => 'These bite-sized spinach puffs are reminiscent of artichoke dip, with a slight hint of spice from ground pepper and za`atar seasoning. Puff pastry surrounds the savory filling, adding a crispy golden crust on the outside.',
-            'published_at' => '2023-03-10',
             'total_of_likes' => 5,
             'ingredients' => '1 tablespoon extra-virgin olive oil
 ¾ cup chopped yellow onion
@@ -1869,13 +1744,11 @@ Step 12, Transfer to a wire rack and let cool for 10 minutes. Serve warm or at r
             'menu_pics' => 'menu-pics/63.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Lemon-Garlic Marinated Shrimp',
-            'slug' => 'lemon-garlic-marinated-shrimp',
+            'name' => 'Lemon-Garlic Marinated Shrimp',
             "description" => 'Marinating precooked shrimp in garlic- and lemon-infused oil is a simple yet elegant appetizer',
-            'published_at' => '2019-08-26',
             'total_of_likes' => 5,
             'ingredients' => '3 tablespoons minced garlic
 2 tablespoons extra-virgin olive oil
@@ -1894,13 +1767,11 @@ Step 3, Chill until ready to serve. ',
             'menu_pics' => 'menu-pics/64.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Baked Breaded Eggplant',
-            'slug' => 'baked-breaded-eggplant',
+            'name' => 'Baked Breaded Eggplant',
             "description" => 'This breaded eggplant is baked to perfection with a crunchy outside and soft interior. It`s wonderful dipped in marinara. If you want to elevate it further, add a sweet and tangy drizzle of balsamic glaze and a sprinkle of fresh basil leaves.',
-            'published_at' => '2020-06-19',
             'total_of_likes' => 3,
             'ingredients' => 'Olive oil cooking spray
 3 tablespoons all-purpose flour
@@ -1928,13 +1799,11 @@ Step 7, Serve with warmed marinara. Drizzle with balsamic glaze, and sprinkle wi
             'menu_pics' => 'menu-pics/65.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Baked Broccoli-Cheddar Quinoa Bites',
-            'slug' => 'baked-broccoli-cheddar-quinoa-bites',
+            'name' => 'Baked Broccoli-Cheddar Quinoa Bites',
             "description" => 'These savory muffin-like quinoa bites are low in carbs and a good source of protein--plus we love their cheesy flavor.',
-            'published_at' => '2019-08-20',
             'total_of_likes' => 9,
             'ingredients' => '½ cup quinoa
 ⅛ teaspoon salt plus 1/4 teaspoon, divided
@@ -1960,13 +1829,11 @@ Step 7, Let cool in the pan on a wire rack for 20 minutes, then remove to the ra
             'menu_pics' => 'menu-pics/66.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Loaded Black Bean Dip',
-            'slug' => 'loaded-black-bean-dip',
+            'name' => 'Loaded Black Bean Dip',
             "description" => 'This is 7-layer black bean dip simplified: just heat and season refried beans, then top with fresh vegetables for a texturally exciting dip.',
-            'published_at' => '2020-04-16',
             'total_of_likes' => 4,
             'ingredients' => '1 (15 ounce) can reduced-sodium refried black beans
 1 tablespoon lime juice
@@ -1991,13 +1858,11 @@ Step 4, To Make Ahead Cover and refrigerate for up to 3 hours.',
             'menu_pics' => 'menu-pics/67.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Loaded Broccoli Salad',
-            'slug' => 'loaded-broccoli-salad',
+            'name' => 'Loaded Broccoli Salad',
             "description" => 'This is the broccoli salad you will get special requests for. The combination of bacon, sour cream, mayonnaise, scallions and Cheddar is hard to resist.',
-            'published_at' => '2022-11-17',
             'total_of_likes' => 12,
             'ingredients' => '3 slices bacon
 ¼ cup sour cream
@@ -2019,13 +1884,11 @@ Step 5, To Make Ahead Cover and refrigerate in an airtight container for up to 2
             'menu_pics' => 'menu-pics/68.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Watermelon, Cucumber & Feta Salad',
-            'slug' => 'watermelon-cucumber-feta-salad',
+            'name' => 'Watermelon, Cucumber & Feta Salad',
             "description" => 'Here is a healthy salad recipe to make at the height of summer when watermelon and cucumbers are at their juiciest and most flavorful. Feta adds the perfect creamy, salty, tangy edge, and mint makes this salad taste even brighter. This is one easy side salad you will want to serve at all your summer BBQs.',
-            'published_at' => '2020-06-19',
             'total_of_likes' => 6,
             'ingredients' => '½ cup red-wine vinegar
 2 teaspoons honey
@@ -2049,13 +1912,11 @@ Step 5, To Make Ahead Prepare through Step 2 and refrigerate for up to 2 hours. 
             'menu_pics' => 'menu-pics/69.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Chicken Cutlets with Sun-Dried Tomato Cream Sauce',
-            'slug' => 'chicken-cutlets-with-sun-dried-tomato-cream-sauce',
+            'name' => 'Chicken Cutlets with Sun-Dried Tomato Cream Sauce',
             "description" => 'Though a chicken cutlet may be a chicken breast cut in half, this recipe shows how to make chicken cutlets with double the deliciousness. A jar of sun-dried tomatoes does double duty for this healthy dinner idea. The flavorful oil they are packed in is used to sauté the chicken, and the tomatoes go into the cream sauce.',
-            'published_at' => '2022-10-24',
             'total_of_likes' => 102,
             'ingredients' => '1 pound chicken cutlets
 ¼ teaspoon salt, divided
@@ -2079,13 +1940,11 @@ Step 7, Serve the chicken topped with the sauce and parsley.',
             'menu_pics' => 'menu-pics/70.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Veggie & Hummus Sandwich',
-            'slug' => 'veggie-hummus-sandwich',
+            'name' => 'Veggie & Hummus Sandwich',
             "description" => 'This mile-high vegetable and hummus sandwich makes the perfect heart-healthy vegetarian lunch to go. Mix it up with different flavors of hummus and different types of vegetables depending on your mood.',
-            'published_at' => '2022-10-07',
             'total_of_likes' => 19,
             'ingredients' => '2 slices whole-grain bread
 3 tablespoons hummus
@@ -2104,13 +1963,11 @@ Step 3, Slice in half and serve.',
             'menu_pics' => 'menu-pics/71.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Avocado-Egg Toast',
-            'slug' => 'avocado-egg-toast',
+            'name' => 'Avocado-Egg Toast',
             "description" => 'Try it once and we think you will agree: Topping avocado toast with an egg is a near-perfect breakfast.',
-            'published_at' => '2022-07-08',
             'total_of_likes' => 10,
             'ingredients' => '¼ avocado
 ¼ teaspoon ground pepper
@@ -2128,13 +1985,11 @@ Step 2, Top toast with the avocado mixture and fried egg. Garnish with Sriracha 
             'menu_pics' => 'menu-pics/72.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Old-Fashioned Oatmeal',
-            'slug' => 'old-fashioned-oatmeal',
+            'name' => 'Old-Fashioned Oatmeal',
             "description" => 'Unlike quick-cooking oats, old-fashioned oatmeal has time to turn extra-creamy and luscious with just a few minutes more of cooking time. With a bit of milk and the toppings of your choice, this oatmeal recipe can be your go-to morning staple for a filling, healthy breakfast.',
-            'published_at' => '2023-01-24',
             'total_of_likes' => 3,
             'ingredients' => '1 cup water or low-fat milk
 Pinch of salt
@@ -2153,13 +2008,11 @@ Step 4, Top with milk, sweetener, cinnamon, dried fruits or nuts, if desired. ',
             'menu_pics' => 'menu-pics/73.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Pesto Ravioli with Spinach & Tomatoes',
-            'slug' => 'pesto-ravioli-with-spinach-tomatoes',
+            'name' => 'Pesto Ravioli with Spinach & Tomatoes',
             "description" => 'This easy ravioli recipe calls for just five ingredients but is loaded with fresh flavors. By using grape tomatoes, prewashed spinach and prepared pesto, we eliminate all prep work, making this 15-minute Caprese-inspired ravioli the ideal weeknight meal.',
-            'published_at' => '2022-11-17',
             'total_of_likes' => 12,
             'ingredients' => '2 8-ounce packages frozen or refrigerated cheese ravioli
 1 tablespoon olive oil
@@ -2177,13 +2030,11 @@ Step 4, Add the cooked ravioli and pesto; stir gently to combine.',
             'menu_pics' => 'menu-pics/74.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Loaded Sweet Potatoes',
-            'slug' => 'loaded-sweet-potatoes',
+            'name' => 'Loaded Sweet Potatoes',
             "description" => 'Cheddar cheese, scallions and bacon flavor these twice baked sweet potatoes. Quick and easy to make, this loaded sweet potato recipe is perfect for the holidays or a weeknight meal.',
-            'published_at' => '2022-12-21',
             'total_of_likes' => 2,
             'ingredients' => '2 medium sweet potatoes (1 1/2 pounds)
 ½ cup shredded extra-sharp Cheddar cheese
@@ -2207,13 +2058,11 @@ Step 8, Sprinkle with the remaining 1 tablespoon scallions and the remaining bac
             'menu_pics' => 'menu-pics/75.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 2,
             'user_id' => 1,
-            'menu_name' => 'Fruit & Yogurt Smoothie',
-            'slug' => 'fruit-yogurt-smoothie',
+            'name' => 'Fruit & Yogurt Smoothie',
             "description" => 'This easy fruit smoothie recipe calls for just three ingredients: yogurt, fruit juice and frozen fruit. Mix up your fruit combinations from day to day for a healthy breakfast or snack that never gets boring.',
-            'published_at' => '2022-12-20',
             'total_of_likes' => 8,
             'ingredients' => '3/4 cup nonfat plain yogurt
 1/2 cup 100% pure fruit juice
@@ -2227,13 +2076,11 @@ Step 2, With the motor running, add fruit through the hole in the lid and contin
             'menu_pics' => 'menu-pics/76.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 2,
             'user_id' => 1,
-            'menu_name' => 'Chocolate-Peanut Butter Protein Shake',
-            'slug' => 'chocolate-peanut-butter-protein-shake',
+            'name' => 'Chocolate-Peanut Butter Protein Shake',
             "description" => 'This creamy high-protein shake will keep you satisfied for hours and tastes like a chocolate-peanut butter banana milkshake. You do not even need to add protein powder, thanks to the naturally occurring protein in the soymilk, Greek yogurt and peanut butter.',
-            'published_at' => '2022-09-19',
             'total_of_likes' => 5,
             'ingredients' => '1 cup unsweetened vanilla soymilk
 ¾ cup sliced frozen banana
@@ -2249,13 +2096,11 @@ Step 2, blend until smooth.',
             'menu_pics' => 'menu-pics/77.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 2,
             'user_id' => 1,
-            'menu_name' => 'Strawberry-Blueberry-Banana Smoothie',
-            'slug' => 'strawberry-blueberry-banana-smoothie',
+            'name' => 'Strawberry-Blueberry-Banana Smoothie',
             "description" => 'A smoothie with strawberries, blueberries and banana is delicately sweet and entirely kid-friendly, even with a boost of protein from hemp seeds. Freeze the fruits ahead of time for an extra frosty texture once blended.',
-            'published_at' => '2020-06-19',
             'total_of_likes' => 1,
             'ingredients' => '½ cup frozen strawberries
 ½ cup frozen blueberries
@@ -2272,13 +2117,11 @@ Step 2, Process until smooth, adding more cashew milk, if needed, for desired co
             'menu_pics' => 'menu-pics/78.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 2,
             'user_id' => 1,
-            'menu_name' => 'Strawberry-Banana Protein Smoothie',
-            'slug' => 'strawberry-banana-protein-smoothie',
+            'name' => 'Strawberry-Banana Protein Smoothie',
             "description" => 'Greek yogurt and nut butter boost protein, and ground flaxseed adds omega-3s in this fresh fruit smoothie recipe. Use ice cubes if you like a frosty smoothie or opt for water if you don`t want it so cold.',
-            'published_at' => '2020-06-19',
             'total_of_likes' => 3,
             'ingredients' => '1 cup hulled strawberries, fresh or frozen
 ½ medium banana
@@ -2297,13 +2140,11 @@ Step 2, Puree until smooth.',
             'menu_pics' => 'menu-pics/79.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 2,
             'user_id' => 1,
-            'menu_name' => 'Pineapple-Grapefruit Detox Smoothie',
-            'slug' => 'pineapple-grapefruit-detox-smoothie',
+            'name' => 'Pineapple-Grapefruit Detox Smoothie',
             "description" => 'Pineapple, grapefruit and spinach are packed with water and minerals, which can help hydrate you and supply your body with a bounty of fiber too. Electrolyte-rich coconut water is a refreshing dairy-free substitute for yogurt or milk. If you have time, freeze the coconut water into cubes for an extra-frosty smoothie.',
-            'published_at' => '2019-07-09',
             'total_of_likes' => 4,
             'ingredients' => '1 cup plain coconut water
 1 cup frozen diced pineapple
@@ -2320,13 +2161,11 @@ Step 2, Puree until smooth and frothy. ',
             'menu_pics' => 'menu-pics/80.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 2,
             'user_id' => 1,
-            'menu_name' => 'Carrot-Apple Smoothie',
-            'slug' => 'carrot-apple-smoothie',
+            'name' => 'Carrot-Apple Smoothie',
             "description" => 'This carrot and apple smoothie is creamy and has a light tropical flavor thanks to coconut milk. It is naturally sweetened from the carrots and apple, and the combination of ginger and lemon juice adds just a bit of spice and helps balance the flavor. The turmeric, fresh or dried, gives the smoothie a vibrant bright orange color.',
-            'published_at' => '2020-12-15',
             'total_of_likes' => 3,
             'ingredients' => '2 large carrots, sliced (about 1 1/2 cups)
 1 medium-ripe banana
@@ -2347,13 +2186,11 @@ Step 4, Serve immediately. ',
             'menu_pics' => 'menu-pics/81.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 2,
             'user_id' => 1,
-            'menu_name' => 'Almond Butter & Banana Protein Smoothie',
-            'slug' => 'almond-butter-banana-protein-smoothie',
+            'name' => 'Almond Butter & Banana Protein Smoothie',
             "description" => 'Almond butter adds nutty flavor plus 7 grams of protein to this healthy, protein-rich banana smoothie.',
-            'published_at' => '2019-08-15',
             'total_of_likes' => 6,
             'ingredients' => '1 small frozen banana
 1 cup unsweetened almond milk
@@ -2370,13 +2207,11 @@ Step 4, Serve immediately. ',
             'menu_pics' => 'menu-pics/82.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 2,
             'user_id' => 1,
-            'menu_name' => 'Spinach-Avocado Smoothie',
-            'slug' => 'spinach-avocado-smoothie',
+            'name' => 'Spinach-Avocado Smoothie',
             "description" => 'This healthy green smoothie gets super creamy from the frozen banana and avocado. Make ahead (up to 1 day) and store it in the fridge until you need a veggie boost.',
-            'published_at' => '2019-07-09',
             'total_of_likes' => 6,
             'ingredients' => '1 cup nonfat plain yogurt
 1 cup fresh spinach
@@ -2392,13 +2227,11 @@ Step 4, Serve immediately. ',
             'menu_pics' => 'menu-pics/83.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 2,
             'user_id' => 1,
-            'menu_name' => 'Fresh mint tea',
-            'slug' => 'fresh-mint-tea',
+            'name' => 'Fresh mint tea',
             "description" => 'Grab a handful of fresh mint leaves and pour over boiling water to release its wonderful flavour and scent. Sweeten the tea with honey according to taste.',
-            'published_at' => '2020-12-15',
             'total_of_likes' => 10,
             'ingredients' => 'handful of fresh mint (around ½ a pack)
 honey to taste',
@@ -2414,13 +2247,11 @@ Step 5, Drop the reserved mint into the cups to decorate if you like.',
             'menu_pics' => 'menu-pics/84.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 2,
             'user_id' => 1,
-            'menu_name' => 'Lemon & Ginger Tea',
-            'slug' => 'lemon-ginger-tea',
+            'name' => 'Lemon & Ginger Tea',
             "description" => 'Combine lemon with root ginger to make this refreshing lemon and ginger tea that`s a great alternative to caffeinated drinks. Sweeten with honey if you like',
-            'published_at' => '2021-08-08',
             'total_of_likes' => 9,
             'ingredients' => '1 lemon
 2cm piece root ginger, finely sliced
@@ -2436,13 +2267,11 @@ Step 4, Sweeten with honey if you like.',
             'menu_pics' => 'menu-pics/85.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 2,
             'user_id' => 1,
-            'menu_name' => 'Turmeric latte',
-            'slug' => 'turmeric-latte',
+            'name' => 'Turmeric latte',
             "description" => 'Making your own turmeric latte is easy with our recipe. Whizz together and benefit from the anti-inflammatory and antioxidant effects from the curcumin',
-            'published_at' => '2019-03-23',
             'total_of_likes' => 57,
             'ingredients' => '350ml almond milk (or any milk of your choice)
 ¼ tsp ground turmeric
@@ -2460,13 +2289,11 @@ Step 2, Once hot, pour into mugs and sprinkle with a little more cinnamon to ser
             'menu_pics' => 'menu-pics/86.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 2,
             'user_id' => 1,
-            'menu_name' => 'Avocado & strawberry smoothie',
-            'slug' => 'avocado-strawberry-smoothie',
+            'name' => 'Avocado & strawberry smoothie',
             "description" => 'A creamy breakfast-friendly blend that is high in calcium and low in calories.',
-            'published_at' => '2023-03-08',
             'total_of_likes' => 39,
             'ingredients' => '½ avocado, stoned, peeled and cut into chunks
 150g strawberry, halved
@@ -2483,13 +2310,11 @@ Step 2, If the consistency is too thick, add a little water.',
             'menu_pics' => 'menu-pics/87.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 2,
             'user_id' => 1,
-            'menu_name' => 'Matcha with vanilla',
-            'slug' => 'matcha-with-vanilla',
+            'name' => 'Matcha with vanilla',
             "description" => 'Swap your regular tea or coffee for this delicious Japanese-style green matcha and vanilla tea. It is simple to make at home and takes just five minutes',
-            'published_at' => '2020-11-19',
             'total_of_likes' => 1,
             'ingredients' => '½ tsp matcha powder
 seeds from half a vanilla pod',
@@ -2504,13 +2329,11 @@ Step 4, Discard the water in the warmed tea bowl, then pour in the prepared matc
             'menu_pics' => 'menu-pics/88.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 2,
             'user_id' => 1,
-            'menu_name' => 'Smoky ginger & honey tea',
-            'slug' => 'smoky-ginger-honey-tea',
+            'name' => 'Smoky ginger & honey tea',
             "description" => 'Swap your regular cup of tea for this smoky blend, which combines the flavour of lapsang souchong loose tea leaves with root ginger, green tea and honey',
-            'published_at' => '2020-10-11',
             'total_of_likes' => 3,
             'ingredients' => 'thumbsized piece of root ginger, sliced
 ½ tsp lapsang souchong tea leaves
@@ -2527,13 +2350,11 @@ Step 4, Add honey to taste and the reserved ginger slice.',
             'menu_pics' => 'menu-pics/89.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 2,
             'user_id' => 1,
-            'menu_name' => 'Mango & Spinach Smoothie',
-            'slug' => 'mango-spinach-smoothie',
+            'name' => 'Mango & Spinach Smoothie',
             "description" => 'The sweet-tart taste of mango comes through in this simple smoothie, giving the tropical fruit the spotlight it deserves. Make it a mango morning!',
-            'published_at' => '2021-04-21',
             'total_of_likes' => 18,
             'ingredients' => '1 ½ cups baby spinach
 1 cup frozen mango chunks
@@ -2549,13 +2370,11 @@ Step 3, Increase speed to medium-high and blend until very smooth. ',
             'menu_pics' => 'menu-pics/90.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 2,
             'user_id' => 1,
-            'menu_name' => 'Pineapple Green Smoothie',
-            'slug' => 'pineapple-green-smoothie',
+            'name' => 'Pineapple Green Smoothie',
             "description" => 'Use ripe bananas for this creamy Greek yogurt, spinach and pineapple smoothie. Chia seeds add healthy omega-3 fats, fiber and a little protein for an extra nutritional boost.',
-            'published_at' => '2022-11-03',
             'total_of_likes' => 21,
             'ingredients' => '½ cup unsweetened almond milk
 ⅓ cup nonfat plain Greek yogurt
@@ -2573,13 +2392,11 @@ Step 2, Blend until smooth.',
             'menu_pics' => 'menu-pics/91.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 2,
             'user_id' => 1,
-            'menu_name' => 'Berry-Kefir Smoothie',
-            'slug' => 'berry-kefir-smoothie',
+            'name' => 'Berry-Kefir Smoothie',
             "description" => 'Get a probiotic boost at breakfast when you add kefir to your smoothie. Feel free to use any berries and nut butter you have on hand in this healthy smoothie recipe.',
-            'published_at' => '2017-04-18',
             'total_of_likes' => 6,
             'ingredients' => '1 ½ cups frozen mixed berries
 1 cup plain kefir
@@ -2595,13 +2412,11 @@ Step 2, Blend until smooth. ',
             'menu_pics' => 'menu-pics/92.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 2,
             'user_id' => 1,
-            'menu_name' => 'Avocado & Banana Smoothie',
-            'slug' => 'avocado-banana-smoothie',
+            'name' => 'Avocado & Banana Smoothie',
             "description" => 'If you love a creamy smoothie, this one is for you: avocado and banana combine for a thick and rich drink. Freeze your banana slices to make it more of an ice cream-style smoothie.',
-            'published_at' => '2021-04-22',
             'total_of_likes' => 32,
             'ingredients' => '1 medium banana, sliced
 ½ avocado, pitted and sliced
@@ -2618,13 +2433,11 @@ Step 3, Increase speed to medium-high and blend until very smooth.',
             'menu_pics' => 'menu-pics/93.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 2,
             'user_id' => 1,
-            'menu_name' => 'Kale & Spinach Smoothie',
-            'slug' => 'kale-spinach-smoothie',
+            'name' => 'Kale & Spinach Smoothie',
             "description" => 'When you really need to eat your greens, go for this smoothie that packs both kale and spinach into every sip. Kiwi and dates add natural sweetness, and almond butter and almond milk keep you full.',
-            'published_at' => '2021-04-21',
             'total_of_likes' => 28,
             'ingredients' => '1 cup baby kale
 1 cup baby spinach
@@ -2642,13 +2455,11 @@ Step 3, Increase speed to medium-high and blend until very smooth. ',
             'menu_pics' => 'menu-pics/94.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 2,
             'user_id' => 1,
-            'menu_name' => 'Cherry-Mocha Smoothie',
-            'slug' => 'cherry-mocha-smoothie',
+            'name' => 'Cherry-Mocha Smoothie',
             "description" => 'For a fast-paced breakfast on the go, give your blender a whirl. Heart disease does not stand a chance thanks to the healthy fats from the almond butter and health-boosting phytonutrients in the cocoa powder and cherries in this tasty breakfast smoothie.',
-            'published_at' => '2020-06-19',
             'total_of_likes' => 2,
             'ingredients' => '1 cup frozen unsweetened pitted dark sweet cherries
 1 cup unsweetened chocolate almond milk
@@ -2671,13 +2482,11 @@ Step 4, Pour into glasses and if desired, top with chocolate shavings, chocolate
             'menu_pics' => 'menu-pics/95.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 2,
             'user_id' => 1,
-            'menu_name' => 'Anti-Inflammatory Beet Smoothie',
-            'slug' => 'anti-inflammatory-beet-smoothie',
+            'name' => 'Anti-Inflammatory Beet Smoothie',
             "description" => 'This vibrant beet smoothie combines sweet and earthy beets with berries, banana and orange juice for a well-balanced flavor. Look for packaged cooked beets where the prepared fruits and vegetables are sold. Beets are high in belatins, an antioxidant that may help decrease inflammation in the body. Other nutrient-packed ingredients add even more anti-inflammatory power, like the anthocyanins in blueberries and the gingerol found in ginger.',
-            'published_at' => '2023-03-16',
             'total_of_likes' => 1,
             'ingredients' => '1 cup frozen strawberries
 1 cup frozen blueberries
@@ -2696,13 +2505,11 @@ Step 3, Divide between 2 glasses. Serve immediately. ',
             'menu_pics' => 'menu-pics/96.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 2,
             'user_id' => 1,
-            'menu_name' => 'Carrot Smoothie',
-            'slug' => 'carrot-smoothie',
+            'name' => 'Carrot Smoothie',
             "description" => 'This type of drink tends to be pricey in the big city juice bars. Now you can make the recipe at home.',
-            'published_at' => '2020-06-19',
             'total_of_likes' => 2,
             'ingredients' => '1 cup sliced carrots
 ½ teaspoon finely shredded orange peel
@@ -2720,13 +2527,11 @@ Step 4, Pour into glasses. If desired, garnish with orange peel curls. ',
             'menu_pics' => 'menu-pics/97.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 2,
             'user_id' => 1,
-            'menu_name' => 'Kale & Banana Smoothie',
-            'slug' => 'kale-banana-smoothie',
+            'name' => 'Kale & Banana Smoothie',
             "description" => 'This simple and sweet kale and banana smoothie is also versatile: Use cow`s milk for a milkshake-style smoothie, oat milk for more sweetness, or a nut milk for more protein.',
-            'published_at' => '2021-04-23',
             'total_of_likes' => 13,
             'ingredients' => '1 ½ cups baby kale
 1 small banana, sliced
@@ -2743,13 +2548,11 @@ Step 3, Increase speed to medium-high and blend until very smooth.',
             'menu_pics' => 'menu-pics/98.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 2,
             'user_id' => 1,
-            'menu_name' => 'Strawberry-Pineapple Smoothie',
-            'slug' => 'strawberry-pineapple-smoothie',
+            'name' => 'Strawberry-Pineapple Smoothie',
             "description" => 'Blend almond milk, strawberry and pineapple for a smoothie that`s so easy you can make it on busy mornings. A bit of almond butter adds richness and filling protein. Freeze some of the almond milk for an extra-icy texture.',
-            'published_at' => '2020-06-19',
             'total_of_likes' => 4,
             'ingredients' => '1 cup frozen strawberries
 1 cup chopped fresh pineapple
@@ -2764,13 +2567,11 @@ Step 2, Process until smooth, adding more almond milk, if needed, for desired co
             'menu_pics' => 'menu-pics/99.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 2,
             'user_id' => 1,
-            'menu_name' => 'Strawberry-Pineapple Smoothie',
-            'slug' => 'strawberry-pineapple-smoothie-2',
+            'name' => 'Strawberry-Pineapple Smoothie',
             "description" => 'Whir up frozen bananas with peanut butter and cocoa in this sweet, creamy drink recipe to get all the delicious flavors of a milkshake with the health benefits of a smoothie.',
-            'published_at' => '2016-11-12',
             'total_of_likes' => 4,
             'ingredients' => '1 cup frozen strawberries
 1 cup chopped fresh pineapple
@@ -2785,13 +2586,11 @@ Step 2, Puree until smooth ',
             'menu_pics' => 'menu-pics/100.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Sautéed Striped Bass with Lemon and Herb Sauce Is the Perfect Summer Dinner',
-            'slug' => 'sautéed-striped-bass-with-lemon-and-herb-sauce-is-the-perfect-summer-dinner',
+            'name' => 'Sautéed Striped Bass with Lemon and Herb Sauce Is the Perfect Summer Dinner',
             "description" => 'If you find sea bass to be strong-flavored, remove the pan drippings from the skillet before making the sauce for a milder final product. The wine-butter sauce is a good complement to the dish, especially with caramelized lemon notes.',
-            'published_at' => '2023-04-03',
             'total_of_likes' => 1,
             'ingredients' => '4 (5 ounce) skin-on striped bass fillets (either hybrid striped bass or wild), patted dry
 ¼ teaspoon black pepper
@@ -2816,13 +2615,11 @@ Step 8, As butter melts, whisk to emulsify mixture. Spoon sauce over fillets. Sp
             'menu_pics' => 'menu-pics/101.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Creamy Chicken Noodle Soup with Rotisserie Chicken',
-            'slug' => 'creamy-chicken-noodle-soup-with-rotisserie-chicken',
+            'name' => 'Creamy Chicken Noodle Soup with Rotisserie Chicken',
             "description" => 'This creamy chicken noodle soup recipe has a delicious pot pie feel to it. We call for rotisserie chicken to streamline your prep time—look for a nice big one with lots of breast meat on it. Pair this comforting and easy soup recipe with a green salad, or, if you`re really hungry, a grilled cheese sandwich.',
-            'published_at' => '2022-11-28',
             'total_of_likes' => 46,
             'ingredients' => '2 tablespoons unsalted butter
 1 tablespoon olive oil
@@ -2848,13 +2645,11 @@ Step 5, Stir in chicken and peas and cook until pasta reaches desired doneness a
             'menu_pics' => 'menu-pics/102.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Spinach & Mushroom Quiche',
-            'slug' => 'spinach-mushroom-quiche',
+            'name' => 'Spinach & Mushroom Quiche',
             "description" => 'This healthy vegetarian quiche recipe is as simple as it gets. It`s a quiche without the fussy crust! It`s filled with sweet wild mushrooms and savory Gruyère cheese. Enjoy it for breakfast or brunch, or serve it with a light salad for lunch.',
-            'published_at' => '2022-12-08',
             'total_of_likes' => 47,
             'ingredients' => '2 tablespoons extra-virgin olive oil
 8 ounces sliced fresh mixed wild mushrooms such as cremini, shiitake, button and/or oyster mushrooms
@@ -2884,13 +2679,11 @@ Step 8, Let stand for 10 minutes; slice. Garnish with thyme and serve. ',
             'menu_pics' => 'menu-pics/103.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Egg, Hash Brown & Bacon Breakfast Skillet',
-            'slug' => 'egg-hash-brown-bacon-breakfast-skillet',
+            'name' => 'Egg, Hash Brown & Bacon Breakfast Skillet',
             "description" => 'This breakfast skillet with eggs and hash browns is reminiscent of the hashbrown bowl at Waffle House. It`s filling and tastes decadent, but is still a pretty low-calorie breakfast.',
-            'published_at' => '2022-09-20',
             'total_of_likes' => 3,
             'ingredients' => '3 slices center-cut bacon, chopped
 2 tablespoons canola oil, divided
@@ -2917,13 +2710,11 @@ Step 9, Remove from heat; let stand 2 minutes. Sprinkle skillet with scallions a
             'menu_pics' => 'menu-pics/104.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Banana Pancakes',
-            'slug' => 'banana-pancakes',
+            'name' => 'Banana Pancakes',
             "description" => 'These delicious and unbelievably simple pancakes are best enjoyed right after cooking. With just eggs and a banana, you can have healthy grain-free pancakes with no added sugar. Serve with maple syrup and yogurt or ricotta cheese to add in some protein.',
-            'published_at' => '2019-02-11',
             'total_of_likes' => 5,
             'ingredients' => '2 large eggs
 1 medium banana',
@@ -2940,13 +2731,11 @@ Step 6, Transfer the pancakes to a plate. Lightly oil the pan again and repeat w
             'menu_pics' => 'menu-pics/105.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Muffin-Tin Quiches with Smoked Cheddar & Potato',
-            'slug' => 'muffin-tin-quiches-with-smoked-cheddar-potato',
+            'name' => 'Muffin-Tin Quiches with Smoked Cheddar & Potato',
             "description" => 'Potatoes, cheese and greens make this mini quiche recipe delicious and satisfying. Bake up a batch over the weekend and you`ll have breakfast available in a hurry for the rest of the week.',
-            'published_at' => '2018-06-08',
             'total_of_likes' => 36,
             'ingredients' => '2 tablespoons extra-virgin olive oil
 1 ½ cups finely diced red-skinned potatoes
@@ -2971,13 +2760,11 @@ Step 7, Let stand 5 minutes before removing from the tin. ',
             'menu_pics' => 'menu-pics/106.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Blueberry-Lemon Ricotta Pound Cake',
-            'slug' => 'blueberry-lemon-ricotta-pound-cake',
+            'name' => 'Blueberry-Lemon Ricotta Pound Cake',
             "description" => 'This healthy pound cake recipe isn`t just delicious—it also only requires one bowl to make. For the best cake texture, be sure to beat the sugar and butter together long enough in Step 2 to look creamy—the time it takes to get there varies according to the type of electric mixer you have. Serve with brunch or alongside a cup of coffee in the afternoon.',
-            'published_at' => '2023-02-02',
             'total_of_likes' => 60,
             'ingredients' => '¾ cup granulated sugar
 5 tablespoons unsalted butter, at room temperature
@@ -3007,13 +2794,11 @@ Step 9, Clean the bowl, add confectioners` sugar and whisk in the remaining 1 te
             'menu_pics' => 'menu-pics/107.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Breakfast Tostada',
-            'slug' => 'breakfast-tostada',
+            'name' => 'Breakfast Tostada',
             "description" => 'This easy and satisfying Mexican-inspired breakfast recipe brings lots of flavor to your plate. Using a mix of fresh and store-bought ingredients, breakfast is on the table in 20 minutes.',
-            'published_at' => '2022-04-12',
             'total_of_likes' => 13,
             'ingredients' => '¼ cup no-sodium-added black beans, rinsed
 2 tablespoons water
@@ -3040,13 +2825,11 @@ Step 7, To assemble the tostada, layer the bean mixture, avocado mixture and let
             'menu_pics' => 'menu-pics/108.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Spinach & Egg Scramble with Raspberries',
-            'slug' => 'spinach-egg-scramble-with-raspberries',
+            'name' => 'Spinach & Egg Scramble with Raspberries',
             "description" => 'This quick egg scramble with hearty bread is one of the best breakfasts for weight loss. It combines protein-packed eggs and superfood raspberries with filling whole-grain toast and nutrient-rich spinach. The protein and fiber help fill you up and keep you going through the morning.',
-            'published_at' => '2019-07-09',
             'total_of_likes' => 2,
             'ingredients' => '1 teaspoon canola oil
 1 ½ cups baby spinach (1 1/2 ounces)
@@ -3068,13 +2851,11 @@ Step 6, Serve the scramble with toast and raspberries.',
             'menu_pics' => 'menu-pics/109.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'White Bean & Avocado Toast',
-            'slug' => 'white-bean-avocado-toast',
+            'name' => 'White Bean & Avocado Toast',
             "description" => 'Mashed avocado and white beans make for a fiber-rich and creamy topping, the perfect partner for a crispy slice of toast. Try it for a quick breakfast or snack.',
-            'published_at' => '2019-07-03',
             'total_of_likes' => 9,
             'ingredients' => '1 slice whole-wheat bread, toasted
 ¼ avocado, mashed
@@ -3091,13 +2872,11 @@ Step 2, Season with a pinch each of salt, pepper and crushed red pepper. ',
             'menu_pics' => 'menu-pics/110.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Spinach & Egg Tacos',
-            'slug' => 'spinach-egg-tacos',
+            'name' => 'Spinach & Egg Tacos',
             "description" => 'Hard-boiled eggs are combined with spinach, cheese and salsa for a quick, flavorful breakfast. Mashed avocado provides a creamy element while a squeeze of lime juice brings acidity.',
-            'published_at' => '2022-02-07',
             'total_of_likes' => 32,
             'ingredients' => '¼ avocado
 1 teaspoon lime juice
@@ -3116,13 +2895,11 @@ Step 3, Divide the mixture between tortillas and top each with 1/2 cup spinach a
             'menu_pics' => 'menu-pics/111.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Smoked Salmon & Cream Cheese Omelet',
-            'slug' => 'smoked-salmon-cream-cheese-omelet',
+            'name' => 'Smoked Salmon & Cream Cheese Omelet',
             "description" => 'The key to this healthy smoked salmon omelet recipe is cooking the eggs over low heat so the curds set up nice and soft. A splash of milk in the eggs is added insurance to keep the salmon omelet from turning rubbery.',
-            'published_at' => '2021-09-03',
             'total_of_likes' => 2,
             'ingredients' => '2 large eggs
 1 teaspoon reduced-fat milk or water
@@ -3149,13 +2926,11 @@ Step 9, Serve immediately, garnished with more dill and pepper, if desired. ',
             'menu_pics' => 'menu-pics/112.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Avocado & Kale Omelet',
-            'slug' => 'avocado-kale-omelet',
+            'name' => 'Avocado & Kale Omelet',
             "description" => 'Make this kale and avocado omelet for a satiating, high-protein breakfast. Fiber-rich kale will keep hunger at bay for longer in this healthy omelet recipe.',
-            'published_at' => '2021-09-03',
             'total_of_likes' => 6,
             'ingredients' => '2 large eggs
 1 teaspoon low-fat milk
@@ -3181,13 +2956,11 @@ Step 6, Top the omelet with the kale salad and avocado. ',
             'menu_pics' => 'menu-pics/113.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Spinach & Feta Scrambled Egg Pitas',
-            'slug' => 'spinach-feta-scrambled-egg-pitas',
+            'name' => 'Spinach & Feta Scrambled Egg Pitas',
             "description" => 'This meatless dinner comes together in only 15 minutes, thanks to the convenience of frozen chopped spinach and crumbled feta. We`ve added a flavorful burst of sun-dried tomato tapenade to spread over the whole-wheat pita before nestling the scrambled eggs inside. If you can`t find it, basil pesto or sun-dried tomato pesto also work well.',
-            'published_at' => '2022-05-05',
             'total_of_likes' => 4,
             'ingredients' => '1 tablespoon extra-virgin olive oil
 1 (10 ounce) block frozen chopped spinach, thawed, drained and squeezed dry
@@ -3210,13 +2983,11 @@ Step 6, Divide the egg mixture among the pitas. ',
             'menu_pics' => 'menu-pics/114.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Baked Banana-Nut Oatmeal Cups',
-            'slug' => 'baked-banana-nut-oatmeal-cups',
+            'name' => 'Baked Banana-Nut Oatmeal Cups',
             "description" => 'Muffins meet oatmeal in these moist and tasty grab-and-go oatmeal cups.',
-            'published_at' => '2022-09-19',
             'total_of_likes' => 37,
             'ingredients' => '3 cups rolled oats
 1 ½ cups low-fat milk
@@ -3241,13 +3012,11 @@ Step 6, Serve warm or at room temperature. ',
             'menu_pics' => 'menu-pics/115.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Spaghetti & Spinach with Sun-Dried Tomato Cream Sauce',
-            'slug' => 'spaghetti-spinach-with-sun-dried-tomato-cream-sauce',
+            'name' => 'Spaghetti & Spinach with Sun-Dried Tomato Cream Sauce',
             "description" => 'To achieve flavor quickly in this sun-dried tomato pasta recipe, we use the oil from sun-dried tomatoes to create the base of the cream sauce. Meanwhile, the residual heat of the pasta wilts the spinach in record time for a fast weeknight dinner.',
-            'published_at' => '2022-10-12',
             'total_of_likes' => 26,
             'ingredients' => '5 ounces baby spinach, coarsely chopped
 8 ounces whole-wheat spaghetti
@@ -3277,13 +3046,11 @@ Step 9, Add the spaghetti and spinach; toss to coat well.',
             'menu_pics' => 'menu-pics/116.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Hearty Chickpea & Spinach Stew',
-            'slug' => 'hearty-chickpea-spinach-stew',
+            'name' => 'Hearty Chickpea & Spinach Stew',
             "description" => 'This satisfying stew comes together in a snap. Mashed chickpeas add body to the broth, and tomato paste adds a savory note without piling on the sodium in this healthy recipe for weight loss.',
-            'published_at' => '2022-11-30',
             'total_of_likes' => 23,
             'ingredients' => '2 (15 ounce) cans low-sodium chickpeas, rinsed, divided
 1 tablespoon olive oil
@@ -3316,13 +3083,11 @@ Step 9, Ladle the soup into bowls. Garnish each serving with 1 tablespoon Parmes
             'menu_pics' => 'menu-pics/117.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Cucumber Sandwich',
-            'slug' => 'cucumber-sandwich',
+            'name' => 'Cucumber Sandwich',
             "description" => 'This creamy, crunchy cucumber sandwich recipe strikes a lovely balance between decadent and light. The cream cheese-yogurt spread complements the crisp refreshing cucumber while the hearty flavor and texture of the whole-wheat bread holds everything together.',
-            'published_at' => '2022-11-17',
             'total_of_likes' => 29,
             'ingredients' => '2 ounces cream cheese, at room temperature
 1 tablespoon low-fat plain Greek yogurt
@@ -3342,13 +3107,11 @@ Step 4, Cut the crusts from the sandwich and cut it in half diagonally.',
             'menu_pics' => 'menu-pics/118.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Peanut Butter-Oat Energy Balls',
-            'slug' => 'peanut-butter-oat-energy-balls',
+            'name' => 'Peanut Butter-Oat Energy Balls',
             "description" => 'Sweet, sticky dates act as the glue for these no-bake energy balls. Perfect for hikes or during sports, this healthy snack travels well. For the best flavor and texture, use Medjool dates--the largest and most luscious date variety. Look for them in the produce department or near other dried fruits.',
-            'published_at' => '2017-10-25',
             'total_of_likes' => 10,
             'ingredients' => '¾ cup chopped Medjool dates
 ½ cup rolled oats
@@ -3366,13 +3129,11 @@ Step 5, Refrigerate for at least 15 minutes and up to 1 week.',
             'menu_pics' => 'menu-pics/119.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Mushroom Pate',
-            'slug' => 'mushroom-pate',
+            'name' => 'Mushroom Pate',
             "description" => 'Serve this vegetarian mushroom pâté recipe as an appetizer with crackers and pickled onions or try it as a sandwich spread.',
-            'published_at' => '2019-08-16',
             'total_of_likes' => 2,
             'ingredients' => '1 teaspoon extra-virgin olive oil plus 2 tablespoons, divided
 ¼ cup minced shallots
@@ -3398,13 +3159,11 @@ Step 8, Serve garnished with sage, if desired.',
             'menu_pics' => 'menu-pics/120.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Baked Brie with Jam in Puff Pastry',
-            'slug' => 'baked-brie-with-jam-in-puff-pastry',
+            'name' => 'Baked Brie with Jam in Puff Pastry',
             "description" => 'This best baked Brie recipe is also the easiest. Serve this decadent yet simple appetizer with apple wedges and crackers and watch it disappear in seconds! It`s bound to be your new party go-to.',
-            'published_at' => '2022-09-22',
             'total_of_likes' => 1,
             'ingredients' => '1 sheet frozen puff pastry (about 8 1/2 ounces), thawed
 1 4- to 6-inch round Brie cheese (8 ounces), cold
@@ -3425,13 +3184,11 @@ Step 8, Let cool for 5 to 10 minutes and serve warm.',
             'menu_pics' => 'menu-pics/121.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Roasted Honeynut Squash',
-            'slug' => 'roasted-honeynut-squash',
+            'name' => 'Roasted Honeynut Squash',
             "description" => 'Honeynut squash looks just like mini butternut squash, but on the inside you`ll find an even sweeter, deeper orange flesh. This winter squash has only been available at farmers` markets and in select grocery stores for a few years. If you see it, grab a few to try! This simple roasting method enhances the natural flavor of the squash with butter and spices.',
-            'published_at' => '2022-09-19',
             'total_of_likes' => 6,
             'ingredients' => '2 medium honeynut squash, halved lengthwise and seeded
 4 teaspoons butter
@@ -3451,13 +3208,11 @@ Step 5, Drizzle with maple syrup, if desired.',
             'menu_pics' => 'menu-pics/122.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Maple-Roasted Sweet Potatoes',
-            'slug' => 'maple-roasted-sweet-potatoes',
+            'name' => 'Maple-Roasted Sweet Potatoes',
             "description" => 'In this healthy side dish recipe, sweet potatoes are tossed with maple syrup, butter and lemon juice and roasted until tender and golden brown. The delicious glaze that forms on these maple-roasted sweet potatoes transforms this ultra-simple dish into something sublime.',
-            'published_at' => '2019-10-17',
             'total_of_likes' => 15,
             'ingredients' => '2 ½ pounds sweet potatoes, peeled and cut into 1 1/2-inch pieces
 ⅓ cup pure maple syrup
@@ -3478,13 +3233,11 @@ Step 6, Uncover, stir and cook, stirring every 15 minutes, until tender and star
             'menu_pics' => 'menu-pics/123.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Roasted Brussels Sprouts & Potatoes',
-            'slug' => 'roasted-brussels-sprouts-potatoes',
+            'name' => 'Roasted Brussels Sprouts & Potatoes',
             "description" => 'Roasted Brussels sprouts and potatoes make a great quick and easy side dish for dinner, or you can turn it into a breakfast hash served with an egg on top.',
-            'published_at' => '2022-11-17',
             'total_of_likes' => 2,
             'ingredients' => '1 pound Brussels sprouts, trimmed and halved
 12 ounces baby Yukon Gold potatoes, quartered
@@ -3505,13 +3258,11 @@ Step 4, Stir in parsley before serving.',
             'menu_pics' => 'menu-pics/124.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Mug Brownie',
-            'slug' => 'mug-brownie',
+            'name' => 'Mug Brownie',
             "description" => 'You might want to keep a copy of this recipe in the pantry beside the cocoa for those moments when you crave a chocolaty treat. Cook this fudgy brownie in a mug in the microwave and it`s ready in less than a minute!',
-            'published_at' => '2020-06-19',
             'total_of_likes' => 4,
             'ingredients' => '1 tablespoon coconut oil
 2 tablespoons unsweetened coconut milk or low-fat milk
@@ -3535,13 +3286,11 @@ Step 7, Let stand for 8 to 10 minutes.',
             'menu_pics' => 'menu-pics/125.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Big-batch breakfast potatoes',
-            'slug' => 'big-batch-breakfast-potatoes',
+            'name' => 'Big-batch breakfast potatoes',
             "description" => 'Treat yourself to a comforting brunch featuring Ree Drummond`s big-batch breakfast potatoes. The combination of tender red potatoes, garlic, onion and chopped bell peppers will remind you of your favorite diner hash, but better.',
-            'published_at' => '2023-02-19',
             'total_of_likes' => 4,
             'ingredients' => '5 pounds red potatoes, roughly chopped/diced
 4 cloves garlic, minced
@@ -3565,13 +3314,11 @@ Step 5, Sprinkle with a little more salt and pepper before serving',
             'menu_pics' => 'menu-pics/126.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Cheesy potato casserole',
-            'slug' => 'cheesy-potato-casserole',
+            'name' => 'Cheesy potato casserole',
             "description" => 'Break out the stretchy pants, because this cheesy potato casserole is nearly impossible to put down. The combination of melted Cheddar and Jack cheeses, plus bacon, puts this dish over the edge.',
-            'published_at' => '2023-02-20',
             'total_of_likes' => 40,
             'ingredients' => '1 pound thin bacon
 16 russet potatoes
@@ -3595,13 +3342,11 @@ Step 5, Butter a baking dish, and then spoon the mixture into the dish, top with
             'menu_pics' => 'menu-pics/127.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Tater tot pie',
-            'slug' => 'tater-tot-pie',
+            'name' => 'Tater tot pie',
             "description" => 'Haters will say it`s cheating, but the fact that this tater tot pie calls for frozen tots makes it all the more endearing in our eyes. Your weekend of comfort food should also be about ease, after all. Pop it in the oven, fry up some eggs, call over your friends, then pop the cork on a bottle of Prosecco and have yourselves a time.',
-            'published_at' => '2023-01-28',
             'total_of_likes' => 24,
             'ingredients' => '1 pound (about 3 cups) frozen Tater Tots
 Nonstick cooking spray
@@ -3622,13 +3367,11 @@ Step 4, Meanwhile, combine the sour cream and mayonnaise with the Sriracha. Driz
             'menu_pics' => 'menu-pics/128.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Healthy Lentil Chili',
-            'slug' => 'healthy-lentil-chili',
+            'name' => 'Healthy Lentil Chili',
             "description" => 'This hearty vegetarian chili is both nutritious and satisfying, thanks to the protein-packed navy beans and brown lentils. We added a generous dose of dried spices and other pantry staples to boost the flavor and make this dish accessible for any night of the week.',
-            'published_at' => '2023-04-19',
             'total_of_likes' => 92,
             'ingredients' => '1 tablespoon olive oil
 1 large onion, diced
@@ -3660,13 +3403,11 @@ Step 7, Remove the bay leaf and stir in the vinegar. Season with salt and black 
             'menu_pics' => 'menu-pics/129.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Lentil Soup',
-            'slug' => 'lentil-soup',
+            'name' => 'Lentil Soup',
             "description" => 'Made with hearty lentils and lots of vegetables, Alton`s soup is comforting and satisfying.',
-            'published_at' => '2023-04-27',
             'total_of_likes' => 107,
             'ingredients' => '2 tablespoons olive oil
 1 cup finely chopped onion
@@ -3692,13 +3433,11 @@ Step 6, Using a stick blender, puree to your preferred consistency. Serve immedi
             'menu_pics' => 'menu-pics/130.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Stuffed Honeynut Squash',
-            'slug' => 'stuffed-honeynut-squash',
+            'name' => 'Stuffed Honeynut Squash',
             "description" => 'Honeynuts look like baby butternut squash but are sweeter and with a thinner skin -- making them perfect for stuffing. This recipe makes a hearty vegetarian main course or flavor-packed side to a roast or steak.',
-            'published_at' => '2023-04-15',
             'total_of_likes' => 76,
             'ingredients' => '2 pounds Honeynut squash (6 to 8), halved and seeded
 6 tablespoons olive oil
@@ -3727,13 +3466,11 @@ Step 9, Bake until the cheese is melted and browned in spots, about 10 minutes.'
             'menu_pics' => 'menu-pics/131.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Broccoli Balls with Harissa-Yogurt Sauce',
-            'slug' => 'broccoli-balls-with-harissa-yogurt-sauce',
+            'name' => 'Broccoli Balls with Harissa-Yogurt Sauce',
             "description" => 'These falafel-inspired broccoli balls are perfectly crisp on the outside, creamy on the inside and loaded with vibrant fresh herbs and spices. Paired with a tangy and spicy harissa-yogurt sauce, they can be perfect guilt-free hors d`oeuvres for your next party, a fiber-packed vegetable side dish or a crunchy addition to a salad. Since harissa pastes can vary widely in spiciness, feel free to adjust to your liking. They freeze really well, so make a double batch and freeze some for another night.',
-            'published_at' => '2023-04-12',
             'total_of_likes' => 76,
             'ingredients' => '5 cups broccoli florets
 One 15-ounce can chickpeas
@@ -3773,13 +3510,11 @@ Step 15, Serve warm with the yogurt sauce. ',
             'menu_pics' => 'menu-pics/132.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Lemon-Herb Rice Salad',
-            'slug' => 'lemon-herb-rice-salad',
+            'name' => 'Lemon-Herb Rice Salad',
             "description" => 'Fresh herbs, like mint and basil, add bursts of fresh flavor to this simple salad. Make sure you leave room for leftovers — the dish tastes even better the next day!',
-            'published_at' => '2023-02-19',
             'total_of_likes' => 80,
             'ingredients' => '2 lemons
 Kosher salt and freshly ground pepper
@@ -3808,13 +3543,11 @@ Step 6, Add the carrot, cucumber, peanuts, cilantro, mint, basil and watercress 
             'menu_pics' => 'menu-pics/133.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Green Beans Gremolata',
-            'slug' => 'green-beans-gremolata',
+            'name' => 'Green Beans Gremolata',
             "description" => 'When it comes to dinner, the side dishes can make or break your meal — especially when you`re eating healthy. As much as we love simple steamed veggies or a quick tossed salad, both can get boring when they`re your weeknight go-to. Filling your table with wholesome choices can (and should be!) so much more interesting. With the right recipes you can rotate between healthy whole grains, vitamin-packed potatoes, cruciferous gems like cauliflower or broccoli and, of course, lots of flavorful takes on veggies. Not sure where to start? We love Ina`s green beans, dressed with a homemade Gremolata including lemon zest, grated Parmesan, minced garlic and parsley, plus toasted pine nuts for a buttery crunch.',
-            'published_at' => '2023-01-20',
             'total_of_likes' => 70,
             'ingredients' => '1 pound French green beans, trimmed
 2 teaspoons minced garlic (2 cloves)
@@ -3837,13 +3570,11 @@ Step 6, Sprinkle with 3/4 teaspoon salt and 1/4 teaspoon pepper and serve hot.',
             'menu_pics' => 'menu-pics/134.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Buttery Radishes with Honey and Chives',
-            'slug' => 'buttery-radishes-with-honey-and-chives',
+            'name' => 'Buttery Radishes with Honey and Chives',
             "description" => 'Radishes are often overlooked, but we give them the star treatment in this recipe. A bit spicy raw, radishes that are cooked take on a much mellower flavor. A touch of butter and a drizzle of honey make these downright decadent. Serve them alongside pan-roasted chicken for a quick and healthy meal.',
-            'published_at' => '2023-04-20',
             'total_of_likes' => 50,
             'ingredients' => '1 pound medium red radishes (about 20)
 3 tablespoons unsalted butter
@@ -3866,13 +3597,11 @@ Step 8, Sprinkle with the pepitas and serve immediately.',
             'menu_pics' => 'menu-pics/135.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Sauteed Carrots',
-            'slug' => 'sauteed-carrots',
+            'name' => 'Sauteed Carrots',
             "description" => 'Ina makes a 15-minute side dish that`s sure to please. Sweet carrots go perfectly with a little butter and chopped fresh dill.',
-            'published_at' => '2023-02-10',
             'total_of_likes' => 12,
             'ingredients' => '2 pounds carrots
 1 teaspoon kosher salt
@@ -3892,13 +3621,11 @@ Step 6, Sprinkle with salt and pepper and serve.',
             'menu_pics' => 'menu-pics/136.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Vegan Wild-Rice-Stuffed Butternut Squash',
-            'slug' => 'vegan-wild-rice-stuffed-butternut-squash',
+            'name' => 'Vegan Wild-Rice-Stuffed Butternut Squash',
             "description" => 'This impressive autumn-inspired dish can be served as a main course for vegan and vegetarian eaters or can be enjoyed by everyone at the table as a side dish. The small amount of curry powder gives the squash a nice warmth and depth.',
-            'published_at' => '2023-04-25',
             'total_of_likes' => 32,
             'ingredients' => '2 medium butternut squash (2 to 2 1/4 pounds each)
 3 tablespoons apple cider vinegar
@@ -3932,13 +3659,11 @@ Step 10, Add the rice, curry powder, cinnamon, cayenne and 1/2 teaspoon salt and
             'menu_pics' => 'menu-pics/137.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Herb and Apple Stuffing',
-            'slug' => 'herb-and-apple-stuffing',
+            'name' => 'Herb and Apple Stuffing',
             "description" => 'Before you reach for the white loaf, opt for whole-wheat bread for a well-rounded apple-studded stuffing from Ina Garten.',
-            'published_at' => '2023-04-23',
             'total_of_likes' => 45,
             'ingredients' => '16 cups 1-inch bread cubes, white or whole wheat (2 baguettes)
 4 tablespoons unsalted butter (1/2 stick)
@@ -3964,13 +3689,11 @@ Step 5, Make sure the stuffing in the cavity is secured by wrapping the legs tig
             'menu_pics' => 'menu-pics/138.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Green Bean Casserole With Crispy Shallots',
-            'slug' => 'green-bean-casserole-with-crispy-shallots',
+            'name' => 'Green Bean Casserole With Crispy Shallots',
             "description" => 'Skip the soup in a can in this quintessential Thanksgiving side dish and make a creamy sauce using low-fat milk instead.',
-            'published_at' => '2023-04-10',
             'total_of_likes' => 19,
             'ingredients' => '1/4 cup olive oil
 6 medium shallots, sliced into rings (about 1 cup)
@@ -4005,13 +3728,11 @@ Step 13, Bake until golden on top and bubbling, about 20 minutes.',
             'menu_pics' => 'menu-pics/139.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Alton`s Lentil Soup',
-            'slug' => 'altons-lentil-soup',
+            'name' => 'Alton`s Lentil Soup',
             "description" => 'Cozy up with a bowl of lentil soup. Alton`s version is packed with fiber, potassium, folate and other B-vitamins.',
-            'published_at' => '2023-04-11',
             'total_of_likes' => 83,
             'ingredients' => '2 tablespoons olive oil
 1 cup finely chopped onion
@@ -4038,13 +3759,11 @@ Step 7, Serve immediately.',
             'menu_pics' => 'menu-pics/140.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Hearty Italian Chicken and Vegetable Soup',
-            'slug' => 'hearty-italian-chicken-and-vegetable-soup',
+            'name' => 'Hearty Italian Chicken and Vegetable Soup',
             "description" => 'This chicken soup is packed with lots of good-for-you vegetables. Enhance store-bought broth with herbs and lemon for a quick soup that tastes like you simmered it all day long.',
-            'published_at' => '2023-04-14',
             'total_of_likes' => 73,
             'ingredients' => '1 tablespoon extra-virgin olive oil
 1 onion, chopped
@@ -4083,13 +3802,11 @@ Step 14, Ladle the soup into serving bowls and serve.',
             'menu_pics' => 'menu-pics/141.jpg'
         ]);
 
-        DB::table('menus')->insert([
+        Menu::create([
             'category_id' => 1,
             'user_id' => 1,
-            'menu_name' => 'Minestrone with Parmigiano-Reggiano',
-            'slug' => 'minestrone-with-parmigiano-reggiano',
+            'name' => 'Minestrone with Parmigiano-Reggiano',
             "description" => 'Swiss chard, carrots, cannellini beans and spinach come together in Bobby`s version of this hearty vegetable soup.',
-            'published_at' => '2023-03-20',
             'total_of_likes' => 50,
             'ingredients' => '3 tablespoons extra-virgin olive oil
 1 large red onion, chopped

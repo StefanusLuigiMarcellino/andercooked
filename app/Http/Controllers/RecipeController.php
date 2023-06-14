@@ -42,7 +42,7 @@ class RecipeController extends Controller
 
     public function store(Request $request){
         $validateData = $request->validate([
-            'menu_name' => 'required|max:255',
+            'name' => 'required|max:255',
             'description' => 'required',
             'menu_pics' => 'required|image|file|max:4096',
             'ingredients' => 'required',

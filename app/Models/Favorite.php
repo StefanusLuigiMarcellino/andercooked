@@ -14,7 +14,7 @@ class Favorite extends Model
     public function scopeFilter($query, array $filters) {
         $query->when($filters['search'] ?? false, function($query, $search) {
             return $query->whereHas('menu', function($query) use ($search) {
-                 $query->where('menu_name', 'like', '%' . $search . '%')
+                 $query->where('name', 'like', '%' . $search . '%')
                              ->orWhereHas('user', function($query) use ($search){
                                 $query->where('username', 'like', '%'. $search . '%');
                              })

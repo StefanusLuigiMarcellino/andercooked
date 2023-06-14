@@ -6,61 +6,68 @@
         <canvas class="my-chart"></canvas>
     </div>
 
-    <script src="/javascript/pie-chart.js"></script>
+    @if ($user->total_calories == 0 && $user->total_carbohydrates == 0 && $user->total_fat == 0 && $user->total_protein == 0)
+        <p>Nothing to display!</p>
 
-    <script>
-        const chartData = {
-            labels: ["Calories", "Fats", "Carbs", "Protein"],
-            data: [
-                {{$user->total_calories}}, 
-                {{$user->total_fat}}, 
-                {{$user->total_carbohydrates}}, 
-                {{$user->total_protein}}
-            ],
-        };
+    @else
+        <script src="/javascript/pie-chart.js"></script>
+        <script>
+            const chartData = {
+                labels: ["Calories", "Fats", "Carbs", "Protein"],
+                data: [
+                    {{$user->total_calories}},
+                    {{$user->total_fat}},
+                    {{$user->total_carbohydrates}},
+                    {{$user->total_protein}}
+                ],
+            };
 
-        const myChart = document.querySelector(".my-chart");
+            const myChart = document.querySelector(".my-chart");
 
-        new Chart(myChart, {
-        type: "doughnut",
-        data: {
-            labels: chartData.labels,
-            datasets: [
-            {
-                label: " ",
-                data: chartData.data,
-                backgroundColor: [
-                    "#FDECCE",   // Color for "Calories"
-                    "#FE8E04",   // Color for "Fats"
-                    "#7D60F8",   // Color for "Carbs"
-                    "#00A043",   // Color for "Protein"
+            new Chart(myChart, {
+            type: "doughnut",
+            data: {
+                labels: chartData.labels,
+                datasets: [
+                {
+                    label: " ",
+                    data: chartData.data,
+                    backgroundColor: [
+                        "#FDECCE",   // Color for "Calories"
+                        "#FE8E04",   // Color for "Fats"
+                        "#7D60F8",   // Color for "Carbs"
+                        "#00A043",   // Color for "Protein"
+                    ],
+                },
                 ],
             },
-            ],
-        },
-        options: {
-            borderWidth: 10,
-            borderRadius: 10,
-            hoverBorderWidth: 0,
-            plugins: {
-            legend: {
-                display: false,
+            options: {
+                borderWidth: 10,
+                borderRadius: 10,
+                hoverBorderWidth: 0,
+                plugins: {
+                legend: {
+                    display: false,
+                },
+                },
             },
-            },
-        },
-        });
+            });
 
-        const populateUl = () => {
-        chartData.labels.forEach((l, i) => {
-            let li = document.createElement("li");
-            li.innerHTML = `${l}: <span class='percentage'>${chartData.data[i]}%</span>`;
-            ul.appendChild(li);
-        });
-        };
+            const populateUl = () => {
+            chartData.labels.forEach((l, i) => {
+                let li = document.createElement("li");
+                li.innerHTML = `${l}: <span class='percentage'>${chartData.data[i]}%</span>`;
+                ul.appendChild(li);
+            });
+            };
 
-        populateUl();
+            populateUl();
 
-    </script>
+        </script>
+
+    @endif
+
+
 
     <a href="/add-nutrient">
         <div class="information">
