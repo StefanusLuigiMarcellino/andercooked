@@ -122,7 +122,9 @@
                 </div>
             </div>
         @else
-            <p>Nothing to display here!</p>
+            <div class="recipe-details margin-2 center-text">
+                <p>Nothing to display!</p>
+            </div>
         @endif
 
     </section>

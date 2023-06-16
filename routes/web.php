@@ -83,6 +83,11 @@ Route::post('add-nutrient/fats', [NutrientController::class, 'fats']);
 Route::post('add-nutrient/carbohydrates', [NutrientController::class, 'carbohydrates']);
 Route::post('add-nutrient/protein', [NutrientController::class, 'protein']);
 
+Route::post('subs-nutrient/calories', [NutrientController::class, 'caloriesSubs']);
+Route::post('subs-nutrient/fats', [NutrientController::class, 'fatsSubs']);
+Route::post('subs-nutrient/carbohydrates', [NutrientController::class, 'carbohydratesSubs']);
+Route::post('subs-nutrient/protein', [NutrientController::class, 'proteinSubs']);
+
 Route::get('testing', [WeeklyReportController::class,'testing']);
 
 Route::get('/weekly-report', [WeeklyReportController::class, 'index'])->name('weekly-data.index');
