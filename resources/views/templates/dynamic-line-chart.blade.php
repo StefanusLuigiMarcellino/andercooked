@@ -1,108 +1,133 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>Multi Axis Line Chart</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1"></script>
-  </head>
-  <body>
+</head>
+<body>
     <canvas id="myChart"></canvas>
 
     <script>
-      const chartData = {
-        labels: ["Week 1", "Week 2", "Week 3", "Week 4"],
-        datasets: [
-          {
-            label: "Calories",
-            data: [150, 180, 200, 170],
-            // yAxisID: "calories-axis",
-            borderColor: "#FDECCE",
-            backgroundColor: "transparent",
-          },
-          {
-              label: "Fats",
-              data: [50, 60, 55, 45],
-              // yAxisID: "fats-axis",
-              borderColor: "#FE8E04",
-              backgroundColor: "transparent",
-            },
-          {
-              label: "Carbohydrates",
-              data: [120, 150, 130, 140],
-              // yAxisID: "carbs-axis",
-              borderColor: "#7D60F8",
-              backgroundColor: "transparent",
-            },
-          {
-            label: "Protein",
-            data: [80, 90, 85, 95],
-            // yAxisID: "protein-axis",
-            borderColor: "#00A043",
-            backgroundColor: "transparent",
-          },
-        ],
-      };
+        const weeklyReports = @json($reports);
 
-      const ctx = document.getElementById("myChart").getContext("2d");
+        const weekIds = [];
+        const proteins = [];
+        const carbs = [];
+        const calories = [];
+        const fats = [];
 
-      new Chart(ctx, {
-        type: "line",
-        data: chartData,
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true,
-              position: "left",
-              grid: {
-                display: false,
-              },
+        weeklyReports.reverse().forEach(report => {
+            const { weekdays, weeklyprotein, weeklycarbohydrat, weeklycalories, weeklyfat } = report;
+            if(weekdays == 0){
+                weekIds.push(``);
+                proteins.push(weeklyprotein);
+                carbs.push(weeklycarbohydrat);
+                calories.push(weeklycalories);
+                fats.push(weeklyfat);
+            } else {
+                weekIds.push(`Week ${weekdays}`);
+                proteins.push(weeklyprotein);
+                carbs.push(weeklycarbohydrat);
+                calories.push(weeklycalories);
+                fats.push(weeklyfat);
+            }
+        });
+
+        const chartData = {
+            labels: weekIds,
+            datasets: [
+                {
+                    label: "Calories",
+                    data: calories,
+                    // yAxisID: "calories-axis",
+                    borderColor: "#FDECCE",
+                    backgroundColor: "transparent",
+                },
+                {
+                    label: "Fats",
+                    data: fats,
+                    // yAxisID: "fats-axis",
+                    borderColor: "#FE8E04",
+                    backgroundColor: "transparent",
+                },
+                {
+                    label: "Carbohydrates",
+                    data: carbs,
+                    // yAxisID: "carbs-axis",
+                    borderColor: "#7D60F8",
+                    backgroundColor: "transparent",
+                },
+                {
+                    label: "Protein",
+                    data: proteins,
+                    // yAxisID: "protein-axis",
+                    borderColor: "#00A043",
+                    backgroundColor: "transparent",
+                },
+            ],
+        };
+
+        const ctx = document.getElementById("myChart").getContext("2d");
+
+        new Chart(ctx, {
+            type: "line",
+            data: chartData,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        position: "left",
+                        grid: {
+                            display: false,
+                        },
+                    },
+                    // caloriesAxis: {
+                    //     beginAtZero: true,
+                    //     position: "left",
+                    //     grid: {
+                    //         display: false,
+                    //     },
+                    //     title: {
+                    //         display: true,
+                    //         text: "Calories",
+                    //     },
+                    // },
+                    // carbsAxis: {
+                    //     beginAtZero: true,
+                    //     position: "right",
+                    //     grid: {
+                    //         display: false,
+                    //     },
+                    //     title: {
+                    //         display: true,
+                    //         text: "Carbohydrates",
+                    //     },
+                    // },
+                    // fatsAxis: {
+                    //     beginAtZero: true,
+                    //     position: "right",
+                    //     grid: {
+                    //         display: false,
+                    //     },
+                    //     title: {
+                    //         display: true,
+                    //         text: "Fats",
+                    //     },
+                    // },
+                    // proteinAxis: {
+                    //     beginAtZero: true,
+                    //     position: "right",
+                    //     grid: {
+                    //         display: false,
+                    //     },
+                    //     title: {
+                    //         display: true,
+                    //         text: "Protein",
+                    //     },
+                    // },
+                },
             },
-            caloriesAxis: {
-              beginAtZero: true,
-              position: "left",
-              grid: {
-                display: false,
-              },
-              title: {
-                display: true,
-                text: "Calories",
-              },
-            },
-            carbsAxis: {
-              beginAtZero: true,
-              position: "right",
-              grid: {
-                display: false,
-              },
-              title: {
-                display: true,
-                text: "Carbohydrates",
-              },
-            },
-            fatsAxis: {
-              beginAtZero: true,
-              position: "right",
-              grid: {
-                display: false,
-              },
-              title: {
-                display: true,
-                text: "Fats",
-              },
-            },
-            proteinAxis: {
-              beginAtZero: true,
-              position: "right",
-              grid: {
-                display: false,
-              },
-              title: {
-                display: true,
-                text: "Protein",
-              },
-            },
-          },
-        },
-      });
+        });
     </script>
-  </body>
+</body>
 </html>
