@@ -10,6 +10,7 @@ use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\FavoriteController;
 use App\Http\Controllers\NutrientController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\WeeklyReportController;
 
 /*
 |--------------------------------------------------------------------------
@@ -81,3 +82,8 @@ Route::post('add-nutrient/calories', [NutrientController::class, 'calories']);
 Route::post('add-nutrient/fats', [NutrientController::class, 'fats']);
 Route::post('add-nutrient/carbohydrates', [NutrientController::class, 'carbohydrates']);
 Route::post('add-nutrient/protein', [NutrientController::class, 'protein']);
+
+Route::get('testing', [WeeklyReportController::class,'testing']);
+
+Route::get('/weekly-report', [WeeklyReportController::class, 'index'])->name('weekly-data.index');
+Route::post('/weekly-report', [WeeklyReportController::class, 'store'])->name('weekly-data.store');

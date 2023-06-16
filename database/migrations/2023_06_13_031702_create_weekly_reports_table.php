@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('weekly_reports', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
-            $table->integer('week_number');
+            $table->integer('weekdays');
             $table->integer('weeklycalories');
             $table->integer('weeklycarbohydrat');
             $table->integer('weeklyfat');

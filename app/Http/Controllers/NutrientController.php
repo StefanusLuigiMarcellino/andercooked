@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\WeeklyReport;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
@@ -10,6 +11,7 @@ class NutrientController extends Controller
     public function index(){
         return view('add-nutrient', [
             "title" => "User Nutrient",
+            "reports" => WeeklyReport::where('user_id', auth()->user()->id)->latest()->orderBy('weekdays', 'asc')->take(4)->get(),
             "user" => auth()->user()
         ]);
     }
