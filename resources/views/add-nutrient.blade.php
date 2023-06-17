@@ -25,7 +25,7 @@
         <div class="upper-wrap mt-3">
             <div class="nutrient-wrapper mt-5">
                 {{-- Calories --}}
-                <div class="nutrient-info bg-white calories" data-aos="zoom-in-up">
+                <div class="nutrient-info bg-white calories">
                     <div class="nutrient-detail">
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 16.4194C7.5 17.7488 7.68546 18.4649 8.16422 19.637C8.70613 20.9637 9.8907 22.2211 11.1369 22.9632C11.3458 23.0876 11.513 23.1678 11.7358 23.2798C12.6424 23.7356 13.6771 23.973 14.7211 24H15.1299C16.3851 23.9666 17.6314 23.6304 18.6628 23.0046C19.1099 22.7333 19.3339 22.5724 19.7369 22.2477L20.6316 21.348C21.7533 19.913 22.3681 18.5125 22.3681 16.4927C22.3681 15.0111 21.835 13.3845 20.9765 12.2446C20.7763 11.9788 20.5862 11.7239 20.3449 11.4847C20.1101 11.2521 19.8712 10.9048 19.4284 11.1726C19.2534 11.2784 19.069 11.6999 18.8673 12.0031C18.7511 12.1777 18.3804 12.6932 18.23 12.794C18.23 12.5617 18.2666 12.4882 18.2666 12.2446C18.2666 10.7152 18.1022 9.83053 17.4487 8.5215C17.281 8.18544 17.1376 7.97055 16.941 7.67428C16.851 7.53873 16.7692 7.41277 16.6635 7.29257C16.5965 7.21637 16.576 7.1889 16.5141 7.11229C16.145 6.65531 16.0216 6.59682 15.6939 6.28458C15.307 5.91602 14.4079 5.25 13.9086 5.25C13.5733 5.25 13.4597 5.57692 13.421 5.86103C13.3767 6.18651 13.3312 6.49921 13.2569 6.79553C13.1059 7.39804 12.8985 7.89625 12.6288 8.36464C12.1668 9.16703 11.9659 9.32662 11.4092 9.89163C11.0392 10.2672 10.5473 10.5374 10.1827 10.8624C9.6792 11.3114 9.24522 11.7225 8.86182 12.2881C8.02677 13.52 7.5 14.8766 7.5 16.4194V16.4194Z" fill="#222222"/>
@@ -34,15 +34,30 @@
 
                         <h1 class="title-font mt-4">Calories</h1>
                         <h1 class="number-font">{{$user->total_calories}}cal</h1>
+
+                        @if ($errors->calorieErrors->any())
+                            <div class="help is-danger mt-2">
+                                @foreach ($errors->calorieErrors->all() as $error)
+                                    <p>{{ $error }}</p>
+                                @endforeach
+                            </div>
+                        @endif
                     </div>
-                    <form action="/add-nutrient/calories" method="post">
-                        @csrf
-                        <button class="button-base bg-cream has-text-centered hover" style="width: 100% !important;">Add</button>
-                    </form>
+
+                    <div class="center-button">
+                        <form action="/subs-nutrient/calories" method="post">
+                            @csrf
+                            <button class="button-base text-cream bg-white border-cream has-text-centered hover button-width">Substract</button>
+                        </form>
+                        <form action="/add-nutrient/calories" method="post">
+                            @csrf
+                            <button class="button-base bg-cream has-text-centered hover button-width">Add</button>
+                        </form>
+                    </div>
 
                 </div>
                 {{-- Fats --}}
-                <div class="nutrient-info bg-white" data-aos="zoom-in-up">
+                <div class="nutrient-info bg-white">
                     <div class="nutrient-detail">
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M11.4307 15.0427C12.3093 15.4435 11.6119 16.7499 12.9269 18.6151C13.6862 19.6919 14.0916 19.7303 14.4635 20.1317C14.8566 20.556 14.6947 21.2729 14.2845 21.5523C13.5313 22.0654 12.0615 21.0198 11.5635 20.5261C11.3725 20.3368 10.8343 19.6844 10.7411 19.3479C10.6612 19.4358 10.724 19.324 10.7002 19.4478C10.6248 19.8392 11.2963 21.3347 11.5349 21.7297C11.767 22.1139 11.9742 22.3657 12.2268 22.681L12.9588 23.4971C13.4534 23.6416 13.9647 23.723 14.4741 23.75H15.2527C16.1685 23.702 17.0462 23.4884 17.7732 23.1624C18.4302 22.8677 18.9976 22.4976 19.5236 22.0552C19.9512 21.6957 20.5453 20.9856 20.8208 20.5009C21.0794 19.983 21.3074 19.6188 21.505 18.9869C22.5497 15.6443 20.3053 12.0929 18.479 9.46107L17.6085 8.15132C17.5158 8.08288 17.1968 7.56519 17.1046 7.42927C17.0036 7.28029 16.6715 6.74861 16.5998 6.69016C16.4172 6.86449 16.3785 6.95902 16.2475 7.19235C15.2761 8.92442 11.723 13.6747 11.4307 15.0426V15.0427Z" fill="#222222"/>
@@ -52,15 +67,29 @@
 
                         <h1 class="title-font mt-4">Fats</h1>
                         <h1 class="number-font">{{$user->total_fat}}g</h1>
+
+                        @if ($errors->fatErrors->any())
+                            <div class="help is-danger mt-2">
+                                @foreach ($errors->fatErrors->all() as $error)
+                                    <p>{{ $error }}</p>
+                                @endforeach
+                            </div>
+                        @endif
                     </div>
 
-                    <form action="/add-nutrient/fats" method="POST">
-                        @csrf
-                        <button class="button-base bg-orange has-text-centered hover" style="width: 100% !important;">Add</button>
-                    </form>
+                    <div class="center-button"> 
+                        <form action="/subs-nutrient/fats" method="POST">
+                            @csrf
+                            <button class="button-base text-orange bg-white border-orange has-text-centered hover button-width">Substract</button>
+                        </form>
+                        <form action="/add-nutrient/fats" method="POST">
+                            @csrf
+                            <button class="button-base bg-orange has-text-centered hover button-width">Add</button>
+                        </form>
+                    </div>
                 </div>
                 {{-- Carbs --}}
-                <div class="nutrient-info bg-white" data-aos="zoom-in-up">
+                <div class="nutrient-info bg-white">
                     <div class="nutrient-detail">
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M14.3178 21.5273V24.2006C14.3178 24.5396 14.5477 24.7264 14.7934 24.75H14.8998C15.1472 24.726 15.3798 24.5345 15.3798 24.164V21.5273C15.8063 21.5179 16.4626 21.3203 16.7928 21.1826C17.9154 20.7144 18.4151 19.7583 18.6082 18.6034C18.6501 18.3517 18.7114 18.0873 18.5741 17.8936C18.3184 17.5326 17.5662 17.7718 17.2104 17.8649C16.7351 17.9892 16.3799 18.1784 16.0282 18.4403C15.3613 18.937 14.8672 20.0162 14.8672 20.8315H14.7939C14.7939 20.3826 14.5778 19.7443 14.4285 19.4392C13.889 18.3364 12.9132 17.8719 11.7475 17.7251C10.9362 17.6228 10.9722 18.0266 11.0519 18.6044C11.2073 19.7333 11.7863 20.7314 12.8681 21.1825C13.1893 21.3165 13.8963 21.5272 14.3177 21.5272L14.3178 21.5273Z" fill="#222222"/>
@@ -72,15 +101,29 @@
 
                         <h1 class="title-font mt-4">Carbohydrates</h1>
                         <h1 class="number-font">{{$user->total_carbohydrates}}g</h1>
+
+                        @if ($errors->carbohydrateErros->any())
+                            <div class="help is-danger mt-2">
+                                @foreach ($errors->carbohydrateErros->all() as $error)
+                                    <p>{{ $error }}</p>
+                                @endforeach
+                            </div>
+                        @endif
                     </div>
 
-                    <form action="/add-nutrient/carbohydrates" method="POST">
-                        @csrf
-                        <button class="button-base bg-purple has-text-centered hover" style="width: 100% !important;">Add</button>
-                    </form>
+                    <div class="center-button">
+                        <form action="/subs-nutrient/carbohydrates" method="POST">
+                            @csrf
+                            <button class="button-base text-purple bg-white border-purple has-text-centered hover button-width">Substract</button>
+                        </form>
+                        <form action="/add-nutrient/carbohydrates" method="POST">
+                            @csrf
+                            <button class="button-base bg-purple has-text-centered hover button-width">Add</button>
+                        </form>
+                    </div>
                 </div>
                 {{-- Protein --}}
-                <div class="nutrient-info bg-white mb-2" data-aos="zoom-in-up">
+                <div class="nutrient-info bg-white mb-2">
                     <div class="nutrient-detail">
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M17.4461 14.8499C15.3128 14.8499 14.7112 12.1077 16.6008 11.1922C17.3322 10.8379 18.1144 11.0503 18.7131 11.5741C19.3012 12.0887 19.3992 12.9874 19.142 13.6716C19.0823 13.8306 18.9854 13.9861 18.8778 14.1182C18.5532 14.5165 18.0401 14.8499 17.4461 14.8499ZM8.85445 18.6513C8.85445 19.169 8.83751 19.2481 8.97136 19.7706C9.08114 20.199 9.29998 20.5038 9.69473 20.7161C10.2548 21.0173 10.899 20.9718 11.4201 20.5989C11.5422 20.5115 12.1485 19.8731 12.4264 19.6581C12.7462 19.4108 13.0539 19.0809 13.5149 18.7687C14.4182 18.1569 15.0534 17.7459 16.1783 17.4762C17.4891 17.1617 18.2893 17.4945 19.4782 16.2948C19.8765 15.8928 20.2128 15.5836 20.4856 15.0461C20.8979 14.2337 20.9693 13.7708 20.9693 12.8411C20.9693 12.0335 20.6258 11.2372 20.2093 10.6341C20.0668 10.4278 19.9289 10.2708 19.7563 10.0982C19.0802 9.42258 18.0405 8.8543 17.0134 8.8543C16.4623 8.8543 16.1241 8.8387 15.5877 9.00479C14.7291 9.27054 14.2311 9.61962 13.575 10.2681L12.663 11.2414C12.6012 11.3082 12.5978 11.3303 12.5395 11.396C12.3646 11.5928 12.1957 11.7724 12.0374 11.9756C10.8488 13.5011 9.81918 14.9134 9.20549 16.8082C9.05252 17.2806 8.8543 18.0591 8.8543 18.6513L8.85445 18.6513Z" fill="#222222"/>
@@ -91,18 +134,32 @@
 
                         <h1 class="title-font mt-4">Protein</h1>
                         <h1 class="number-font">{{$user->total_protein}}g</h1>
+
+                        @if ($errors->proteinErrors->any())
+                            <div class="help is-danger mt-2">
+                                @foreach ($errors->proteinErrors->all() as $error)
+                                    <p>{{ $error }}</p>
+                                @endforeach
+                            </div>
+                        @endif
                     </div>
 
-                    <form action="/add-nutrient/protein" method="POST">
-                        @csrf
-                        <button class="button-base bg-green has-text-centered hover" style="width: 100% !important;">Add</button>
-                    </form>
+                    <div class="center-button">
+                        <form action="/subs-nutrient/protein" method="POST">
+                            @csrf
+                            <button class="button-base text-green bg-white border-green has-text-centered hover button-width">Substract</button>
+                        </form>
+                        <form action="/add-nutrient/protein" method="POST">
+                            @csrf
+                            <button class="button-base bg-green has-text-centered hover button-width">Add</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="margin-2">
-            <h3 class="header-font black">Nutrient Detail</h3>
+            <h3 class="header-font black">Weekly Reports</h3>
 
             <div class="insider mt-5" style="padding: 25px;">
                 @include('templates.dynamic-line-chart')

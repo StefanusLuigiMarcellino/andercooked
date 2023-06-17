@@ -1,15 +1,15 @@
 {{-- PIE CHART --}}
-<div class="header-font mt-6">Weekly Report</div>
+<div class="header-font mt-6">Nutrient Detail</div>
 
 <div class="container-pie-chart">
-    <div class="chart-container" style="width: 18vw; margin: 0 auto;">
-        <canvas class="my-chart"></canvas>
-    </div>
-
     @if ($user->total_calories == 0 && $user->total_carbohydrates == 0 && $user->total_fat == 0 && $user->total_protein == 0)
-        <p>Nothing to display!</p>
-
-    @else
+        <div class="chart-container center-text" style="height: 12vw; margin: 0 auto;">
+            <p>Nothing to display!</p>
+        </div>
+        @else
+        <div class="chart-container" style="width: 18vw; margin: 0 auto;">
+            <canvas class="my-chart"></canvas>
+        </div>
         <script src="/javascript/pie-chart.js"></script>
         <script>
             const chartData = {

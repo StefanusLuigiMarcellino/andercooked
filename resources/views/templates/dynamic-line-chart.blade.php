@@ -16,7 +16,7 @@
         const calories = [];
         const fats = [];
 
-        weeklyReports.reverse().forEach(report => {
+        weeklyReports.forEach(report => {
             const { weekdays, weeklyprotein, weeklycarbohydrat, weeklycalories, weeklyfat } = report;
             if(weekdays == 0){
                 weekIds.push(``);
@@ -41,28 +41,28 @@
                     data: calories,
                     // yAxisID: "calories-axis",
                     borderColor: "#FDECCE",
-                    backgroundColor: "transparent",
+                    backgroundColor: "#FDECCE",
                 },
                 {
                     label: "Fats",
                     data: fats,
                     // yAxisID: "fats-axis",
                     borderColor: "#FE8E04",
-                    backgroundColor: "transparent",
+                    backgroundColor: "#FE8E04",
                 },
                 {
                     label: "Carbohydrates",
                     data: carbs,
                     // yAxisID: "carbs-axis",
                     borderColor: "#7D60F8",
-                    backgroundColor: "transparent",
+                    backgroundColor: "#7D60F8",
                 },
                 {
                     label: "Protein",
                     data: proteins,
                     // yAxisID: "protein-axis",
                     borderColor: "#00A043",
-                    backgroundColor: "transparent",
+                    backgroundColor: "#00A043",
                 },
             ],
         };

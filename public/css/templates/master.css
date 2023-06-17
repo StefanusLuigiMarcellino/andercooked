@@ -616,3 +616,9 @@ a{
     flex-grow: 0 !important;
 } */
 
+.center-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
