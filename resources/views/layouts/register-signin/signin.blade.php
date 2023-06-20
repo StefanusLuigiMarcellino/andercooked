@@ -21,7 +21,7 @@
             @endif
 
 
-            <form action="\signin" method="post">
+            <form action="/signin" method="post">
                 @csrf
                 <div class="field">
                     <h1 class="header-font">Welcome Back!</h1>

@@ -41,26 +41,32 @@ class RecipeController extends Controller
     }
 
     public function store(Request $request){
-        $validateData = $request->validate([
-            'name' => 'required|max:255',
-            'description' => 'required',
-            'menu_pics' => 'required|image|file|max:4096',
-            'ingredients' => 'required',
-            'cooking_steps' => 'required',
-            'calories' => 'required|numeric',
-            'carbohydrates' => 'required|numeric',
-            'fat' => 'required|numeric',
-            'protein' => 'required|numeric',
-        ]);
+    switch($request->input('action')){
+        case 'add':
+            $validateData = $request->validate([
+                'name' => 'required|max:255',
+                'description' => 'required',
+                'menu_pics' => 'required|image|file|max:4096',
+                'ingredients' => 'required',
+                'cooking_steps' => 'required',
+                'calories' => 'required|numeric',
+                'carbohydrates' => 'required|numeric',
+                'fat' => 'required|numeric',
+                'protein' => 'required|numeric',
+            ]);
 
-        $validateData['user_id'] = auth()->user()->id;
-        $validateData['menu_pics'] = $request->file('menu_pics')->store('menu-pics');
-        $validateData['published_at'] = date("Y-m-d");
-        $validateData['total_of_likes'] = 0;
-        $validateData['category_id'] = 1;
+            $validateData['user_id'] = auth()->user()->id;
+            $validateData['menu_pics'] = $request->file('menu_pics')->store('menu-pics');
+            $validateData['published_at'] = date("Y-m-d");
+            $validateData['total_of_likes'] = 0;
+            $validateData['category_id'] = 1;
 
-        Menu::create($validateData);
-        return redirect('/recipe');
+            Menu::create($validateData);
+            return redirect('recipe');
+
+        case 'cancel':
+            return redirect('recipe');
+    }
     }
 
     public function destroy($id){
