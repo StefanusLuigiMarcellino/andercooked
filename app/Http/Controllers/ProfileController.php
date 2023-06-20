@@ -27,16 +27,15 @@ class ProfileController extends Controller
                     'oldimage' => ''
                 ]);
                 $user = $request->user();
-                if('/storage/'.$request->profile_pics){
+                if($request->profile_pics){
                     // destroy
-                    if($request->oldimage != '/profile/profile-pics.png'){
+                    if($request->oldimage != '/assets/profile/profile-pics.png'){
                         Storage::delete($request->oldimage);
                     }
                     $validateData['profile_pics'] = '/storage/'.$request->file('profile_pics')->store('profile');
                 }else{
                     $validateData['profile_pics'] = $request->oldimage;
                 }
-                // dd($validateData);
                 $user->name = $validateData['name'];
                 $user->profile_picture = $validateData['profile_pics'];
                 $user->save();
