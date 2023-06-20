@@ -7,7 +7,7 @@
 @section('main-section')
     <section class="">
         <div class="background-image" data-aos="fade-left">
-            <img src="/storage/{{ $menu->menu_pics }}" alt="" width="100%">
+            <img src="{{ $menu->menu_pics }}" alt="" width="100%">
         </div>
         <section class="main-page-large">
             <div class="upper-section">

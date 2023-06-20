@@ -15,7 +15,7 @@
                 @foreach ($menus as $menu)
                     <div class="list-detail" data-aos="zoom-in-up">
                         <div class="pics">
-                            <img src="{{ asset('storage/' . $menu->menu_pics) }}" alt="">
+                            <img src="{{ $menu->menu_pics }}" alt="">
                         </div>
                         <div class="info">
                             <h1 class="title-recipe-font black">{{ $menu->name }}</h1>
@@ -73,7 +73,7 @@
         @if ($curr != null)
             <div class="recipe-details margin-2">
                 <div class="img-wrap">
-                    <img src="{{ asset('storage/' . $curr->menu_pics) }}" alt="">
+                    <img src="{{ $curr->menu_pics }}" alt="">
                 </div>
                 <div class="padding">
                     <div class="like-count-container center">

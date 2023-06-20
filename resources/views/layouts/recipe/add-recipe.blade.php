@@ -35,7 +35,7 @@
                 <div class="field mt-5" id="file-img">
                     <label class="label">Upload Menu Picture</label>
                     <label class="file-label mb-3">
-                        <input class="file-input @error('menu_pics') is-danger @enderror" type="file" name="menu_pics">
+                        <input class="file-input @error('menu_pics') is-danger @enderror" type="file" accept="image/png, image/jpg, image/jpeg" name="menu_pics">
                         <span class="upload-wrapper">
                             {{-- <span class="upload-font">
                                 <span class="green">Click to upload picture </span>or drag and drop

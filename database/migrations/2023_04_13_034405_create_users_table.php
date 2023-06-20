@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->string('username')->unique();
-            $table->string('profile_picture')->nullable();
+            $table->string('profile_picture');
             $table->integer('total_calories');
             $table->integer('total_carbohydrates');
             $table->integer('total_protein');

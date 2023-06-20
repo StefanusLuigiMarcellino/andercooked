@@ -41,7 +41,7 @@
             @foreach ($menus as $menu)
                 <div class="list" data-aos="zoom-in-up">
                     <div class="image-wrapper">
-                        <a href="/menu-details/{{ $menu->slug }}"><img src="{{ asset('storage/' . $menu->menu_pics) }}" alt=""></a>
+                        <a href="/menu-details/{{ $menu->slug }}"><img src="{{ $menu->menu_pics }}" alt=""></a>
                     </div>
                     {{-- <div class="filter"></div> --}}
                     <div class="list-information">

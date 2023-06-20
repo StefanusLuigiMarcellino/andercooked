@@ -63,7 +63,7 @@
         </div>
         <div class="" style="padding: 0 25px;">
             <div class="kotak2">
-                <img class="" src="{{ asset('storage/' . $picture) }}" alt="">
+                <img class="" src="{{ $picture }}" alt="">
             </div>
         </div>
     </div>

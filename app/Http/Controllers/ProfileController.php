@@ -3,11 +3,21 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Foundation\Auth\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 class ProfileController extends Controller
 {
+    public function index(){
+        return view('layouts.profile.profile', [
+            "title" => "Profile",
+            "semi-white" => "TRUE",
+            "user" => User::where('id', auth()->user()->id)->first()
+        ]);
+    }
+
+
     public function store(Request $request){
         switch($request->input('action')){
             case 'save':
@@ -17,12 +27,12 @@ class ProfileController extends Controller
                     'oldimage' => ''
                 ]);
                 $user = $request->user();
-                if($request->profile_pics){
+                if('/storage/'.$request->profile_pics){
                     // destroy
-                    if($request->oldimage != 'profile/profile-pics.png'){
+                    if($request->oldimage != '/profile/profile-pics.png'){
                         Storage::delete($request->oldimage);
                     }
-                    $validateData['profile_pics'] = $request->file('profile_pics')->store('profile');
+                    $validateData['profile_pics'] = '/storage/'.$request->file('profile_pics')->store('profile');
                 }else{
                     $validateData['profile_pics'] = $request->oldimage;
                 }

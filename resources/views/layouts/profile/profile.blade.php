@@ -15,7 +15,7 @@
                             @csrf
                             <h3 class="form-title black">Profile Details</h3>
                             <div class="profile-picture">
-                                <img id="imagePreview" src="/storage/{{ $user->profile_picture }}" alt="">
+                                <img id="imagePreview" src="{{ $user->profile_picture }}" alt="">
                                 <input id="profile_pics" class="file-input" accept="image/png, image/jpg, image/jpeg" type="file" name="profile_pics"  onchange="showPreview(this)">
                                 <input type="hidden" name="oldimage" id="oldimage" value="{{ $user->profile_picture }}">
                                 <label for="profile_pics" class="button-semi-green pointer">

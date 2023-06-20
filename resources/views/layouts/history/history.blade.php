@@ -29,7 +29,7 @@
                     @foreach($histories as $history)
                         <div class="list" data-aos="zoom-in-up">
                             <div class="image-wrapper">
-                                <a href="/menu-details/{{ $history->menu->slug }}"><img src="{{ asset('storage/' . $history->menu->menu_pics) }}" alt=""></a>
+                                <a href="/menu-details/{{ $history->menu->slug }}"><img src="{{ $history->menu->menu_pics }}" alt=""></a>
                             </div>
                             <div class="list-information">
                                 <div class="left-list">

@@ -30,7 +30,7 @@
                     @foreach($favorites as $favorite)
                         <div class="list" data-aos="zoom-in-up">
                             <div class="image-wrapper">
-                                <a href="/menu-details/{{ $favorite->menu->slug }}"><img src="{{ asset('storage/' . $favorite->menu->menu_pics) }}" alt=""></a>
+                                <a href="/menu-details/{{ $favorite->menu->slug }}"><img src="{{  $favorite->menu->menu_pics }}" alt=""></a>
                             </div>
                             {{-- <div class="filter"></div> --}}
                             <div class="list-information">

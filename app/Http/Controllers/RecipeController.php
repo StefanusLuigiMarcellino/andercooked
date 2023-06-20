@@ -56,7 +56,7 @@ class RecipeController extends Controller
             ]);
 
             $validateData['user_id'] = auth()->user()->id;
-            $validateData['menu_pics'] = $request->file('menu_pics')->store('menu-pics');
+            $validateData['menu_pics'] = '/storage/' . $request->file('menu_pics')->store('menu-pics');
             $validateData['published_at'] = date("Y-m-d");
             $validateData['total_of_likes'] = 0;
             $validateData['category_id'] = 1;
@@ -70,13 +70,13 @@ class RecipeController extends Controller
     }
 
     public function destroy($id){
-        $Menu = Menu::findOrFail($id);
-        $Favorite = Favorite::where('menu_id', $id);
-        $History = History::where('menu_id', $id);
-        Storage::delete($Menu->menu_pics);
-        $Menu->delete();
-        $Favorite->delete();
-        $History->delete();
+        $menu = Menu::findOrFail($id);
+        $favorite = Favorite::where('menu_id', $id);
+        $history = History::where('menu_id', $id);
+        Storage::delete($menu->menu_pics);
+        $menu->delete();
+        $favorite->delete();
+        $history->delete();
 
         return redirect('/recipe');
     }

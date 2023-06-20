@@ -17,7 +17,8 @@ class User extends Authenticatable
         'total_calories' => 0,
         'total_carbohydrates' => 0,
         'total_protein' => 0,
-        'total_fat' => 0
+        'total_fat' => 0,
+        'profile_picture' => '/assets/profile/profile-pics.png'
     ];
 
     public function menu(){

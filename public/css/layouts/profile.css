@@ -41,7 +41,8 @@ body{
 
 .up-wrapper{
     width: 100%;
-    height: 95vh;
+    height: 105vh;
+    /* overflow: hidden; */
     /* background-color: red; */
 }
 .form-wrapper{
@@ -77,6 +78,7 @@ body{
     width: 5.5vw;
     height: 5.5vw;
     border-radius: 50%;
+    object-fit: cover;
 }
 
 .button-green{
@@ -108,6 +110,7 @@ body{
     border-radius: 8px;
     font-weight: 600;
     font-size: 0.7vw;
+    z-index: 1;
 }
 .button-semi-green:hover{
     background-color: var(--hover-grey);
@@ -174,7 +177,7 @@ body{
 .line-2{
     position: relative;
     display: block;
-    margin: 10.5vw 0 2vw -2vw;
+    margin: .5vw 0 2vw -2vw;
     width: 24vw;
     border-top: 1px #CCCCC3 solid;
 }

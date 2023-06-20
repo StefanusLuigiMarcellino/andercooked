@@ -8,6 +8,7 @@ use App\Http\Controllers\RecipeController;
 use App\Http\Controllers\SigninController;
 use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\FavoriteController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NutrientController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RegisterController;
@@ -37,24 +38,10 @@ Route::fallback(function () {
     ]);
 });
 
-Route::get('/home', function () {
-    return view('layouts.home', [
-        "title" => "Home",
-        "user" => auth()->user(),
-        "menus" => Menu::orderBy('total_of_likes', 'desc')->paginate(4)
-    ]);
-})->middleware('auth');
+Route::get('/home', [HomeController::class, 'index'])->middleware('auth');
 
-Route::get('/profile', function () {
-    return view('layouts.profile.profile', [
-        "title" => "Profile",
-        "semi-white" => "TRUE",
-        "user" => User::where('id', auth()->user()->id)->first()
-    ]);
-});
-
-Route::get('/menu', [MenuController::class, 'index']);
-Route::get('/menu-details/{menu:slug}', [MenuController::class, 'show']);
+Route::get('/menu', [MenuController::class, 'index'])->middleware('auth');
+Route::get('/menu-details/{menu:slug}', [MenuController::class, 'show'])->middleware('auth');
 
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
@@ -64,30 +51,31 @@ Route::post('/signin', [SigninController::class, 'authenticate']);
 
 Route::post('/logout', [SigninController::class, 'logout']);
 
-Route::get('/favorite', [FavoriteController::class, 'index']);
-Route::post('/favorite/{menu:id}', [FavoriteController::class, 'like']);
+Route::get('/favorite', [FavoriteController::class, 'index'])->middleware('auth');
+Route::post('/favorite/{menu:id}', [FavoriteController::class, 'like'])->middleware('auth');
 
-Route::get('/history', [HistoryController::class, 'index']);
-Route::post('/menu-details/{menu:id}', [MenuController::class, 'history']);
+Route::get('/history', [HistoryController::class, 'index'])->middleware('auth');
+Route::post('/menu-details/{menu:id}', [MenuController::class, 'history'])->middleware('auth');
 
-Route::get('/recipe', [RecipeController::class, 'show']);
+Route::get('/recipe', [RecipeController::class, 'show'])->middleware('auth');
 // NOTES: ini yang bikin $curr nya error di recipe.blade.php (gara gara ada /recipe/ nya, kalo cuma /recipe aja aman)
-Route::get('/recipe/{menu:slug}', [RecipeController::class, 'detail']);
-Route::get('/add-recipe', [RecipeController::class, 'index']);
-Route::post('/add-recipe', [RecipeController::class, 'store']);
+Route::get('/recipe/{menu:slug}', [RecipeController::class, 'detail'])->middleware('auth');
+Route::get('/add-recipe', [RecipeController::class, 'index'])->middleware('auth');
+Route::post('/add-recipe', [RecipeController::class, 'store'])->middleware('auth');
 
-Route::delete('/recipe/{menu:id}', [RecipeController::class, 'destroy']);
+Route::delete('/recipe/{menu:id}', [RecipeController::class, 'destroy'])->middleware('auth');
 
-Route::get('add-nutrient', [NutrientController::class, 'index']);
-Route::post('add-nutrient/calories', [NutrientController::class, 'calories']);
-Route::post('add-nutrient/fats', [NutrientController::class, 'fats']);
-Route::post('add-nutrient/carbohydrates', [NutrientController::class, 'carbohydrates']);
-Route::post('add-nutrient/protein', [NutrientController::class, 'protein']);
+Route::get('add-nutrient', [NutrientController::class, 'index'])->middleware('auth');
+Route::post('add-nutrient/calories', [NutrientController::class, 'calories'])->middleware('auth');
+Route::post('add-nutrient/fats', [NutrientController::class, 'fats'])->middleware('auth');
+Route::post('add-nutrient/carbohydrates', [NutrientController::class, 'carbohydrates'])->middleware('auth');
+Route::post('add-nutrient/protein', [NutrientController::class, 'protein'])->middleware('auth');
 
-Route::get('testing', [WeeklyReportController::class,'testing']);
+Route::get('testing', [WeeklyReportController::class,'testing'])->middleware('auth');
 
-Route::get('/weekly-report', [WeeklyReportController::class, 'index'])->name('weekly-data.index');
-Route::post('/weekly-report', [WeeklyReportController::class, 'store'])->name('weekly-data.store');
+Route::get('/weekly-report', [WeeklyReportController::class, 'index'])->name('weekly-data.index')->middleware('auth');
+Route::post('/weekly-report', [WeeklyReportController::class, 'store'])->name('weekly-data.store')->middleware('auth');
 
-Route::post('/profile/update', [ProfileController::class, 'store']);
-Route::post('/profile/change', [ProfileController::class, 'change']);
+Route::get('/profile', [ProfileController::class, 'index'])->middleware('auth');
+Route::post('/profile/update', [ProfileController::class, 'store'])->middleware('auth');
+Route::post('/profile/change', [ProfileController::class, 'change'])->middleware('auth');
