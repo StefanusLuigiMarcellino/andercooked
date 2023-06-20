@@ -10,14 +10,18 @@
             <div class="column is-8">
                 <div class="form-wrapper">
                     <div class="up-wrapper">
-                        <form action="/profile/update" method="POST" id="update_profile">
+
+                        <form action="/profile/update" method="POST" id="update_profile" enctype="multipart/form-data">
                             @csrf
                             <h3 class="form-title black">Profile Details</h3>
                             <div class="profile-picture">
-                                <img src="assets/profile/profile-pics.png" alt="">
-                                <button class="button-semi-green pointer" id="upload-pics">Upload new picture</button>
-                                <button class="button-white del pointer" id="delete-pics">Delete</button>
-                            </div>
+                                <img id="imagePreview" src="/storage/{{ $user->profile_picture }}" alt="">
+                                <input id="profile_pics" class="file-input" accept="image/png, image/jpg, image/jpeg" type="file" name="profile_pics"  onchange="showPreview(this)">
+                                <input type="hidden" name="oldimage" id="oldimage" value="{{ $user->profile_picture }}">
+                                <label for="profile_pics" class="button-semi-green pointer">
+                                  Upload new picture
+                                </label>
+                              </div>
 
                             <div class="field">
                                 <label class="label">Name</label>
@@ -120,4 +124,19 @@
 
 @section('script')
     <script src="/javascript/notification.js"></script>
+    <script>
+        function showPreview(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function(e) {
+                // Update the imagePreview src with the new image
+                var imagePreview = document.getElementById('imagePreview');
+                imagePreview.src = e.target.result;
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
 @endsection

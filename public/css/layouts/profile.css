@@ -64,12 +64,18 @@ body{
     display: flex;
     flex-direction: row;
     width: 22vw;
-    justify-content: space-between;
+    gap: 20px;
     align-items: center;
 }
 
 .profile-picture img{
     width: 5.5vw;
+    border-radius: 50%;
+}
+
+#imagePreview{
+    width: 5.5vw;
+    height: 5.5vw;
     border-radius: 50%;
 }
 

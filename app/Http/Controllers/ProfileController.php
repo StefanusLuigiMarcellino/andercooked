@@ -4,19 +4,32 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class ProfileController extends Controller
 {
     public function store(Request $request){
         switch($request->input('action')){
             case 'save':
-                $validatedData = $request->validate([
-                    'name' => 'max:255'
+                $validateData = $request->validate([
+                    'name' => 'max:255',
+                    'profile_pics' => 'image|file|max:4096',
+                    'oldimage' => ''
                 ]);
                 $user = $request->user();
-                $user->name = $validatedData['name'];
+                if($request->profile_pics){
+                    // destroy
+                    if($request->oldimage != 'profile/profile-pics.png'){
+                        Storage::delete($request->oldimage);
+                    }
+                    $validateData['profile_pics'] = $request->file('profile_pics')->store('profile');
+                }else{
+                    $validateData['profile_pics'] = $request->oldimage;
+                }
+                // dd($validateData);
+                $user->name = $validateData['name'];
+                $user->profile_picture = $validateData['profile_pics'];
                 $user->save();
-
                 return redirect()->back();
 
             case 'cancel':
