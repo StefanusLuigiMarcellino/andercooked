@@ -8,14 +8,20 @@ use Illuminate\Support\Facades\Auth;
 class ProfileController extends Controller
 {
     public function store(Request $request){
-        $validatedData = $request->validate([
-            'name' => 'max:255'
-        ]);
-        $user = $request->user();
-        $user->name = $validatedData['name'];
-        $user->save();
+        switch($request->input('action')){
+            case 'save':
+                $validatedData = $request->validate([
+                    'name' => 'max:255'
+                ]);
+                $user = $request->user();
+                $user->name = $validatedData['name'];
+                $user->save();
 
-        return redirect()->back();
+                return redirect()->back();
+
+            case 'cancel':
+                return redirect('home');
+        }
     }
 
     public function change(Request $request){

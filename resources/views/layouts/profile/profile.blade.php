@@ -47,8 +47,8 @@
                         <span class="line"></span>
 
                         <div class="wrapper-button">
-                            <button class="button-white del pointer" id="cancel-update">Cancel</button>
-                            <button class="button-green pointer" id="save-update">Save profile</button>
+                            <button class="button-white del pointer" id="cancel-update" type="submit" name="action" value="cancel">Cancel</button>
+                            <button class="button-green pointer" id="save-update" type="submit" name="action" value="save">Save profile</button>
                         </div>
                     </form>
                 </div>
