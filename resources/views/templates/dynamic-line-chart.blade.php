@@ -16,7 +16,7 @@
         const calories = [];
         const fats = [];
 
-        weeklyReports.forEach(report => {
+        weeklyReports.reverse().forEach(report => {
             const { weekdays, weeklyprotein, weeklycarbohydrat, weeklycalories, weeklyfat } = report;
             if(weekdays == 0){
                 weekIds.push(``);

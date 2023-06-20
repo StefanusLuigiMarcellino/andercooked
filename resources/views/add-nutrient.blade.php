@@ -21,7 +21,15 @@
             @include('templates.user2-profile')
         </div>
 
-        <div class="header-font mt-6 black">Hi, <span>{{ $user->username }}</span></div>
+        <div class="header-font mt-6 black">Hi, 
+            <span>
+                @if(empty($user->name))
+                    {{ $user->username }}
+                @else
+                    {{ $user->name }}
+                @endif
+            </span>
+        </div>
         <div class="upper-wrap mt-3">
             <div class="nutrient-wrapper mt-5">
                 {{-- Calories --}}
@@ -44,16 +52,20 @@
                         @endif
                     </div>
 
-                    <div class="center-button">
-                        <form action="/subs-nutrient/calories" method="post">
-                            @csrf
-                            <button class="button-base text-cream bg-white border-cream has-text-centered hover button-width">Substract</button>
-                        </form>
-                        <form action="/add-nutrient/calories" method="post">
-                            @csrf
-                            <button class="button-base bg-cream has-text-centered hover button-width">Add</button>
-                        </form>
-                    </div>
+                    <form class="button-form bg-cream is-centered hover" action="/add-nutrient/calories" method="post">
+                        @csrf
+                        <button class="button-base bg-cream" type="submit" name="action" value="substract">
+                            <svg width="15" height="3" viewBox="0 0 15 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 3.15642C0.447715 3.15642 0 2.7087 0 2.15642V1C0 0.447715 0.447715 0 1 0H14C14.5523 0 15 0.447715 15 1V2.15642C15 2.7087 14.5523 3.15642 14 3.15642H1Z" fill="white"/>
+                            </svg>                                
+                        </button>
+                        <input class="input-base bg-white is-centered border-cream" type="number" name="number" placeholder="">
+                        <button class="button-base bg-cream" type="submit" name="action" value="add">
+                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.5 15C6.94862 15 6.50164 14.553 6.50164 14.0016V9.49836C6.50164 8.94608 6.05392 8.49836 5.50164 8.49836H0.998362C0.446983 8.49836 0 8.05138 0 7.5V7.5C0 6.94862 0.446982 6.50164 0.998361 6.50164H5.50164C6.05392 6.50164 6.50164 6.05392 6.50164 5.50164V0.998362C6.50164 0.446983 6.94862 0 7.5 0V0C8.05138 0 8.49836 0.446982 8.49836 0.998361V5.50164C8.49836 6.05392 8.94608 6.50164 9.49836 6.50164H14.0016C14.553 6.50164 15 6.94862 15 7.5V7.5C15 8.05138 14.553 8.49836 14.0016 8.49836H9.49836C8.94608 8.49836 8.49836 8.94608 8.49836 9.49836V14.0016C8.49836 14.553 8.05138 15 7.5 15V15Z" fill="white"/>
+                            </svg>                                
+                        </button>
+                    </form>
 
                 </div>
                 {{-- Fats --}}
@@ -77,16 +89,21 @@
                         @endif
                     </div>
 
-                    <div class="center-button"> 
-                        <form action="/subs-nutrient/fats" method="POST">
-                            @csrf
-                            <button class="button-base text-orange bg-white border-orange has-text-centered hover button-width">Substract</button>
-                        </form>
-                        <form action="/add-nutrient/fats" method="POST">
-                            @csrf
-                            <button class="button-base bg-orange has-text-centered hover button-width">Add</button>
-                        </form>
-                    </div>
+                    <form class="button-form bg-orange is-centered hover" action="/add-nutrient/fats" method="post">
+                        @csrf
+                        <button class="button-base bg-orange" type="submit" name="action" value="substract">
+                            <svg width="15" height="3" viewBox="0 0 15 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 3.15642C0.447715 3.15642 0 2.7087 0 2.15642V1C0 0.447715 0.447715 0 1 0H14C14.5523 0 15 0.447715 15 1V2.15642C15 2.7087 14.5523 3.15642 14 3.15642H1Z" fill="white"/>
+                            </svg>                                
+                        </button>
+                        <input class="input-base bg-white is-centered border-orange" type="number" name="number" placeholder="">
+                        <button class="button-base bg-orange" type="submit" name="action" value="add">
+                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.5 15C6.94862 15 6.50164 14.553 6.50164 14.0016V9.49836C6.50164 8.94608 6.05392 8.49836 5.50164 8.49836H0.998362C0.446983 8.49836 0 8.05138 0 7.5V7.5C0 6.94862 0.446982 6.50164 0.998361 6.50164H5.50164C6.05392 6.50164 6.50164 6.05392 6.50164 5.50164V0.998362C6.50164 0.446983 6.94862 0 7.5 0V0C8.05138 0 8.49836 0.446982 8.49836 0.998361V5.50164C8.49836 6.05392 8.94608 6.50164 9.49836 6.50164H14.0016C14.553 6.50164 15 6.94862 15 7.5V7.5C15 8.05138 14.553 8.49836 14.0016 8.49836H9.49836C8.94608 8.49836 8.49836 8.94608 8.49836 9.49836V14.0016C8.49836 14.553 8.05138 15 7.5 15V15Z" fill="white"/>
+                            </svg>                                
+                        </button>
+                    </form>
+
                 </div>
                 {{-- Carbs --}}
                 <div class="nutrient-info bg-white">
@@ -102,25 +119,30 @@
                         <h1 class="title-font mt-4">Carbohydrates</h1>
                         <h1 class="number-font">{{$user->total_carbohydrates}}g</h1>
 
-                        @if ($errors->carbohydrateErros->any())
+                        @if ($errors->carbohydrateErrors->any())
                             <div class="help is-danger mt-2">
-                                @foreach ($errors->carbohydrateErros->all() as $error)
+                                @foreach ($errors->carbohydrateErrors->all() as $error)
                                     <p>{{ $error }}</p>
                                 @endforeach
                             </div>
                         @endif
                     </div>
 
-                    <div class="center-button">
-                        <form action="/subs-nutrient/carbohydrates" method="POST">
-                            @csrf
-                            <button class="button-base text-purple bg-white border-purple has-text-centered hover button-width">Substract</button>
-                        </form>
-                        <form action="/add-nutrient/carbohydrates" method="POST">
-                            @csrf
-                            <button class="button-base bg-purple has-text-centered hover button-width">Add</button>
-                        </form>
-                    </div>
+                    <form class="button-form bg-purple is-centered hover" action="/add-nutrient/carbohydrates" method="post">
+                        @csrf
+                        <button class="button-base bg-purple" type="submit" name="action" value="substract">
+                            <svg width="15" height="3" viewBox="0 0 15 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 3.15642C0.447715 3.15642 0 2.7087 0 2.15642V1C0 0.447715 0.447715 0 1 0H14C14.5523 0 15 0.447715 15 1V2.15642C15 2.7087 14.5523 3.15642 14 3.15642H1Z" fill="white"/>
+                            </svg>                                
+                        </button>
+                        <input class="input-base bg-white is-centered border-purple" type="number" name="number" placeholder="">
+                        <button class="button-base bg-purple" type="submit" name="action" value="add">
+                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.5 15C6.94862 15 6.50164 14.553 6.50164 14.0016V9.49836C6.50164 8.94608 6.05392 8.49836 5.50164 8.49836H0.998362C0.446983 8.49836 0 8.05138 0 7.5V7.5C0 6.94862 0.446982 6.50164 0.998361 6.50164H5.50164C6.05392 6.50164 6.50164 6.05392 6.50164 5.50164V0.998362C6.50164 0.446983 6.94862 0 7.5 0V0C8.05138 0 8.49836 0.446982 8.49836 0.998361V5.50164C8.49836 6.05392 8.94608 6.50164 9.49836 6.50164H14.0016C14.553 6.50164 15 6.94862 15 7.5V7.5C15 8.05138 14.553 8.49836 14.0016 8.49836H9.49836C8.94608 8.49836 8.49836 8.94608 8.49836 9.49836V14.0016C8.49836 14.553 8.05138 15 7.5 15V15Z" fill="white"/>
+                            </svg>                                
+                        </button>
+                    </form>
+
                 </div>
                 {{-- Protein --}}
                 <div class="nutrient-info bg-white mb-2">
@@ -144,16 +166,21 @@
                         @endif
                     </div>
 
-                    <div class="center-button">
-                        <form action="/subs-nutrient/protein" method="POST">
-                            @csrf
-                            <button class="button-base text-green bg-white border-green has-text-centered hover button-width">Substract</button>
-                        </form>
-                        <form action="/add-nutrient/protein" method="POST">
-                            @csrf
-                            <button class="button-base bg-green has-text-centered hover button-width">Add</button>
-                        </form>
-                    </div>
+                    <form class="button-form bg-green is-centered hover" action="/add-nutrient/protein" method="post">
+                        @csrf
+                        <button class="button-base bg-green" type="submit" name="action" value="substract">
+                            <svg width="15" height="3" viewBox="0 0 15 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 3.15642C0.447715 3.15642 0 2.7087 0 2.15642V1C0 0.447715 0.447715 0 1 0H14C14.5523 0 15 0.447715 15 1V2.15642C15 2.7087 14.5523 3.15642 14 3.15642H1Z" fill="white"/>
+                            </svg>                                
+                        </button>
+                        <input class="input-base bg-white is-centered border-green" type="number" name="number" placeholder="">
+                        <button class="button-base bg-green" type="submit" name="action" value="add">
+                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.5 15C6.94862 15 6.50164 14.553 6.50164 14.0016V9.49836C6.50164 8.94608 6.05392 8.49836 5.50164 8.49836H0.998362C0.446983 8.49836 0 8.05138 0 7.5V7.5C0 6.94862 0.446982 6.50164 0.998361 6.50164H5.50164C6.05392 6.50164 6.50164 6.05392 6.50164 5.50164V0.998362C6.50164 0.446983 6.94862 0 7.5 0V0C8.05138 0 8.49836 0.446982 8.49836 0.998361V5.50164C8.49836 6.05392 8.94608 6.50164 9.49836 6.50164H14.0016C14.553 6.50164 15 6.94862 15 7.5V7.5C15 8.05138 14.553 8.49836 14.0016 8.49836H9.49836C8.94608 8.49836 8.49836 8.94608 8.49836 9.49836V14.0016C8.49836 14.553 8.05138 15 7.5 15V15Z" fill="white"/>
+                            </svg>                                
+                        </button>
+                    </form>
+
                 </div>
             </div>
         </div>
