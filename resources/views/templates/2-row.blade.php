@@ -17,3 +17,7 @@
     @include('templates.data-aos')
 @endsection
 
+@section('script')
+    @yield('script')
+@endsection
+
