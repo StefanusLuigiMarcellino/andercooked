@@ -58,8 +58,8 @@ Route::get('/history', [HistoryController::class, 'index'])->middleware('auth');
 Route::post('/menu-details/{menu:id}', [MenuController::class, 'history'])->middleware('auth');
 
 Route::get('/recipe', [RecipeController::class, 'show'])->middleware('auth');
-// NOTES: ini yang bikin $curr nya error di recipe.blade.php (gara gara ada /recipe/ nya, kalo cuma /recipe aja aman)
 Route::get('/recipe/{menu:slug}', [RecipeController::class, 'detail'])->middleware('auth');
+
 Route::get('/add-recipe', [RecipeController::class, 'index'])->middleware('auth');
 Route::post('/add-recipe', [RecipeController::class, 'store'])->middleware('auth');
 

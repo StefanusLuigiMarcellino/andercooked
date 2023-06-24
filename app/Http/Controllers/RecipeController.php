@@ -13,7 +13,7 @@ class RecipeController extends Controller
 {
     public function show(){
         $user = auth()->user()->id;
-        $menu = Menu::where('user_id', $user)->latest()->filter(request(['category', 'search']))->paginate(10);
+        $menu = Menu::where('user_id', $user)->latest()->get();
         return view('layouts.recipe.recipe', [
             "title" => "Recipe",
             "menus" => $menu,
@@ -21,10 +21,9 @@ class RecipeController extends Controller
         ]);
     }
 
-    // NOTES: ini yang bikin $curr nya error di recipe.blade.php
     public function detail($slug){
         $user = auth()->user()->id;
-        $menu = Menu::where('user_id', $user)->latest()->filter(request(['category', 'search']))->paginate(10);
+        $menu = Menu::where('user_id', $user)->latest()->get();
         $curr = Menu::where('user_id', $user)->where('slug', $slug)->first();
         return view('layouts.recipe.recipe',  [
             "title" => "Recipe",

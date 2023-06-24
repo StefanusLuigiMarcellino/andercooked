@@ -7,15 +7,8 @@
 
 @section('main-section')
     <section class="main-section">
-        {{-- code here --}}
         <div class="header">
             <form action="/favorite" class="search-bar" data-aos="fade-down">
-                {{-- @if (request('page'))
-                    <input type="hidden" name="page" value="{{ request('page') }}">
-                @endif
-                @if (request('category'))
-                    <input type="hidden" name="category" value="{{ request('category') }}">
-                @endif --}}
                 @include('icons.search')
                 <input class="search-font grey" type="search" name="search" placeholder="Search by food or drink name" value="{{ request('search') }}">
                 <button class="search-button">Search</button>
@@ -32,7 +25,6 @@
                             <div class="image-wrapper">
                                 <a href="/menu-details/{{ $favorite->menu->slug }}"><img src="{{  $favorite->menu->menu_pics }}" alt=""></a>
                             </div>
-                            {{-- <div class="filter"></div> --}}
                             <div class="list-information">
                                 <div class="left-list">
                                     <div class="title-font">{{ $favorite->menu->name }}</div>
@@ -42,14 +34,13 @@
                                     <form action="/favorite/{{ $favorite->menu->id }}" method="post">
                                         @csrf
                                         <button>
-                                            <i class="far fa-heart {{ $favorite->menu->likedByUser() ? 'fas fa-heart' : 'far fa-heart' }}"></i>
+                                            <i class="fas fa-heart "></i>
                                         </button>
                                     </form>
                                 </div>
                             </div>
                         </div>
                     @endforeach
-                    {{-- notes: nanti akan dibuat animasi spt ini -->https://codepen.io/pugson/pen/wMBjLz --}}
                 @endif
             </div>
             @if($favorites->count() == False)

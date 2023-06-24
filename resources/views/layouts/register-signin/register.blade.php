@@ -38,7 +38,8 @@
                     </div>
                     <div class="field">
                         <label for="" class="label">
-                            Password
+                            Password <span class="tooltip-span" id="span">?</span>
+                            <span class="tooltip-content" id="content">The password should contain at least 8 characters long, one lowercase letter, one uppercase letter, and one numeric digit.</span>
                         </label>
                         <div class="control">
                             <input type="password" name="password" id="password" class="input @error('password') is-invalid @enderror"
@@ -101,5 +102,18 @@
     </h2>
     <a href="/signin" class="fontcolor"> Log in </a>
 </div>
+
+<script>
+    const button = document.getElementById('span');
+    const tooltip = document.getElementById('content');
+
+    button.addEventListener('mouseover', function() {
+        tooltip.style.visibility = 'visible';
+    });
+
+    button.addEventListener('mouseout', function() {
+        tooltip.style.visibility = 'hidden';
+    });
+</script>
 
 @endsection

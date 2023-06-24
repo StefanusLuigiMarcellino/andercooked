@@ -10,7 +10,7 @@
         <div class="header">
             <form action="/menu" class="search-bar" data-aos="fade-down">
                 @if (request('page'))
-                    <input type="hidden" name="page" value="{{ request('page') }}">
+                    <input type="hidden" name="page" value="1">
                 @endif
                 @if (request('category'))
                     <input type="hidden" name="category" value="{{ request('category') }}">
@@ -46,12 +46,6 @@
                     </div>
                 </form>
 
-                {{-- <a href="/menu?category=foodies">
-                    <div class="category-set">Food</div>
-                </a>
-                <a href="/menu?category=beverages">
-                    <div class="category-set">Drink</div>
-                </a> --}}
             </div>
             <div class="menu-list-large margin-2">
                 @if ($menus->count())

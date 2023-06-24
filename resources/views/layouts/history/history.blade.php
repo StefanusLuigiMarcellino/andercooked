@@ -9,12 +9,6 @@
     <section class="main-section">
         <div class="header">
             <form action="/history" class="search-bar" data-aos="fade-down">
-                {{-- @if (request('page'))
-                    <input type="hidden" name="page" value="{{ request('page') }}">
-                @endif
-                @if (request('category'))
-                    <input type="hidden" name="category" value="{{ request('category') }}">
-                @endif --}}
                 @include('icons.search')
                 <input class="search-font grey" type="search" name="search" placeholder="Search by food or drink name" value="{{ request('search') }}">
                 <button class="search-button">Search</button>

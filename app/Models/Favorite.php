@@ -10,6 +10,7 @@ class Favorite extends Model
 {
     use HasFactory;
     protected $guarded = ['id'];
+    protected $with = ['menu'];
 
     public function scopeFilter($query, array $filters) {
         $query->when($filters['search'] ?? false, function($query, $search) {

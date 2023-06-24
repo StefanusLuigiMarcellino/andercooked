@@ -1,6 +1,6 @@
 <form action="/menu" class="search-bar" data-aos="fade-down">
     @if (request('page'))
-        <input type="hidden" name="page" value="{{ request('page') }}">
+        <input type="hidden" name="page" value="1">
     @endif
     @if (request('category'))
         <input type="hidden" name="category" value="{{ request('category') }}">
