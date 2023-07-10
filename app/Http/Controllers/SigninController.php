@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
+use Laravel\Socialite\Facades\Socialite;
+use App\Models\User;
 
 class SigninController extends Controller
 {
@@ -69,6 +71,31 @@ class SigninController extends Controller
             return redirect()->intended('/home');
         }
         return back()->with('failed', 'Login failed.');
+    }
+
+    public function redirectGoogle(){
+        return Socialite::driver('google')->redirect();
+    }
+
+    public function handleCallback(){
+        $user = Socialite::driver('google')->user();
+
+        $finduser = User::where('google_id', $user->getId())->first();
+
+        if($finduser){
+            Auth::login($finduser);
+            return redirect()->intended('home');
+        }else{
+            $newuser = User::create([
+                'username' => $user->getName(),
+                'email' => $user->getEmail(),
+                'google_id' => $user->getId(),
+                'password' => bcrypt('123456'),
+            ]);
+
+            Auth::login($newuser);
+            return redirect()->intended('home');
+        }
     }
 
     public function logout(){

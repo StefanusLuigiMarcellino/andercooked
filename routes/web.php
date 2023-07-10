@@ -1,16 +1,18 @@
 <?php
 
+use App\Http\Controllers\CobaController;
 use App\Models\Menu;
 use Illuminate\Foundation\Auth\User;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\RecipeController;
 use App\Http\Controllers\SigninController;
 use App\Http\Controllers\HistoryController;
-use App\Http\Controllers\FavoriteController;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\NutrientController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\FavoriteController;
+use App\Http\Controllers\NutrientController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\WeeklyReportController;
 
@@ -49,6 +51,10 @@ Route::post('/register', [RegisterController::class, 'store']);
 Route::get('/signin', [SigninController::class, 'index'])->middleware('guest')->name('login');
 Route::post('/signin', [SigninController::class, 'authenticate']);
 
+// Auth::routes();
+Route::get('/auth/google', [SigninController::class, 'redirectGoogle']);
+Route::get('/auth/google/callback', [SigninController::class, 'handleCallback']);
+
 Route::post('/logout', [SigninController::class, 'logout']);
 
 Route::get('/favorite', [FavoriteController::class, 'index'])->middleware('auth');
@@ -79,3 +85,5 @@ Route::post('/weekly-report', [WeeklyReportController::class, 'store'])->name('w
 Route::get('/profile', [ProfileController::class, 'index'])->middleware('auth');
 Route::post('/profile/update', [ProfileController::class, 'store'])->middleware('auth');
 Route::post('/profile/change', [ProfileController::class, 'change'])->middleware('auth');
+
+
