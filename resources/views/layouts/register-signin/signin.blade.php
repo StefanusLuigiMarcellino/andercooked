@@ -27,6 +27,8 @@
                     <h1 class="header-font">Welcome Back!</h1>
                     <h2 class="subheader-font">Please enter your details</h2>
                 </div>
+
+                
                 <div class="keterangan">
                     <div class="field">
                         <label for="" class="label">
@@ -36,7 +38,7 @@
                             <input type="email" name="email" id="email" class="input @error('email')is-invalid @enderror"
                             placeholder="andercooked@gmail.com" required value="{{ old('email') }}">
                         </div>
-
+                        
                         @error('email')
                         <p class="help is-danger">{{ $message }}</p>
                         @enderror
@@ -50,16 +52,21 @@
                         </div>
                     </div>
                 </div>
-                <div class="field mb-2 is-centered">
+                <div class="field mb-3 is-centered">
                     <label for="" class=" ">
                         <div class="control">
-                            <a href="">
-                                <button class="regist mt-5 font">Log In</button>
-                            </a>
+                            <button class="regist mt-5 font">Log In</button>
                         </div>
                     </label>
                 </div>
-                <a href='/auth/google'>Login with Google</a>
+                <a href="/auth/google" class="field mb-3 mt-4 is-centered">
+                    <div class="control regist-google mt-2 ">
+                        <img class="google-icon mr-4" width="15px" height="15px" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
+                        Sign up with Google
+                    </div>
+                </a>
+            
+                {{-- <a href='/auth/google'>Login with Google</a> --}}
             </form>
         </div>
         <div class="" style="padding: 0 25px;">

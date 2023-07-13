@@ -125,10 +125,36 @@ span{
 .regist:hover{
     opacity: 0.85;
 }
+.regist-google{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--black);
+    border-radius: 15px !important;
+    width: 100%;
+    padding: 7px;
+    background-color: var(--white) !important;
+    text-decoration: none;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.regist-google:hover{
+    box-shadow: 0 3px 4px 0 rgba(0,0,0,.25);
+    opacity: 0.85;
+}
 
 .font{
     font-size: 18px;
     font-weight: 700;
+}
+.font-google{
+    margin: 11px 11px 0 0;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 0.2px;
 }
 
 .SK{
@@ -235,3 +261,5 @@ section{
     visibility: visible;
     opacity: 1;
 }
+
+
