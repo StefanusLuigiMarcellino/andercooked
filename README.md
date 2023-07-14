@@ -11,43 +11,43 @@ It's easier to find healthy recipes here. Apart from food, various healthy and d
 ``` bash 
 $ git clone https://github.com/StefanusLuigiMarcellino/andercooked.git 
 ```
-2. Move to andercooked directory \
+2. Move to andercooked directory
 ``` bash
 $ cd andercooked 
 ```
-3. Installing composer to read .json file \
+3. Installing composer to read .json file
 ``` bash
 $ composer install 
 ```
-4. Create new file by copying .env.example and rename it to .env \
+4. Create new file by copying .env.example and rename it to .env
 ``` bash
 $ cp .env.example .env 
 ```
-5. Generate a unique key for Laravel project \
+5. Generate a unique key for Laravel project
 ``` bash
 $ php artisan key:generate 
 ```
-6. Installing laravel Bulma framework \
+6. Installing laravel Bulma framework
 ``` bash
 $ npm install bulma 
 ```
-7.  Create table for this project \
+7.  Create table for this project
 ``` bash
 $ php artisan migrate 
 ```
-8. Get data from seeder \
+8. Get data from seeder
 ``` bash
 $ php artisan db:seed 
 ```
-9. Uploading picture to Andercooked website \
+9. Uploading picture to Andercooked website
 ``` bash
 $ php artisan storage:link 
 ```
-10. Installing Laravel library for UI \
+10. Installing Laravel library for UI
 ``` bash
 $ composer require laravel/ui 
 ```
-11. Installing Laravel library for socialite \
+11. Installing Laravel library for socialite
 ``` bash
 $ composer require laravel/socialite 
 ```
