@@ -7,7 +7,7 @@
 It's easier to find healthy recipes here. Apart from food, various healthy and delicious drinks from exotic drinks to relaxing drinks are also available here. Let's start an interesting journey with Andercooked find your treasury healthy menu!
 
 ## How to Install and Run the Project 🏃
-1. Clone the project from Stefanus Luigi repository
+1. Clone the project from this repository
 ``` bash 
 git clone https://github.com/StefanusLuigiMarcellino/andercooked.git 
 ```
@@ -70,6 +70,11 @@ composer require laravel/socialite
     <img src="./public/assets/documentation/Home.png" alt="Register" width="100%"  style="padding-bottom: 20px"/>
 </div>
 
+- **Menu**
+<div align="center">
+    <img src="./public/assets/documentation/Menu.png" alt="Register" width="100%"  style="padding-bottom: 20px"/>
+</div>
+
 - **Menu Description**
 <div align="center">
     <img src="./public/assets/documentation/MenuDesc.png" alt="Register" width="100%"/>
@@ -84,6 +89,11 @@ composer require laravel/socialite
 - **Favorite**
 <div align="center">
     <img src="./public/assets/documentation/Favorite.png" alt="Register" width="100%"  style="padding-bottom: 20px"/>
+</div>
+
+- **Recipe**
+<div align="center">
+    <img src="./public/assets/documentation/Recipe.png" alt="Register" width="100%"  style="padding-bottom: 20px"/>
 </div>
 
 - **Add Recipe**
