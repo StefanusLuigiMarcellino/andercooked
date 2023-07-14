@@ -9,47 +9,47 @@ It's easier to find healthy recipes here. Apart from food, various healthy and d
 ## How to Install and Run the Project 🏃
 1. Clone the project from Stefanus Luigi repository
 ``` bash 
-$ git clone https://github.com/StefanusLuigiMarcellino/andercooked.git 
+git clone https://github.com/StefanusLuigiMarcellino/andercooked.git 
 ```
 2. Move to andercooked directory
 ``` bash
-$ cd andercooked 
+cd andercooked 
 ```
 3. Installing composer to read .json file
 ``` bash
-$ composer install 
+composer install 
 ```
 4. Create new file by copying .env.example and rename it to .env
 ``` bash
-$ cp .env.example .env 
+cp .env.example .env 
 ```
 5. Generate a unique key for Laravel project
 ``` bash
-$ php artisan key:generate 
+php artisan key:generate 
 ```
 6. Installing laravel Bulma framework
 ``` bash
-$ npm install bulma 
+npm install bulma 
 ```
 7.  Create table for this project
 ``` bash
-$ php artisan migrate 
+php artisan migrate 
 ```
 8. Get data from seeder
 ``` bash
-$ php artisan db:seed 
+php artisan db:seed 
 ```
 9. Uploading picture to Andercooked website
 ``` bash
-$ php artisan storage:link 
+php artisan storage:link 
 ```
 10. Installing Laravel library for UI
 ``` bash
-$ composer require laravel/ui 
+composer require laravel/ui 
 ```
 11. Installing Laravel library for socialite
 ``` bash
-$ composer require laravel/socialite 
+composer require laravel/socialite 
 ```
 
 [PDF Manual Guide How to Use Andercooked💁](https://drive.google.com/file/d/1aoHpdwnSpCISnItTLRZQ0jYC__1Yq4DS/view?usp=drive_link)
