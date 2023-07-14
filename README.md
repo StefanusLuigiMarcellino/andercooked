@@ -1,66 +1,83 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<div align="center">
+    <img src="./public/assets/logo/full-logo.svg" alt="" width="60%">
+</div>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Description 🎯
+[Andercooked](http://andercooked.000webhostapp.com/) is a useful website focused on helping people find healthy and flavorful food with nutrition tracking as our main feature.
+It's easier to find healthy recipes here. Apart from food, various healthy and delicious drinks from exotic drinks to relaxing drinks are also available here. Let's start an interesting journey with Andercooked find your treasury healthy menu!
 
-## About Laravel
+## How to Install and Run the Project 🏃
+1. Clone the project from Stefanus Luigi repository \
+``` $ git clone https://github.com/StefanusLuigiMarcellino/andercooked.git ```
+2. Move to andercooked directory \
+``` $ cd andercooked ```
+3. Installing composer to read .json file \
+``` $ composer install ```
+4. Create new file by copying .env.example and rename it to .env \
+``` $ cp .env.example .env ```
+5. Generate a unique key for Laravel project \
+``` $ php artisan key:generate ```
+6. Installing laravel Bulma framework \
+``` $ npm install bulma ```
+7.  Create table for this project \
+``` $ php artisan migrate ```
+8. Get data from seeder \
+``` $ php artisan db:seed ```
+9. Uploading picture to Andercooked website \
+``` $ php artisan storage:link ```
+10. Installing Laravel library for UI \
+``` $ composer require laravel/ui ```
+11. Installing Laravel library for socialite \
+``` $ composer require laravel/socialite ```
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+[PDF Manual Guide How to Use Andercooked💁](https://drive.google.com/file/d/1aoHpdwnSpCISnItTLRZQ0jYC__1Yq4DS/view?usp=drive_link)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Website preview 💻
+- **Register**
+<div align="center">
+    <img src="./public/assets/documentation/Register.png" alt="Register" width="100%"  style="padding-bottom: 20px"/>
+</div>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- **Login**
+<div align="center">
+    <img src="./public/assets/documentation/Login.png" alt="Register" width="100%"  style="padding-bottom: 20px"/>
+</div>
 
-## Learning Laravel
+- **Home**
+<div align="center">
+    <img src="./public/assets/documentation/Home.png" alt="Register" width="100%"  style="padding-bottom: 20px"/>
+</div>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- **Menu Description**
+<div align="center">
+    <img src="./public/assets/documentation/MenuDesc.png" alt="Register" width="100%"/>
+    <img src="./public/assets/documentation/Ingredient&steps.png" alt="Register" width="100%"  style="padding-bottom: 20px"/>
+</div>
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- **History**
+<div align="center">
+    <img src="./public/assets/documentation/History.png" alt="Register" width="100%"  style="padding-bottom: 20px"/>
+</div>
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- **Favorite**
+<div align="center">
+    <img src="./public/assets/documentation/Favorite.png" alt="Register" width="100%"  style="padding-bottom: 20px"/>
+</div>
 
-## Laravel Sponsors
+- **Add Recipe**
+<div align="center">
+    <img src="./public/assets/documentation/AddRecipe.png" alt="Register" width="100%"  style="padding-bottom: 20px"/>
+</div>
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+- **Nutrient**
+<div align="center">
+    <img src="./public/assets/documentation/Nutrient.png" alt="Register" width="100%"  style="padding-bottom: 20px"/>
+</div>
 
-### Premium Partners
+## Contributors ✨
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+Thanks go to these wonderful people:
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+<a href="https://github.com/StefanusLuigiMarcellino/andercooked/graphs/contributors">
+  <img src="./public/assets/documentation/Frame 2.png" width="50%"/>
+</a>
